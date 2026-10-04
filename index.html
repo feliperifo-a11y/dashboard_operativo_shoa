@@ -1062,7 +1062,15 @@ svg.leaflet-image-layer.leaflet-interactive path {
   .aBtn.pri { background: var(--accent); border-color: var(--accent); color: #fff; } .aBtn.pri:hover { background: #195e98; color: #fff; }
   .sello { font-size: 11px; color: var(--ok); font-weight: 600; margin-right: 2px; } .sello.vacio { color: var(--muted); font-weight: 500; }
   .nItem.own { border-left: 3px solid var(--accent); padding-left: 8px; }
-  #srContraste:not(:empty) { margin-top: 6px; }
+  .ctLink { display: block; margin-top: 10px; font-size: 12px; color: var(--mut, #6b7280); text-decoration: none; }
+  .ctLink:hover { text-decoration: underline; }
+  .ctLink .w { color: #b26a00; font-weight: 600; }
+  #contrasteView { display: none; }
+  body[data-vista="contraste"] #contrasteView { display: block; }
+  body[data-vista="contraste"] #resumen, body[data-vista="contraste"] #app { display: none; }
+  body[data-vista="contraste"] { overflow-y: auto !important; height: auto !important; }
+  .ctDoc { max-width: 900px; margin: 0 auto; padding: 16px 20px 40px; }
+  .ctDoc .srChk li[data-k] { cursor: pointer; }
   @media (min-width: 900px) {
     body[data-vista="resumen"] { overflow: hidden; height: 100vh; }
     #resumen { height: 100vh; display: flex; flex-direction: column; padding-bottom: 12px; }
@@ -1163,7 +1171,7 @@ svg.leaflet-image-layer.leaflet-interactive path {
         <b style="color:#d08a00">Con retraso</b>: último dato entre ese umbral y 24 h.<br>
         <b style="color:#b3261e">No operativa</b>: más de 24 h sin datos o sin transmisiones en 7 días.<br>
         Siniestrada o no instalada: según el informe cargado. ⚠ marca una DART en modo evento o una boya fuera de su círculo de borneo.</p></details>
-      <div id="srContraste"></div>
+      <a class="ctLink" id="ctLink" href="#contraste" hidden></a>
       </div>
     </section>
 
@@ -1192,6 +1200,13 @@ svg.leaflet-image-layer.leaflet-interactive path {
 
 
 <!-- ============================ VISTA RESUMEN DE PRENSA ============================ -->
+<div id="contrasteView">
+  <header class="top prTop">
+    <a class="tbtn" href="#">← Volver al dashboard</a>
+    <div class="tt"><h1>Contraste informe ↔ monitor</h1><div class="st">Diferencias entre el informe publicado en el área 1 y lo que recibe el monitor en línea</div></div>
+  </header>
+  <main id="srContraste" class="ctDoc"></main>
+</div>
 <div id="prensaView">
   <header class="top prTop">
     <a class="tbtn" href="#">← Volver al dashboard</a>
@@ -1825,7 +1840,7 @@ document.getElementById('buoyList').addEventListener('click', e => {
 
 // ----------------------------- Vistas: resumen / mapa -----------------------------
 let mapaListo = false;
-function vistaDeHash() { return location.hash === '#mapa' ? 'mapa' : /^#prensa/.test(location.hash) ? 'prensa' : 'resumen'; }
+function vistaDeHash() { return location.hash === '#mapa' ? 'mapa' : location.hash === '#contraste' ? 'contraste' : /^#prensa/.test(location.hash) ? 'prensa' : 'resumen'; }
 function mostrar(vista) {
   document.body.dataset.vista = vista;
   window.scrollTo(0, 0);
@@ -2549,12 +2564,12 @@ function sello(k) {
 
 // ---- Área 1: estaciones ----
 function renderEstaciones() {
-  const box = document.getElementById('srMat'), fin = document.getElementById('srContraste');
+  const box = document.getElementById('srMat'), fin = document.getElementById('srContraste'), lnk = document.getElementById('ctLink');
   sello('est');
   const d = datosEst();
   if (!d) {
     box.innerHTML = `<div class="emptyNote">Aún no hay informe de estaciones publicado: se muestra solo lo que recibe el monitor.</div>`;
-    fin.innerHTML = '';
+    fin.innerHTML = '<div class="emptyNote">No hay informe de estaciones publicado para contrastar.</div>'; lnk.hidden = true;
     return;
   }
   const M = d.material;
@@ -2564,7 +2579,9 @@ function renderEstaciones() {
   if (d.mensajes && !/^no hay$/i.test(d.mensajes)) h += `<div class="srMsg"><b>Mensajes navales</b>${srE(d.mensajes)}</div>`;
   box.innerHTML = h;
   const chk = chequeosEstaciones(), nW = chk.filter(c => c.t === 'warn').length;
-  fin.innerHTML = `<h3 class="subH">Contraste informe ↔ monitor <span class="srN ${nW ? 'w' : ''}">${nW ? nW + ' observaciones' : 'sin observaciones'}</span></h3>${chkHTML(chk)}`;
+  fin.innerHTML = `<h3 class="subH">Resultado <span class="srN ${nW ? 'w' : ''}">${nW ? nW + ' observaciones' : 'sin observaciones'}</span></h3>${chkHTML(chk)}`;
+  lnk.hidden = false;
+  lnk.innerHTML = `Contraste informe ↔ monitor · ${nW ? `<span class="w">${nW} observaci${nW === 1 ? 'ón' : 'ones'}</span>` : 'sin observaciones'} →`;
   fin.querySelectorAll('.srChk li[data-k]').forEach(li => li.addEventListener('click', () => verBoya(li.dataset.k)));
 }
 
