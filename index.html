@@ -1396,6 +1396,8 @@ function srLimpiar(t) {
     .replace(/[⁠​‌‍﻿­]/g, '')
     .replace(/ /g, ' ')
     .replace(/\r\n?/g, '\n')
+    .replace(/[*~]+/g, '')                                         // formato de WhatsApp: *negrita*, ~tachado~
+    .replace(/(^|\s)_([^_\n]+)_(?=\s|$|[.,:;)])/gm, '$1$2')          // _cursiva_
     .replace(/[•▪●◦·]\s*/g, '• ')
     .replace(/[ \t]+/g, ' ');
 }
@@ -2346,8 +2348,9 @@ function repoInfo() {
   return { owner: 'feliperifo-a11y', repo: 'dashboard_operativo_shoa' };
 }
 const urlEditar = (k) => { const r = repoInfo(); return `https://github.com/${r.owner}/${r.repo}/edit/main/publicado/${PUB_ARCH[k]}`; };
+let ultimaCarga = 0;
 async function cargarPublicado() {
-  let cambio = false;
+  let cambio = false; ultimaCarga = Date.now();
   for (const k of ['est', 'per', 'not', 'uni']) {
     try {
       const r = await fetch(`${BASE_PUB}publicado/${k === 'uni' ? 'unidades.json' : PUB_ARCH[k]}?t=${Date.now()}`, { cache: 'no-store' });
@@ -2356,6 +2359,10 @@ async function cargarPublicado() {
       if (!d || (!d.publicado && k !== 'uni')) continue;
       if (JSON.stringify(d) !== JSON.stringify(PUB[k])) { PUB[k] = d; cambio = true; }
     } catch (e) { /* abierto como archivo local o sin publicación */ }
+  }
+  // una vista local antigua no tapa lo publicado: si lo publicado es del mismo informe o más reciente, se descarta
+  for (const k of ['est', 'per', 'not']) {
+    if (AREA[k] && PUB[k] && PUB[k].publicado && new Date(PUB[k].publicado) >= new Date(AREA[k].recibido)) { AREA[k] = null; areaGuardar(k); cambio = true; }
   }
   if (cambio && typeof renderPrensaCompleta === 'function') setTimeout(renderPrensaCompleta, 0);
   if (cambio) { SITREP = (AREA.est || AREA.per || PUB.est || PUB.per) ? true : null; SR_DECL = datosEst() ? srEstadoDeclarado(datosEst().material) : {}; srUnidades(); renderSitrep(); renderNoticias(); if (ESTADO) renderBoyasSeguro(); }
@@ -2811,7 +2818,12 @@ document.querySelectorAll('[data-area]').forEach(btn => btn.addEventListener('cl
   renderSitrep();
   if (document.body.dataset.vista === 'prensa') renderPrensaCompleta();
   cargarPublicado();
-  setInterval(cargarPublicado, 5 * 60e3);
+  setInterval(cargarPublicado, 3 * 60e3);
+  // celulares: al volver a la pestaña (o al restaurarla desde la memoria) se consulta de inmediato
+  const alVolver = () => { if (document.visibilityState === 'visible' && Date.now() - ultimaCarga > 20e3) cargarPublicado(); };
+  document.addEventListener('visibilitychange', alVolver);
+  window.addEventListener('pageshow', (e) => { if (e.persisted) cargarPublicado(); });
+  window.addEventListener('focus', alVolver);
 })();
 
 // =================== Publicación directa en GitHub ===================
