@@ -1,6 +1,67 @@
 {
  "tipo": "noticias",
  "version": 1,
- "publicado": "2026-10-02T19:56:00.000Z",
- "items": []
+ "publicado": "2026-10-04T15:04:00.000Z",
+ "items": [
+  {
+   "titulo": "RESUMEN DE PRENSA 30 DE ENERO DE 2026",
+   "resumen": "",
+   "url": null
+  },
+  {
+   "titulo": "BIO BIO CHILE",
+   "resumen": "DEFINE LUGAR Y USOS: AVANZA PROYECTO PARA FOMENTAR QUE EMPRESAS EXTRAIGAN AGUA DE MAR PARA DESALINIZAR La Sala de la Cámara Baja despachó para un tercer trámite en el Senado el proyecto que busca fomentar la desalinización del agua de mar.La iniciativa considera la creación de una concesión marítima especial; la definición de una estrategia nacional de desalinización; y preferencias para resguardar el derecho humano al agua y saneamiento.",
+   "url": "https://www.biobiochile.cl/noticias/economia/actualidad-economica/2026/01/28/define-lugar-y-usos-avanza-proyecto-para-fomentar-que-empresas-extraigan-agua-de-mar-para-desalinizar.shtml#google_vignette"
+  },
+  {
+   "titulo": "THE CLINIC",
+   "resumen": "RODOLFO RONDÓN, EL CIENTÍFICO QUE LLEVA A CHILE A LA PRIMERA LÍNEA EN EL ESTUDIO DE MICROPLÁSTICOS EN LA ANTÁRTICA El investigador del Inach tuvo una pasantía en el laboratorio del OIEA en Mónaco, donde trabajó en técnicas y protocolos para detectar microplásticos en organismos antárticos como el kril.",
+   "url": "https://www.theclinic.cl/2026/01/23/rodolfo-rondon-el-cientifico-que-lleva-a-chile-a-la-primera-linea-en-el-estudio-de-microplasticos-en-la-antartica/"
+  },
+  {
+   "titulo": "DIARIO FINANCIERO",
+   "resumen": "",
+   "url": null
+  },
+  {
+   "titulo": "Noticia",
+   "resumen": "",
+   "url": "https://www.df.cl/df-lab/tech-empresas/los-detalles-del-proyecto-de-fabrica-de-drones-que-busca-fortalecer-la"
+  },
+  {
+   "titulo": "EURONEWS",
+   "resumen": "EL NIVEL DEL MAR SUBE EN EL MUNDO, PERO PODRÍA BAJAR EN GROENLANDIA Los científicos señalan que el descenso del nivel del mar en Groenlandia tendrá repercusiones en las zonas costeras, en las rutas marítimas, la pesca y las infraestructuras. El aumento de las temperaturas sube el nivel del mar en todo el mundo, lo que pone a millones de personas en riesgo de inundaciones graves y de erosión costera. Pero en Groenlandia, ocurre lo contrario.",
+   "url": "https://es.euronews.com/green/2026/01/28/el-nivel-del-mar-sube-en-el-mundo-pero-en-groenlandia-esta-a-punto-de-bajar-segun-los-cien"
+  },
+  {
+   "titulo": "LA TERCERA",
+   "resumen": "TRAS SIETE AÑOS DE TRÁMITE: CONGRESO DESPACHA NUEVA LEY DE INTELIGENCIA DEL ESTADO QUE FORTALECE LA ANI El proyecto contempla nuevos órganos de coordinación y asesoría, como el Consejo Interministerial de Inteligencia, que estará integrado por los ministros de Interior, que presidirá la instancia, Relaciones Exteriores, Defensa Nacional y Seguridad Pública. Además, se establecen nuevas funciones para la ANI en áreas tan relevantes como ciberseguridad, infraestructura crítica, acceso a datos específicos y la acreditación de seguridad, y se establecen procedimientos especiales de obtención de información.",
+   "url": "https://www.latercera.com/nacional/noticia/tras-siete-anos-de-tramite-congreso-despacha-nueva-ley-de-inteligencia-del-estado-que-fortalece-la-ani/#:~:text=28%20ENERO%202026-"
+  },
+  {
+   "titulo": "INACH (CON PUBLICACIÓNPARA DESCARGA )",
+   "resumen": "",
+   "url": null
+  },
+  {
+   "titulo": "Noticia",
+   "resumen": "",
+   "url": "https://www.inach.cl/enciclopedia-visual-antartica-2/"
+  },
+  {
+   "titulo": "EL MOSTRADOR",
+   "resumen": "CUANDO EL LAGO DEJA DE SER ESPEJO: LA CONTAMINACIÓN QUE YA ESTÁ ESCRIBIENDO SU PROPIA SENTENCIA En el sur de Chile se está instalando una idea peligrosa: la contaminación de los lagos es “tema de verano”. Pero un lago no funciona con calendario turístico. Funciona con cargas, descargas y memoria ecológica. En diciembre, autoridades reforzaron el monitoreo del Lago Villarrica por riesgo de floraciones algales, con muestreos durante la temporada estival. La lectura simple es “hay vigilancia”, la incómoda es otra: si hay que vigilar así, es porque el sistema ya está al límite. Y cuando un lago llega a ese borde, no avisa con palabras: avisa con banderas, cierres y microtoxinas.",
+   "url": "https://www.elmostrador.cl/agenda-pais/agenda-sustentable/2026/01/30/cuando-el-lago-deja-de-ser-espejo-la-contaminacion-que-ya-esta-escribiendo-su-propia-sentencia/"
+  },
+  {
+   "titulo": "COOPERATIVA",
+   "resumen": "RODRIGO PAZ OFRECE A CHILE LOS \"PUERTOS\" DE BOLIVIA PARA QUE SE CONECTE CON BRASIL \"Le ofrezco a Chile, también, nuestros “puertos” ante un mar enorme del continente como es Brasil, porque a través de Bolivia esos puertos territoriales (terrestres) o a través de la hidrovía (Paraguay-Paraná) seremos parte de un complemento junto a Uruguay y Paraguay y Argentina\". De esta forma, Paz mantiene su política de acercamiento con su país vecino, antecedida la anterior semana por la visita a Chile del canciller boliviano, Fernando Aramayo, con la intención de restablecer las relaciones diplomáticas y comerciales además de la posible asistencia del mandatario boliviano a la investidura de Kast.",
+   "url": "https://www.cooperativa.cl/noticias/pais/relaciones-exteriores/bolivia/rodrigo-paz-ofrece-a-chile-los-puertos-de-bolivia-para-que-se-conecte/2026-01-28/150117.html"
+  },
+  {
+   "titulo": "Patricia Gorziglia Schmidt",
+   "resumen": "30 de enero de 2026",
+   "url": null
+  }
+ ]
 }
