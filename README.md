@@ -1,4 +1,4 @@
-# Red de boyas SNAM — Dashboard de estado operativo
+# DASHBOARD OPERATIVO SHOA
 
 Autor: CF Felipe Rifo Espósito · feliperifo@gmail.com
 
@@ -6,7 +6,7 @@ Autor: CF Felipe Rifo Espósito · feliperifo@gmail.com
 
 | Archivo | Función |
 |---|---|
-| `index.html` | El dashboard. Abre en el **resumen** (1. Estaciones · operatividad, 2. Personal en comisión, 3. Noticias) y el botón **Ver mapa** (o la dirección `…/#mapa`) muestra estaciones, unidades y personal desplegado. Autocontenido, con una instantánea del último estado conocido. |
+| `index.html` | El dashboard. Abre en el **resumen** (1. Monitoreo estaciones, 2. Personal y unidades, 3. Noticias SHOA) y el botón **Ver mapa** (o la dirección `…/#mapa`) muestra estaciones, unidades y personal desplegado. Autocontenido, con una instantánea del último estado conocido. |
 | `colector.py` | Consulta las fuentes y escribe `estado.json`. Solo biblioteca estándar de Python. |
 | `.github/workflows/estado.yml` | Ejecuta el colector cada 10 minutos y publica el sitio en GitHub Pages. |
 | `estado.json` | Estado inicial (2 de octubre de 2026). El flujo lo reemplaza en cada ejecución. |
@@ -59,9 +59,9 @@ Lo que ven todos los que abren el link está en la carpeta `publicado/`:
 
 | Archivo | Área | Contenido |
 |---|---|---|
-| `publicado/estaciones.json` | 1. Estaciones | Material del SITREP (nivel del mar, DART, meteoceánicas, glider) y mensajes navales. |
-| `publicado/personal.json` | 2. Personal | **Solo cifras, sin nombres**: total, oficiales por grado (CN, CF, CC, T1, T2, ST), gente de mar por grado (SO, S1, S2, C1, C2, M1), EC y PAC; despliegue por unidad, comisiones, embarcaciones y novedades. |
-| `publicado/noticias.json` | 3. Noticias | Noticias propias, además de las de la portada. |
+| `publicado/estaciones.json` | 1. Monitoreo estaciones | Material del SITREP (nivel del mar, DART, meteoceánicas, glider) y mensajes navales. |
+| `publicado/personal.json` | 2. Personal y unidades | **Solo cifras, sin nombres**: total, oficiales por grado (CN, CF, CC, T1, T2, ST), gente de mar por grado (SO, S1, S2, C1, C2, M1), EC y PAC; despliegue por unidad, comisiones, embarcaciones y novedades. |
+| `publicado/noticias.json` | 3. Noticias SHOA | Noticias propias, además de las de la portada. |
 
 **Cómo publicar** (solo quien tiene permiso de escritura en el repositorio):
 

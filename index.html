@@ -2,7 +2,7 @@
 <html lang="es">
 <head>
 <meta charset="UTF-8">
-<title>Red de Boyas SNAM — Estado operativo</title>
+<title>DASHBOARD OPERATIVO SHOA</title>
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <!-- Leaflet 1.9.4 (BSD-2) incorporado. Estado en vivo: estado.json (colector.py). -->
 <style>/* required styles */
@@ -1100,7 +1100,7 @@ svg.leaflet-image-layer.leaflet-interactive path {
 <div id="resumen">
   <header class="top">
     <div class="logo"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#fff" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 2v5"/><path d="M8.5 7h7l1.5 7h-10z"/><path d="M2 18c2.5 0 2.5-2 5-2s2.5 2 5 2 2.5-2 5-2 2.5 2 5 2"/><path d="M2 22c2.5 0 2.5-2 5-2s2.5 2 5 2 2.5-2 5-2 2.5 2 5 2"/></svg></div>
-    <div class="tt"><h1>Red de boyas SNAM · Estado operativo</h1><div class="st"><span id="hoy"></span></div></div>
+    <div class="tt"><h1>DASHBOARD OPERATIVO</h1><div class="st"><span id="hoy"></span></div></div>
     <div class="tb">
       <a class="tbtn map" href="#mapa" id="lnkMapa">Ver mapa ↗</a>
     </div>
@@ -1108,7 +1108,7 @@ svg.leaflet-image-layer.leaflet-interactive path {
 
   <main class="areas">
     <section class="area">
-      <div class="aHead"><h2><span class="n">1</span>Estaciones · operatividad <span class="cnt" id="cnt_red"></span></h2><div class="aTools"><span class="sello vacio" id="sello_est">Sin publicar</span><button type="button" class="aBtn pri ed" data-area="est" data-acc="publicar">Publicar</button><button type="button" class="aBtn ed" data-area="est" data-acc="cargar">Vista local</button><button type="button" class="aBtn" data-area="est" data-acc="ver">Ver texto</button><button type="button" class="aBtn ed" data-area="est" data-acc="quitar">Quitar vista local</button></div></div>
+      <div class="aHead"><h2><span class="n">1</span>Monitoreo estaciones <span class="cnt" id="cnt_red"></span></h2><div class="aTools"><span class="sello vacio" id="sello_est">Sin publicar</span><button type="button" class="aBtn pri ed" data-area="est" data-acc="publicar">Publicar</button><button type="button" class="aBtn ed" data-area="est" data-acc="cargar">Vista local</button><button type="button" class="aBtn" data-area="est" data-acc="ver">Ver texto</button><button type="button" class="aBtn ed" data-area="est" data-acc="quitar">Quitar vista local</button></div></div>
       <div class="aBody">
       <div id="srMat"></div>
       <h3 class="subH">Estado medido por el monitor</h3>
@@ -1125,7 +1125,7 @@ svg.leaflet-image-layer.leaflet-interactive path {
     </section>
 
     <section class="area">
-      <div class="aHead"><h2><span class="n">2</span>Personal en comisión</h2><div class="aTools"><span class="sello vacio" id="sello_per">Sin publicar</span><button type="button" class="aBtn pri ed" data-area="per" data-acc="publicar">Publicar</button><button type="button" class="aBtn ed" data-area="per" data-acc="cargar">Vista local</button><button type="button" class="aBtn" data-area="per" data-acc="ver">Ver texto</button><button type="button" class="aBtn ed" data-area="per" data-acc="quitar">Quitar vista local</button></div></div>
+      <div class="aHead"><h2><span class="n">2</span>Personal y unidades</h2><div class="aTools"><span class="sello vacio" id="sello_per">Sin publicar</span><button type="button" class="aBtn pri ed" data-area="per" data-acc="publicar">Publicar</button><button type="button" class="aBtn ed" data-area="per" data-acc="cargar">Vista local</button><button type="button" class="aBtn" data-area="per" data-acc="ver">Ver texto</button><button type="button" class="aBtn ed" data-area="per" data-acc="quitar">Quitar vista local</button></div></div>
       <div class="aBody">
       <div id="srPers"></div>
       </div>
@@ -2061,8 +2061,8 @@ function resumenPer() {
 }
 
 const AREA_INFO = {
-  est: { titulo: 'Cargar estaciones (área 1)', ph: 'Pegue el bloque de material del SITREP: ESTACIONES DE NIVEL DEL MAR, BOYAS DART, BOYAS METEOCEAN, GLIDER y, si corresponde, mensajes navales.\nTambién puede pegar el SITREP completo: se toma solo lo que corresponde a estaciones.' },
-  per: { titulo: 'Cargar personal (área 2)', ph: 'Pegue el personal en comisión (Oficiales, GM, Empleados Civiles, PAC), las comisiones y las embarcaciones.\nTambién puede pegar el SITREP completo: se toma solo lo que corresponde a personal.' },
+  est: { titulo: 'Cargar monitoreo de estaciones (área 1)', ph: 'Pegue el bloque de material del SITREP: ESTACIONES DE NIVEL DEL MAR, BOYAS DART, BOYAS METEOCEAN, GLIDER y, si corresponde, mensajes navales.\nTambién puede pegar el SITREP completo: se toma solo lo que corresponde a estaciones.' },
+  per: { titulo: 'Cargar personal y unidades (área 2)', ph: 'Pegue el personal en comisión (Oficiales, GM, Empleados Civiles, PAC), las comisiones y las embarcaciones.\nTambién puede pegar el SITREP completo: se toma solo lo que corresponde a personal.' },
   not: { titulo: 'Cargar noticias (área 3)', ph: 'Pegue una o varias noticias separadas por una línea en blanco.\nPrimera línea: título. Siguientes: texto. Si incluye un enlace (https://…), se usa como vínculo.' },
 };
 
