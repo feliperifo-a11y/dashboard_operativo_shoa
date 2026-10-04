@@ -1079,6 +1079,9 @@ svg.leaflet-image-layer.leaflet-interactive path {
   body:not(.editor) .ed { display: none; }
   body.editor .edOff, body:not(.editor) .edOn { display: none; }
   .sello.local { color: #8a5300; }
+  .aBtn.carga { font-size: 12px; padding: 5px 11px; }
+  .srF2 { display: flex; align-items: center; gap: 10px; flex-wrap: wrap; }
+  .srHint { font-size: 11.5px; color: var(--muted); }
   #pubBox { display: none; border-top: 1px solid var(--line); padding-top: 8px; }
   #pubBox.on { display: block; }
   .pubH { font-size: 12.5px; font-weight: 700; color: var(--navy); } .pubH span { font-weight: 500; color: var(--muted); }
@@ -1108,7 +1111,7 @@ svg.leaflet-image-layer.leaflet-interactive path {
 
   <main class="areas">
     <section class="area">
-      <div class="aHead"><h2><span class="n">1</span>Monitoreo estaciones <span class="cnt" id="cnt_red"></span></h2><div class="aTools"><span class="sello vacio" id="sello_est">Sin publicar</span><button type="button" class="aBtn pri ed" data-area="est" data-acc="publicar">Publicar</button><button type="button" class="aBtn ed" data-area="est" data-acc="cargar">Vista local</button><button type="button" class="aBtn" data-area="est" data-acc="ver">Ver texto</button><button type="button" class="aBtn ed" data-area="est" data-acc="quitar">Quitar vista local</button></div></div>
+      <div class="aHead"><h2><span class="n">1</span>Monitoreo estaciones <span class="cnt" id="cnt_red"></span></h2><div class="aTools"><span class="sello vacio" id="sello_est">Sin publicar</span><button type="button" class="aBtn pri carga" data-area="est" data-acc="cargar">⤒ Cargar información</button><button type="button" class="aBtn" data-area="est" data-acc="ver">Ver texto</button><button type="button" class="aBtn quitar" id="quitar_est" data-area="est" data-acc="quitar" hidden>Quitar</button></div></div>
       <div class="aBody">
       <div id="srMat"></div>
       <h3 class="subH">Estado medido por el monitor</h3>
@@ -1125,14 +1128,14 @@ svg.leaflet-image-layer.leaflet-interactive path {
     </section>
 
     <section class="area">
-      <div class="aHead"><h2><span class="n">2</span>Personal y unidades</h2><div class="aTools"><span class="sello vacio" id="sello_per">Sin publicar</span><button type="button" class="aBtn pri ed" data-area="per" data-acc="publicar">Publicar</button><button type="button" class="aBtn ed" data-area="per" data-acc="cargar">Vista local</button><button type="button" class="aBtn" data-area="per" data-acc="ver">Ver texto</button><button type="button" class="aBtn ed" data-area="per" data-acc="quitar">Quitar vista local</button></div></div>
+      <div class="aHead"><h2><span class="n">2</span>Personal y unidades</h2><div class="aTools"><span class="sello vacio" id="sello_per">Sin publicar</span><button type="button" class="aBtn pri carga" data-area="per" data-acc="cargar">⤒ Cargar información</button><button type="button" class="aBtn" data-area="per" data-acc="ver">Ver texto</button><button type="button" class="aBtn quitar" id="quitar_per" data-area="per" data-acc="quitar" hidden>Quitar</button></div></div>
       <div class="aBody">
       <div id="srPers"></div>
       </div>
     </section>
 
     <section class="area">
-      <div class="aHead"><h2><span class="n">3</span>Noticias SHOA <span class="cnt" id="cnt_news"></span></h2><div class="aTools"><span class="sello vacio" id="sello_not">Sin publicar</span><button type="button" class="aBtn pri ed" data-area="not" data-acc="publicar">Publicar</button><button type="button" class="aBtn ed" data-area="not" data-acc="cargar">Vista local</button><button type="button" class="aBtn" data-area="not" data-acc="ver">Ver texto</button><button type="button" class="aBtn ed" data-area="not" data-acc="quitar">Quitar vista local</button></div></div>
+      <div class="aHead"><h2><span class="n">3</span>Noticias SHOA <span class="cnt" id="cnt_news"></span></h2><div class="aTools"><span class="sello vacio" id="sello_not">Sin publicar</span><button type="button" class="aBtn pri carga" data-area="not" data-acc="cargar">⤒ Cargar información</button><button type="button" class="aBtn" data-area="not" data-acc="ver">Ver texto</button><button type="button" class="aBtn quitar" id="quitar_not" data-area="not" data-acc="quitar" hidden>Quitar</button></div></div>
       <div class="aBody">
       <div id="news"><div class="emptyNote">Cargando…</div></div>
       </div>
@@ -1229,9 +1232,10 @@ svg.leaflet-image-layer.leaflet-interactive path {
 
 <div id="srModal" role="dialog" aria-modal="true" aria-labelledby="srTitle"><div class="srBox">
   <div class="srMh"><b id="srTitle">Cargar SITREP</b></div>
-  <label class="srF">Fecha y hora del informe<input type="datetime-local" id="srFecha"></label>
+  <div class="srF2"><label class="srF">Fecha y hora del informe<input type="datetime-local" id="srFecha"></label><button type="button" class="aBtn" id="srFileBtn">Abrir archivo .txt…</button><input type="file" id="srFile" accept=".txt,.text,.md,text/plain" hidden></div>
+  <div class="srHint" id="srHint"></div>
   <textarea id="srTxt" spellcheck="false" placeholder="Pegue aquí el SITREP tal como lo recibió (WhatsApp, correo o mensaje naval)."></textarea>
-  <div class="srMf"><button type="button" class="act" id="srOk">Ver en este equipo</button><button type="button" class="act" id="srPrep">Preparar publicación</button><button type="button" class="act ghost" id="srCancel">Cerrar</button></div>
+  <div class="srMf"><button type="button" class="act" id="srOk">Cargar en el dashboard</button><button type="button" class="act ed" id="srPrep">Preparar publicación para todos</button><button type="button" class="act ghost" id="srCancel">Cerrar</button></div>
   <div id="pubBox">
     <div class="pubH">Esto es lo que verán todos <span>(archivo <code id="pubFile"></code>)</span></div>
     <pre id="pubPrev"></pre>
@@ -2272,7 +2276,8 @@ function sello(k) {
   const el = document.getElementById('sello_' + k); if (!el) return;
   if (AREA[k]) { el.textContent = `Vista local ${fmtLocal(new Date(AREA[k].recibido))} · solo este equipo`; el.className = 'sello local'; }
   else if (PUB[k]) { el.textContent = `Publicado ${fmtLocal(new Date(PUB[k].publicado))}`; el.className = 'sello'; }
-  else { el.textContent = 'Sin publicar'; el.className = 'sello vacio'; }
+  else { el.textContent = 'Sin información cargada'; el.className = 'sello vacio'; }
+  const q = document.getElementById('quitar_' + k); if (q) q.hidden = !AREA[k];
 }
 
 // ---- Área 1: estaciones ----
@@ -2399,10 +2404,15 @@ function areaAbrir(k, modo) {
   const r = AREA[k] ? new Date(AREA[k].recibido) : new Date();
   document.getElementById('srFecha').value = new Date(r.getTime() - r.getTimezoneOffset() * 60000).toISOString().slice(0, 16);
   document.getElementById('srTxt').readOnly = modo === 'ver';
+  if (modo === 'publicar') modo = modoModal = 'local';
   document.getElementById('srOk').style.display = modo === 'local' ? '' : 'none';
-  document.getElementById('srPrep').style.display = modo === 'publicar' ? '' : 'none';
+  document.getElementById('srPrep').style.display = (modo === 'local' && EDITOR) ? '' : 'none';
+  document.getElementById('srFileBtn').style.display = modo === 'local' ? '' : 'none';
+  document.getElementById('srHint').textContent = modo === 'local'
+    ? 'Pegue el texto o abra un archivo .txt. «Cargar en el dashboard» lo muestra en este equipo.' + (EDITOR ? ' «Preparar publicación para todos» lo deja listo para publicarlo en el sitio.' : '')
+    : '';
   document.getElementById('pubBox').classList.remove('on');
-  const t = { local: AREA_INFO[k].titulo.replace('Cargar', 'Vista local:'), publicar: AREA_INFO[k].titulo.replace('Cargar', 'Publicar para todos:'), ver: 'Texto de esta área' }[modo];
+  const t = { local: AREA_INFO[k].titulo, publicar: AREA_INFO[k].titulo.replace('Cargar', 'Publicar para todos:'), ver: 'Texto de esta área' }[modo];
   document.getElementById('srTitle').textContent = t;
   ov.classList.add('open'); if (modo !== 'ver') document.getElementById('srTxt').focus();
 }
@@ -2410,6 +2420,15 @@ const cerrarModal = () => document.getElementById('srModal').classList.remove('o
 document.getElementById('srCancel').onclick = cerrarModal;
 document.getElementById('srModal').addEventListener('click', e => { if (e.target.id === 'srModal') cerrarModal(); });
 const fechaModal = () => { const f = document.getElementById('srFecha').value; return f ? new Date(f).toISOString() : new Date().toISOString(); };
+document.getElementById('srFileBtn').onclick = () => document.getElementById('srFile').click();
+document.getElementById('srFile').onchange = async (e) => {
+  const f = e.target.files[0]; if (!f) return;
+  const txt = await f.text();
+  document.getElementById('srTxt').value = txt;
+  const d = new Date(f.lastModified || Date.now());
+  document.getElementById('srFecha').value = new Date(d.getTime() - d.getTimezoneOffset() * 60000).toISOString().slice(0, 16);
+  e.target.value = '';
+};
 document.getElementById('srOk').onclick = () => {
   const texto = document.getElementById('srTxt').value.trim(); if (!texto || !areaModal) return;
   areaAplicar(areaModal, { texto, recibido: fechaModal() }, true); cerrarModal();
@@ -2435,7 +2454,7 @@ document.querySelectorAll('[data-area]').forEach(btn => btn.addEventListener('cl
   if (acc === 'publicar') areaAbrir(k, 'publicar');
   else if (acc === 'cargar') areaAbrir(k, 'local');
   else if (acc === 'ver') areaAbrir(k, 'ver');
-  else if (acc === 'quitar' && AREA[k] && confirm('¿Quitar la vista local de esta área? Se volverá a mostrar lo publicado.')) areaAplicar(k, null, true);
+  else if (acc === 'quitar' && AREA[k] && confirm('¿Quitar la información cargada en esta área en este equipo?' + (PUB[k] ? ' Se volverá a mostrar lo publicado.' : ''))) areaAplicar(k, null, true);
 }));
 
 (function areasInit() {

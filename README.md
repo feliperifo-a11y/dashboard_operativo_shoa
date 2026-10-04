@@ -66,11 +66,11 @@ Lo que ven todos los que abren el link está en la carpeta `publicado/`:
 **Cómo publicar** (solo quien tiene permiso de escritura en el repositorio):
 
 1. Abrir el dashboard en **modo editor**: agregar `?editor=1` a la dirección, o usar el enlace «Modo editor» al pie. Queda recordado en ese equipo.
-2. En el área correspondiente, pulsar **Publicar**, pegar el texto (sirve el SITREP completo) y pulsar **Preparar publicación**. Se muestra exactamente lo que verán todos. En el área 2, los nombres se eliminan antes de este paso.
+2. En el área correspondiente, pulsar **Cargar información**, pegar el texto o abrir un archivo .txt (sirve el SITREP completo) y pulsar **Preparar publicación para todos**. Se muestra exactamente lo que verán todos. En el área 2, los nombres se eliminan antes de este paso.
 3. Pulsar **Copiar y abrir el editor de GitHub**. En el editor: seleccionar todo, pegar y **Commit changes**.
 4. En uno o dos minutos el sitio se actualiza para todos.
 
-**Vista local**: en modo editor también se puede cargar un texto solo para revisarlo en ese equipo, sin publicarlo. Mientras exista una vista local, esa área muestra la vista local en ese equipo; «Quitar vista local» vuelve a lo publicado.
+**Cargar en el dashboard** (disponible para cualquiera, sin modo editor): muestra el texto solo en ese equipo, sin publicarlo. Mientras exista una vista local, esa área muestra la vista local en ese equipo; «Quitar vista local» vuelve a lo publicado.
 
 El sitio es público. Por eso el área 2 nunca publica nombres, y el registro de unidades con dotación nominal solo existe en la vista local de cada equipo.
 
