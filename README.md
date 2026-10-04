@@ -85,7 +85,7 @@ En **Cargar información** del área 3, el botón **Abrir resumen de prensa (.do
 - **Ver resumen completo →** abre el resumen entero, con textos e imágenes, en la dirección `…/#prensa`. Se puede compartir, imprimir o guardar como PDF.
 - Cuando una noticia viene solo como imagen (sin título escrito), el título se toma del enlace.
 - La firma del documento no se incorpora.
-- Para publicarlo para todos: en modo editor, **Preparar publicación para todos** y luego el mismo paso de copiar y pegar en GitHub. El archivo publicado (`publicado/noticias.json`) pesa alrededor de 100 KB, porque las imágenes se comprimen.
+- Para publicarlo para todos: en modo editor, con la publicación conectada, **Publicar para todos**. El archivo publicado (`publicado/noticias.json`) pesa alrededor de 100 KB, porque las imágenes se comprimen.
 
 ## Probar sin red
 

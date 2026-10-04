@@ -1129,7 +1129,8 @@ svg.leaflet-image-layer.leaflet-interactive path {
   .ghBox { background: #fff; width: min(560px, 100%); border-radius: 10px; box-shadow: 0 10px 40px rgba(0,0,0,.35); padding: 16px 18px; font-size: 13px; line-height: 1.5; display: flex; flex-direction: column; gap: 8px; }
   .ghBox > b { font-size: 15px; color: var(--navy); } .ghBox p { margin: 0; } .ghBox ol { margin: 0; padding-left: 20px; color: var(--ink-2); }
   #ghTok { font: 13px ui-monospace, Consolas, monospace; padding: 7px 9px; border: 1px solid var(--line); border-radius: 6px; }
-  .ghMsg { color: var(--err); font-size: 12px; min-height: 16px; }
+  .ghMsg { font-size: 12px; min-height: 16px; line-height: 1.45; }
+  .ghMsg .err, .srHint .err { color: var(--err); font-weight: 600; }
   #ghStatus b.ok { color: var(--ok); } #ghStatus b.no { color: var(--err); }
   .srHint .err { color: var(--err); font-weight: 600; }
   #pubToast { position: fixed; left: 50%; bottom: 22px; transform: translateX(-50%); z-index: 3200; background: #14532d; color: #fff; font-size: 13px; font-weight: 600; padding: 10px 16px; border-radius: 10px; box-shadow: 0 6px 20px rgba(0,0,0,.25); display: none; max-width: 90vw; }
@@ -2781,21 +2782,26 @@ function b64utf8(s) {
   for (let i = 0; i < bytes.length; i += 0x8000) bin += String.fromCharCode.apply(null, bytes.subarray(i, i + 0x8000));
   return btoa(bin);
 }
+const AYUDA_PERMISO = 'En GitHub: Settings → Developer settings → Fine-grained tokens → abra el token → <b>Repository access: Only select repositories → dashboard_operativo_shoa</b> y <b>Permissions → Contents: Read and write</b> → Update. El token debe crearse con la cuenta <b>feliperifo-a11y</b>.';
+async function ghFetch(url, opt) {
+  try { return await fetch(url, opt); }
+  catch (e) { throw new Error('No se pudo conectar con GitHub (api.github.com). La red de este equipo puede estar bloqueándolo: pruebe desde otra red o desde el celular con datos móviles.'); }
+}
 function ghHeaders(tok) { return { Authorization: 'Bearer ' + tok, Accept: 'application/vnd.github+json', 'X-GitHub-Api-Version': '2022-11-28' }; }
 async function ghPut(path, obj, mensaje) {
   const tok = ghToken(); if (!tok) throw new Error('sin_token');
   const { owner, repo } = repoInfo();
   const url = `https://api.github.com/repos/${owner}/${repo}/contents/${path}`;
   let sha;
-  const g = await fetch(url + '?ref=main&t=' + Date.now(), { headers: ghHeaders(tok), cache: 'no-store' });
+  const g = await ghFetch(url + '?ref=main&t=' + Date.now(), { headers: ghHeaders(tok), cache: 'no-store' });
   if (g.ok) sha = (await g.json()).sha;
   else if (g.status === 401) throw new Error('El token no es válido o expiró. Conéctese de nuevo.');
   else if (g.status !== 404) throw new Error(`GitHub respondió ${g.status} al leer el archivo.`);
-  const p = await fetch(url, { method: 'PUT', headers: { ...ghHeaders(tok), 'Content-Type': 'application/json' },
+  const p = await ghFetch(url, { method: 'PUT', headers: { ...ghHeaders(tok), 'Content-Type': 'application/json' },
     body: JSON.stringify({ message: mensaje, content: b64utf8(JSON.stringify(obj, null, 1)), sha, branch: 'main' }) });
   if (!p.ok) {
     let m = ''; try { m = (await p.json()).message || ''; } catch (e) {}
-    if (p.status === 403 || p.status === 404) throw new Error('El token no tiene permiso de escritura en este repositorio (Contents: Read and write).');
+    if (p.status === 403 || p.status === 404) { const e = new Error('GitHub rechazó la escritura: el token no tiene permiso para modificar este repositorio' + (m ? ' («' + m + '»)' : '') + '.'); e.ayuda = AYUDA_PERMISO; throw e; }
     if (p.status === 409) throw new Error('El archivo cambió mientras se publicaba. Intente de nuevo.');
     throw new Error(`GitHub respondió ${p.status}${m ? ': ' + m : ''}.`);
   }
@@ -2827,13 +2833,18 @@ document.getElementById('ghOk').onclick = async () => {
   msg.textContent = 'Verificando…';
   try {
     const { owner, repo } = repoInfo();
-    const r = await fetch(`https://api.github.com/repos/${owner}/${repo}`, { headers: ghHeaders(tok), cache: 'no-store' });
-    if (r.status === 401) throw new Error('El token no es válido.');
+    const r = await ghFetch(`https://api.github.com/repos/${owner}/${repo}`, { headers: ghHeaders(tok), cache: 'no-store' });
+    if (r.status === 401) throw new Error('El token no es válido (revise que lo copió completo).');
     if (!r.ok) throw new Error('El token no tiene acceso al repositorio ' + repo + '.');
+    const info = await r.json();
+    if (info.permissions && info.permissions.push === false) { const e = new Error('Ese token pertenece a una cuenta de GitHub sin permiso de escritura en ' + owner + '/' + repo + '.'); e.ayuda = AYUDA_PERMISO; throw e; }
+    msg.textContent = 'Probando escritura…';
     try { localStorage.setItem(LS_TOKEN, tok); } catch (e) {}
+    try { await ghPut('publicado/conexion.json', { conectado: new Date().toISOString() }, 'Verifica la publicación directa'); }
+    catch (e) { try { localStorage.removeItem(LS_TOKEN); } catch (x) {} throw e; }
     document.getElementById('ghModal').classList.remove('open');
     ghPintarEstado(); ajustarModalPublicacion();
-  } catch (e) { msg.textContent = e.message; }
+  } catch (e) { msg.innerHTML = `<span class="err">${escH(e.message)}</span>` + (e.ayuda ? `<br>${e.ayuda}` : ''); }
 };
 
 // ---- Ventana de carga: en modo editor, publicar directamente ----
@@ -2868,6 +2879,7 @@ document.getElementById('srOk').onclick = async () => {
   if (!ghToken()) { ghAbrir(); return; }
   const k = areaModal, btn = document.getElementById('srOk'), hint = document.getElementById('srHint');
   const obj = construirPublicacion(k, texto, fechaModal());
+  let error = '';
   btn.disabled = true; btn.textContent = 'Publicando…'; hint.textContent = '';
   try {
     await ghPut('publicado/' + PUB_ARCH[k], obj, `Publica ${NOMBRE_AREA[k]} (${new Date(obj.publicado).toLocaleString('es-CL', { timeZone: TZ })})`);
@@ -2878,8 +2890,8 @@ document.getElementById('srOk').onclick = async () => {
     cerrarModal();
     avisoPublicado(NOMBRE_AREA[k]);
   } catch (e) {
-    hint.innerHTML = `<span class="err">No se pudo publicar: ${escH(e.message)}</span>`;
-  } finally { btn.disabled = false; ajustarModalPublicacion(); }
+    error = `<span class="err">No se pudo publicar: ${escH(e.message)}</span>` + (e.ayuda ? `<br>${e.ayuda}` : '');
+  } finally { btn.disabled = false; ajustarModalPublicacion(); if (error) hint.innerHTML = error; }
 };
 function aplicarPublicadoLocal() {
   SITREP = (AREA.est || AREA.per || PUB.est || PUB.per) ? true : null;
