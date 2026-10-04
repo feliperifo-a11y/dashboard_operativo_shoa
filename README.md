@@ -61,18 +61,21 @@ Lo que ven todos los que abren el link está en la carpeta `publicado/`:
 |---|---|---|
 | `publicado/estaciones.json` | 1. Monitoreo estaciones | Material del SITREP (nivel del mar, DART, meteoceánicas, glider) y mensajes navales. |
 | `publicado/personal.json` | 2. Personal y unidades | **Solo cifras, sin nombres**: total, oficiales por grado (CN, CF, CC, T1, T2, ST), gente de mar por grado (SO, S1, S2, C1, C2, M1), EC y PAC; despliegue por unidad, comisiones, embarcaciones y novedades. |
-| `publicado/noticias.json` | 3. Noticias SHOA | Noticias propias, además de las de la portada. |
+| `publicado/noticias.json` | 3. Noticias SHOA | Noticias propias o resumen de prensa, además de las de la portada. |
+| `publicado/unidades.json` | Mapa | Buques y lanchas registrados y posiciones corregidas, con cantidad a bordo sin nombres. |
 
-**Cómo publicar** (solo quien tiene permiso de escritura en el repositorio):
+**Todos ven lo mismo.** Quien abre el link sin modo editor ve solo lo publicado: no tiene botones de carga y cualquier vista local antigua de su equipo se descarta.
 
-1. Abrir el dashboard en **modo editor**: agregar `?editor=1` a la dirección, o usar el enlace «Modo editor» al pie. Queda recordado en ese equipo.
-2. En el área correspondiente, pulsar **Cargar información**, pegar el texto o abrir un archivo .txt (sirve el SITREP completo) y pulsar **Preparar publicación para todos**. Se muestra exactamente lo que verán todos. En el área 2, los nombres se eliminan antes de este paso.
-3. Pulsar **Copiar y abrir el editor de GitHub**. En el editor: seleccionar todo, pegar y **Commit changes**.
-4. En uno o dos minutos el sitio se actualiza para todos.
+**Cómo publicar (publicación directa):**
 
-**Cargar en el dashboard** (disponible para cualquiera, sin modo editor): muestra el texto solo en ese equipo, sin publicarlo. Mientras exista una vista local, esa área muestra la vista local en ese equipo; «Quitar vista local» vuelve a lo publicado.
+1. Abrir el dashboard en **modo editor**: agregar `?editor=1` a la dirección. Queda recordado en ese equipo.
+2. La primera vez, conectar la publicación: al pie dice «Publicación directa: no conectada · conectar». Se pide un **token de GitHub** de grano fino con acceso solo a este repositorio y permiso *Contents: Read and write*. Se guarda únicamente en ese equipo.
+3. En cada área, **Cargar información** → pegar el texto o abrir el Word → **Publicar para todos**. El cambio queda en el repositorio y el sitio se actualiza para todos en uno o dos minutos.
+4. Lo que se registra o corrige en el mapa (buques, lanchas, posiciones) también se publica solo, sin nombres: solo la cantidad a bordo por categoría.
 
-El sitio es público. Por eso el área 2 nunca publica nombres, y el registro de unidades con dotación nominal solo existe en la vista local de cada equipo.
+**Solo en este equipo** sirve para revisar un texto sin publicarlo. Sin la publicación conectada, sigue disponible el método manual (*Preparar publicación para todos* → copiar y pegar en GitHub).
+
+El sitio es público. Por eso el área 2 y el mapa nunca publican nombres. El dashboard descargado como archivo también muestra lo publicado, si hay conexión a internet.
 
 ## Resumen de prensa diario (área 3)
 

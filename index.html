@@ -1122,6 +1122,18 @@ svg.leaflet-image-layer.leaflet-interactive path {
   .prRow a:hover { text-decoration: underline; }
   .prAll { display: inline-block; margin-top: 6px; font-size: 12.5px; font-weight: 700; color: var(--accent); text-decoration: none; }
   @media print { body[data-vista="prensa"] .prTop { display: none; } #prensaDoc { border: 0; box-shadow: none; padding: 0; } .prIdx { display: none; } }
+
+  /* ---------- publicación directa ---------- */
+  #ghModal { position: fixed; inset: 0; z-index: 3100; background: rgba(20,30,45,.55); display: none; align-items: center; justify-content: center; padding: 20px; }
+  #ghModal.open { display: flex; }
+  .ghBox { background: #fff; width: min(560px, 100%); border-radius: 10px; box-shadow: 0 10px 40px rgba(0,0,0,.35); padding: 16px 18px; font-size: 13px; line-height: 1.5; display: flex; flex-direction: column; gap: 8px; }
+  .ghBox > b { font-size: 15px; color: var(--navy); } .ghBox p { margin: 0; } .ghBox ol { margin: 0; padding-left: 20px; color: var(--ink-2); }
+  #ghTok { font: 13px ui-monospace, Consolas, monospace; padding: 7px 9px; border: 1px solid var(--line); border-radius: 6px; }
+  .ghMsg { color: var(--err); font-size: 12px; min-height: 16px; }
+  #ghStatus b.ok { color: var(--ok); } #ghStatus b.no { color: var(--err); }
+  .srHint .err { color: var(--err); font-weight: 600; }
+  #pubToast { position: fixed; left: 50%; bottom: 22px; transform: translateX(-50%); z-index: 3200; background: #14532d; color: #fff; font-size: 13px; font-weight: 600; padding: 10px 16px; border-radius: 10px; box-shadow: 0 6px 20px rgba(0,0,0,.25); display: none; max-width: 90vw; }
+  #pubToast.on { display: block; }
   @media (max-width: 760px) { #staleBanner { top: 64px; } }
 </style>
 </head>
@@ -1174,7 +1186,7 @@ svg.leaflet-image-layer.leaflet-interactive path {
     <span><b>Ver mapa</b><small>Estaciones operativas y no operativas · personal desplegado en comisión · unidades y embarcaciones</small></span>
     <span class="ar">→</span>
   </a>
-  <div class="footSig">Lo publicado lo ven todos; la «vista local» y el registro de unidades quedan solo en este equipo. <a href="?editor=1" class="edOff">Modo editor</a><a href="?editor=0" class="edOn">Salir del modo editor</a> · Dashboard: CF Felipe Rifo Espósito · <a href="mailto:feliperifo@gmail.com?subject=Dashboard%20Red%20de%20Boyas%3A%20comentarios">feliperifo@gmail.com</a></div>
+  <div class="footSig"><span class="ed" id="ghStatus"></span><span class="ed"> · </span> <a href="?editor=1" class="edOff">Modo editor</a><a href="?editor=0" class="edOn">Salir del modo editor</a> · Dashboard: CF Felipe Rifo Espósito · <a href="mailto:feliperifo@gmail.com?subject=Dashboard%20Red%20de%20Boyas%3A%20comentarios">feliperifo@gmail.com</a></div>
 </div>
 
 
@@ -1273,7 +1285,7 @@ svg.leaflet-image-layer.leaflet-interactive path {
   <div class="srF2"><label class="srF">Fecha y hora del informe<input type="datetime-local" id="srFecha"></label><button type="button" class="aBtn" id="srFileBtn">Abrir archivo…</button><input type="file" id="srFile" accept=".docx,.txt,.text,.md,text/plain,application/vnd.openxmlformats-officedocument.wordprocessingml.document" hidden></div>
   <div class="srHint" id="srHint"></div>
   <textarea id="srTxt" spellcheck="false" placeholder="Pegue aquí el SITREP tal como lo recibió (WhatsApp, correo o mensaje naval)."></textarea>
-  <div class="srMf"><button type="button" class="act" id="srOk">Cargar en el dashboard</button><button type="button" class="act ed" id="srPrep">Preparar publicación para todos</button><button type="button" class="act ghost" id="srCancel">Cerrar</button></div>
+  <div class="srMf"><button type="button" class="act" id="srOk">Cargar en el dashboard</button><button type="button" class="act ghost" id="srLocal">Solo en este equipo</button><button type="button" class="act ed" id="srPrep">Preparar publicación para todos</button><button type="button" class="act ghost" id="srCancel">Cerrar</button></div>
   <div id="pubBox">
     <div class="pubH">Esto es lo que verán todos <span>(archivo <code id="pubFile"></code>)</span></div>
     <pre id="pubPrev"></pre>
@@ -1284,6 +1296,22 @@ svg.leaflet-image-layer.leaflet-interactive path {
     </ol>
   </div>
 </div></div>
+<div id="ghModal" role="dialog" aria-modal="true" aria-labelledby="ghTitle"><div class="ghBox">
+  <b id="ghTitle">Conectar la publicación directa</b>
+  <p>Para que «Cargar información» publique de inmediato para todos, el dashboard necesita un <b>token de GitHub</b> con permiso solo sobre este repositorio. Se guarda únicamente en este equipo.</p>
+  <ol>
+    <li>Pulse <b>Crear token en GitHub</b> (abre la página de GitHub con su sesión).</li>
+    <li><i>Token name</i>: «Dashboard operativo». <i>Expiration</i>: la que prefiera (por ejemplo, 90 días).</li>
+    <li><i>Repository access</i>: <b>Only select repositories</b> → <b>dashboard_operativo_shoa</b>.</li>
+    <li><i>Permissions → Repository permissions → Contents</i>: <b>Read and write</b>.</li>
+    <li><b>Generate token</b>, cópielo y péguelo aquí.</li>
+  </ol>
+  <div class="ghRow"><button type="button" class="aBtn" id="ghCrear">Crear token en GitHub ↗</button></div>
+  <input type="password" id="ghTok" placeholder="github_pat_…" autocomplete="off" spellcheck="false">
+  <div class="ghMsg" id="ghMsg"></div>
+  <div class="srMf"><button type="button" class="act" id="ghOk">Conectar</button><button type="button" class="act ghost" id="ghCancel">Cancelar</button></div>
+</div></div>
+<div id="pubToast" role="status" aria-live="polite"></div>
 
 <script>/* @preserve
  * Leaflet 1.9.4, a JS library for interactive maps. https://leafletjs.com
@@ -1525,7 +1553,7 @@ if (typeof module !== 'undefined') module.exports = { parseSitrep, srEstadoDecla
 // Datos incorporados: D (capas de referencia del KMZ SNAM-2026), LAND, LIMITES y SNAPSHOT
 // (último estado conocido). En operación se lee estado.json, que escribe el colector cada 10 min.
 
-const ESTADO_URL = 'estado.json';
+const ESTADO_URL = location.protocol === 'file:' ? 'https://feliperifo-a11y.github.io/dashboard_operativo_shoa/estado.json' : 'estado.json';
 const REFRESCO_MIN = 5;
 const LS_BUQUES = 'boyasSNAM.buques.v1';
 const TZ = 'America/Santiago';
@@ -1973,7 +2001,7 @@ document.getElementById('shipList').addEventListener('click', e => {
   const go = e.target.closest('.sGo'), ed = e.target.closest('.sEd'), del = e.target.closest('.sDel');
   if (go) { const s = BUQUES.find(x => x.id === go.dataset.id); if (s.lat == null) { abrirForm(s); return; } map.flyTo([s.lat, s.lon], 11, { duration: 1 }); map.once('moveend', () => shipMarkers.get(s.id)?.openPopup()); }
   if (ed) abrirForm(BUQUES.find(x => x.id === ed.dataset.id));
-  if (del) { const s = BUQUES.find(x => x.id === del.dataset.id); if (confirm(`¿Eliminar ${s.tipo} ${s.nombre} de este equipo?`)) { BUQUES = BUQUES.filter(x => x.id !== s.id); guardarBuques(); renderBuques(); } }
+  if (del) { const s = BUQUES.find(x => x.id === del.dataset.id); if (confirm(`¿Eliminar ${s.tipo} ${s.nombre}?`)) { BUQUES = BUQUES.filter(x => x.id !== s.id); guardarBuques(); renderBuques(); marcarCambioUnidades(); } }
 });
 
 // formulario
@@ -2033,7 +2061,7 @@ F('btnSave').onclick = () => {
     hora: F('fHora').value ? new Date(F('fHora').value).toISOString() : new Date().toISOString(), obs: F('fObs').value.trim(), dotacion: dot, editado: new Date().toISOString() };
   const i = BUQUES.findIndex(x => x.id === reg.id);
   if (i >= 0) BUQUES[i] = reg; else BUQUES.push(reg);
-  guardarBuques(); cerrarForm(); renderBuques();
+  guardarBuques(); cerrarForm(); renderBuques(); marcarCambioUnidades();
   map.flyTo([la, lo], Math.max(map.getZoom(), 9), { duration: 0.8 });
 };
 // exportar / importar
@@ -2049,7 +2077,7 @@ F('impFile').onchange = async (e) => {
     const d = JSON.parse(await f.text()); const arr = Array.isArray(d) ? d : d.buques;
     const ok = (arr || []).filter(s => s && s.nombre && isFinite(s.lat) && isFinite(s.lon));
     for (const s of ok) { s.id = s.id || ('b' + Math.random().toString(36).slice(2)); const i = BUQUES.findIndex(x => x.id === s.id); if (i >= 0) BUQUES[i] = s; else BUQUES.push(s); }
-    guardarBuques(); renderBuques(); alert(`Se cargaron ${ok.length} buque(s).`);
+    guardarBuques(); renderBuques(); marcarCambioUnidades(); alert(`Se cargaron ${ok.length} buque(s).`);
   } catch (err) { alert('El archivo no es un registro de buques válido (.json).'); }
   e.target.value = '';
 };
@@ -2265,7 +2293,9 @@ let SITREP = null;   // compatibilidad: verdadero si hay algún área cargada
 let SR_DECL = {};    // clave boya → estado declarado en el área 1
 
 // ---- Información publicada en el repositorio (la ven todos los que abren el link) ----
-const PUB = { est: null, per: null, not: null };
+const PUB = { est: null, per: null, not: null, uni: null };
+// Base de lo publicado: relativa en el sitio; absoluta si el dashboard se abre como archivo descargado
+const BASE_PUB = location.protocol === 'file:' ? 'https://feliperifo-a11y.github.io/dashboard_operativo_shoa/' : '';
 const PUB_ARCH = { est: 'estaciones.json', per: 'personal.json', not: 'noticias.json' };
 const EDITOR = (() => { try { const q = new URLSearchParams(location.search).get('editor'); if (q === '1') localStorage.setItem('boyasSNAM.editor', '1'); if (q === '0') localStorage.removeItem('boyasSNAM.editor'); return localStorage.getItem('boyasSNAM.editor') === '1'; } catch (e) { return false; } })();
 document.body.classList.toggle('editor', EDITOR);
@@ -2276,12 +2306,12 @@ function repoInfo() {
 const urlEditar = (k) => { const r = repoInfo(); return `https://github.com/${r.owner}/${r.repo}/edit/main/publicado/${PUB_ARCH[k]}`; };
 async function cargarPublicado() {
   let cambio = false;
-  for (const k of ['est', 'per', 'not']) {
+  for (const k of ['est', 'per', 'not', 'uni']) {
     try {
-      const r = await fetch(`publicado/${PUB_ARCH[k]}?t=${Date.now()}`, { cache: 'no-store' });
+      const r = await fetch(`${BASE_PUB}publicado/${k === 'uni' ? 'unidades.json' : PUB_ARCH[k]}?t=${Date.now()}`, { cache: 'no-store' });
       if (!r.ok) continue;
       const d = await r.json();
-      if (!d || !d.publicado) continue;
+      if (!d || (!d.publicado && k !== 'uni')) continue;
       if (JSON.stringify(d) !== JSON.stringify(PUB[k])) { PUB[k] = d; cambio = true; }
     } catch (e) { /* abierto como archivo local o sin publicación */ }
   }
@@ -2390,6 +2420,7 @@ function srUnidades() {
     if (prev && prev.manual) Object.assign(reg, { lat: prev.lat, lon: prev.lon, aprox: false, lugar: '', rumbo: prev.rumbo, manual: true, hora: prev.hora });
     BUQUES.push(reg);
   }
+  if (typeof aplicarUnidadesPublicadas === 'function') aplicarUnidadesPublicadas();
   guardarBuques(); renderBuques();
 }
 
@@ -2723,7 +2754,8 @@ document.querySelectorAll('[data-area]').forEach(btn => btn.addEventListener('cl
   // migración: un SITREP completo guardado por la versión anterior alimenta las áreas 1 y 2
   let viejo = null; try { viejo = JSON.parse(localStorage.getItem(LS_SITREP_OLD) || 'null'); } catch (e) {}
   const ini = (typeof SITREP_INICIAL !== 'undefined' && SITREP_INICIAL) ? SITREP_INICIAL : null;
-  for (const k of ['est', 'per', 'not']) {
+  if (!EDITOR) for (const k of ['est', 'per', 'not']) { try { localStorage.removeItem(LS_AREA[k]); } catch (e) {} }  // visitantes: ven solo lo publicado
+  for (const k of (EDITOR ? ['est', 'per', 'not'] : [])) {
     const s = areaLeer(k) || (k !== 'not' && viejo && viejo.texto ? viejo : null) || (ini && ini[k] ? ini[k] : null);
     if (s) areaAplicar(k, s, false); else { AREA[k] = null; }
   }
@@ -2733,6 +2765,176 @@ document.querySelectorAll('[data-area]').forEach(btn => btn.addEventListener('cl
   cargarPublicado();
   setInterval(cargarPublicado, 5 * 60e3);
 })();
+
+// =================== Publicación directa en GitHub ===================
+// En modo editor, con la publicación conectada (token de GitHub del editor, guardado solo en su equipo),
+// «Cargar información» publica de inmediato para todos: escribe publicado/*.json en el repositorio,
+// y el flujo automático vuelve a desplegar el sitio en uno o dos minutos.
+// Lo mismo ocurre con el registro de unidades y buques del mapa (sin nombres).
+
+const LS_TOKEN = 'boyasSNAM.ghToken';
+const ghToken = () => { try { return localStorage.getItem(LS_TOKEN) || ''; } catch (e) { return ''; } };
+const PUB_UNI = 'unidades.json';
+
+function b64utf8(s) {
+  const bytes = new TextEncoder().encode(s); let bin = '';
+  for (let i = 0; i < bytes.length; i += 0x8000) bin += String.fromCharCode.apply(null, bytes.subarray(i, i + 0x8000));
+  return btoa(bin);
+}
+function ghHeaders(tok) { return { Authorization: 'Bearer ' + tok, Accept: 'application/vnd.github+json', 'X-GitHub-Api-Version': '2022-11-28' }; }
+async function ghPut(path, obj, mensaje) {
+  const tok = ghToken(); if (!tok) throw new Error('sin_token');
+  const { owner, repo } = repoInfo();
+  const url = `https://api.github.com/repos/${owner}/${repo}/contents/${path}`;
+  let sha;
+  const g = await fetch(url + '?ref=main&t=' + Date.now(), { headers: ghHeaders(tok), cache: 'no-store' });
+  if (g.ok) sha = (await g.json()).sha;
+  else if (g.status === 401) throw new Error('El token no es válido o expiró. Conéctese de nuevo.');
+  else if (g.status !== 404) throw new Error(`GitHub respondió ${g.status} al leer el archivo.`);
+  const p = await fetch(url, { method: 'PUT', headers: { ...ghHeaders(tok), 'Content-Type': 'application/json' },
+    body: JSON.stringify({ message: mensaje, content: b64utf8(JSON.stringify(obj, null, 1)), sha, branch: 'main' }) });
+  if (!p.ok) {
+    let m = ''; try { m = (await p.json()).message || ''; } catch (e) {}
+    if (p.status === 403 || p.status === 404) throw new Error('El token no tiene permiso de escritura en este repositorio (Contents: Read and write).');
+    if (p.status === 409) throw new Error('El archivo cambió mientras se publicaba. Intente de nuevo.');
+    throw new Error(`GitHub respondió ${p.status}${m ? ': ' + m : ''}.`);
+  }
+  return p.json();
+}
+
+// ---- Estado de conexión (pie de página, solo editor) ----
+function ghPintarEstado() {
+  const el = document.getElementById('ghStatus'); if (!el) return;
+  el.innerHTML = ghToken()
+    ? `Publicación directa: <b class="ok">conectada</b> · <a href="#" id="ghOff">desconectar</a>`
+    : `Publicación directa: <b class="no">no conectada</b> · <a href="#" id="ghOn">conectar</a>`;
+  const on = document.getElementById('ghOn'), off = document.getElementById('ghOff');
+  if (on) on.onclick = (e) => { e.preventDefault(); ghAbrir(); };
+  if (off) off.onclick = (e) => { e.preventDefault(); if (confirm('¿Desconectar la publicación directa en este equipo? Se borra el token guardado aquí.')) { try { localStorage.removeItem(LS_TOKEN); } catch (x) {} ghPintarEstado(); ajustarModalPublicacion(); } };
+}
+function ghAbrir() {
+  document.getElementById('ghMsg').textContent = '';
+  document.getElementById('ghTok').value = '';
+  document.getElementById('ghModal').classList.add('open');
+  setTimeout(() => document.getElementById('ghTok').focus(), 50);
+}
+document.getElementById('ghCancel').onclick = () => document.getElementById('ghModal').classList.remove('open');
+document.getElementById('ghModal').addEventListener('click', e => { if (e.target.id === 'ghModal') e.target.classList.remove('open'); });
+document.getElementById('ghCrear').onclick = () => window.open('https://github.com/settings/personal-access-tokens/new?name=Dashboard+operativo&description=Publicacion+directa+del+dashboard&expires_in=90&contents=write', '_blank', 'noopener');
+document.getElementById('ghOk').onclick = async () => {
+  const tok = document.getElementById('ghTok').value.trim(), msg = document.getElementById('ghMsg');
+  if (!tok) { msg.textContent = 'Pegue el token.'; return; }
+  msg.textContent = 'Verificando…';
+  try {
+    const { owner, repo } = repoInfo();
+    const r = await fetch(`https://api.github.com/repos/${owner}/${repo}`, { headers: ghHeaders(tok), cache: 'no-store' });
+    if (r.status === 401) throw new Error('El token no es válido.');
+    if (!r.ok) throw new Error('El token no tiene acceso al repositorio ' + repo + '.');
+    try { localStorage.setItem(LS_TOKEN, tok); } catch (e) {}
+    document.getElementById('ghModal').classList.remove('open');
+    ghPintarEstado(); ajustarModalPublicacion();
+  } catch (e) { msg.textContent = e.message; }
+};
+
+// ---- Ventana de carga: en modo editor, publicar directamente ----
+function ajustarModalPublicacion() {
+  const ok = document.getElementById('srOk'), local = document.getElementById('srLocal'), prep = document.getElementById('srPrep');
+  if (!EDITOR) { ok.textContent = 'Cargar en el dashboard'; local.style.display = 'none'; return; }
+  const con = !!ghToken();
+  ok.textContent = con ? 'Publicar para todos' : 'Conectar publicación…';
+  local.style.display = modoModal === 'local' ? '' : 'none';
+  prep.style.display = (!con && modoModal === 'local') ? '' : 'none';
+  const h = document.getElementById('srHint');
+  if (modoModal === 'local') h.textContent = (areaModal === 'not' ? 'Abra el resumen de prensa en Word (.docx), o pegue noticias separadas por una línea en blanco. ' : 'Pegue el texto o abra un archivo Word o .txt. ') +
+    (con ? '«Publicar para todos» lo deja visible de inmediato para quien abra el link.' : 'Conecte la publicación para publicar con un clic.');
+}
+const _areaAbrirBase = areaAbrir;
+areaAbrir = function (k, modo) { _areaAbrirBase(k, modo); ajustarModalPublicacion(); };
+
+function textoYPrensaModal() {
+  const texto = document.getElementById('srTxt').value.trim();
+  const pr = (areaModal === 'not' && pendientePrensa && texto === prensaComoTexto(pendientePrensa)) ? pendientePrensa : null;
+  if (!pr) pendientePrensa = null;
+  return { texto, pr };
+}
+const NOMBRE_AREA = { est: 'Monitoreo estaciones', per: 'Personal y unidades', not: 'Noticias SHOA' };
+document.getElementById('srLocal').onclick = () => {
+  const { texto, pr } = textoYPrensaModal(); if (!texto || !areaModal) return;
+  areaAplicar(areaModal, { texto, recibido: fechaModal(), prensa: pr }, true); pendientePrensa = null; cerrarModal();
+};
+document.getElementById('srOk').onclick = async () => {
+  const { texto, pr } = textoYPrensaModal(); if (!texto || !areaModal) return;
+  if (!EDITOR) { areaAplicar(areaModal, { texto, recibido: fechaModal(), prensa: pr }, true); pendientePrensa = null; cerrarModal(); return; }
+  if (!ghToken()) { ghAbrir(); return; }
+  const k = areaModal, btn = document.getElementById('srOk'), hint = document.getElementById('srHint');
+  const obj = construirPublicacion(k, texto, fechaModal());
+  btn.disabled = true; btn.textContent = 'Publicando…'; hint.textContent = '';
+  try {
+    await ghPut('publicado/' + PUB_ARCH[k], obj, `Publica ${NOMBRE_AREA[k]} (${new Date(obj.publicado).toLocaleString('es-CL', { timeZone: TZ })})`);
+    PUB[k] = obj; if (PUB.est) delete PUB.est._datos;
+    if (AREA[k]) { AREA[k] = null; areaGuardar(k); }     // lo que ve el editor es lo publicado
+    pendientePrensa = null;
+    aplicarPublicadoLocal();
+    cerrarModal();
+    avisoPublicado(NOMBRE_AREA[k]);
+  } catch (e) {
+    hint.innerHTML = `<span class="err">No se pudo publicar: ${escH(e.message)}</span>`;
+  } finally { btn.disabled = false; ajustarModalPublicacion(); }
+};
+function aplicarPublicadoLocal() {
+  SITREP = (AREA.est || AREA.per || PUB.est || PUB.per) ? true : null;
+  SR_DECL = datosEst() ? srEstadoDeclarado(datosEst().material) : {};
+  srUnidades(); renderSitrep(); renderNoticias(); renderPrensaCompleta(); if (ESTADO) renderBoyasSeguro();
+}
+function avisoPublicado(que) {
+  const t = document.getElementById('pubToast');
+  t.textContent = `✓ ${que} publicado. Todos lo verán al abrir o recargar el link en uno o dos minutos.`;
+  t.classList.add('on'); clearTimeout(t._t); t._t = setTimeout(() => t.classList.remove('on'), 7000);
+}
+
+// ---- Unidades y buques del mapa: también se publican (sin nombres) ----
+let uniCambioUsuario = false, uniTimer = null, uniUltimo = null;
+function payloadUnidades() {
+  const resumenDot = (dot) => { const c = { of: 0, gm: 0, ec: 0, pac: 0 }; for (const p of dot || []) c[catDe(p.grado, p.funcion || '')]++; return { n: (dot || []).length, txt: resumenUnidad(c) }; };
+  const manuales = BUQUES.filter(b => b.fuente !== 'sitrep' && b.fuente !== 'pub').map(b => {
+    const d = b.a_bordo != null ? { n: b.a_bordo, txt: b.a_bordo_txt || '' } : resumenDot(b.dotacion);
+    return { id: b.id, nombre: b.nombre, tipo: b.tipo, actividad: b.actividad, lat: b.lat, lon: b.lon, rumbo: b.rumbo, hora: b.hora, obs: b.obs || '', a_bordo: d.n, a_bordo_txt: d.txt };
+  });
+  const correcciones = BUQUES.filter(b => b.fuente === 'sitrep' && b.manual && b.lat != null).map(b => ({ nombre: b.nombre, lat: b.lat, lon: b.lon, rumbo: b.rumbo, hora: b.hora }));
+  return { tipo: 'unidades', version: 1, buques: manuales, correcciones };
+}
+function marcarCambioUnidades() {
+  if (!EDITOR || !ghToken()) return;
+  uniCambioUsuario = true;
+  clearTimeout(uniTimer);
+  uniTimer = setTimeout(async () => {
+    if (!uniCambioUsuario) return; uniCambioUsuario = false;
+    const p = payloadUnidades(); const s = JSON.stringify(p);
+    if (s === uniUltimo) return;
+    p.publicado = new Date().toISOString();
+    try { await ghPut('publicado/' + PUB_UNI, p, 'Actualiza unidades y buques del mapa'); uniUltimo = s; PUB.uni = p; avisoPublicado('Registro de unidades del mapa'); }
+    catch (e) { alert('No se pudo publicar el registro de unidades: ' + e.message); }
+  }, 1500);
+}
+// Visitantes: muestran las unidades publicadas; el editor, en un equipo nuevo, las incorpora a su registro
+function aplicarUnidadesPublicadas() {
+  const u = PUB.uni; if (!u) return;
+  for (const c of u.correcciones || []) {
+    const b = BUQUES.find(x => x.fuente === 'sitrep' && srSinTilde(x.nombre) === srSinTilde(c.nombre));
+    if (b && !(EDITOR && b.manual)) Object.assign(b, { lat: c.lat, lon: c.lon, rumbo: c.rumbo, hora: c.hora, aprox: false, lugar: '', manual: true });
+  }
+  if (EDITOR) {
+    if (!BUQUES.some(b => b.fuente === 'manual')) for (const s of u.buques || []) BUQUES.push({ ...s, fuente: 'manual', manual: true, dotacion: [] });
+    uniUltimo = JSON.stringify(payloadUnidades());
+  } else {
+    BUQUES = BUQUES.filter(b => b.fuente !== 'pub' && b.fuente !== 'manual');
+    for (const s of u.buques || []) BUQUES.push({ ...s, fuente: 'pub', dotacion: [] });
+  }
+}
+
+// ---- Visitantes: sin botones de carga (todos ven lo mismo) ----
+document.querySelectorAll('.aBtn.carga').forEach(b => b.classList.add('ed'));
+ghPintarEstado();
 
 </script>
 </body>
