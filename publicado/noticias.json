@@ -1,10 +1,10 @@
 {
  "tipo": "noticias",
  "version": 1,
- "publicado": "2026-10-04T15:09:00.000Z",
+ "publicado": "2026-10-04T15:10:00.000Z",
  "items": [
   {
-   "titulo": "RESUMEN DE PRENSA 01 DE OCTUBRE DE 2026",
+   "titulo": "RESUMEN DE PRENSA 30 DE SEPTIEMBRE DE 2026",
    "resumen": "",
    "url": null
   },
@@ -14,14 +14,24 @@
    "url": null
   },
   {
-   "titulo": "MERCURIO DE SANTIAGO",
+   "titulo": "LA TERCERA",
    "resumen": "",
    "url": null
   },
   {
-   "titulo": "MERCURIO DE SANTIAGO",
+   "titulo": "ALVARADO RESPALDA A BARROS POR SUS DICHOS SOBRE MALVINAS: “ÉL NUNCA HA MANIFESTADO UNA POSICIÓN CONTRARIA A LA DEL GOBIERNO”",
    "resumen": "",
    "url": null
+  },
+  {
+   "titulo": "El ministro de Defensa, Fernando Barros, generó controversia al señalar que, aunque Chile apoya la pretensión trasandina sobre las Islas Malvinas, existe una «situación de hecho» dada por los 200 años de presencia británica en el archipiélago. Ante las críticas desde Buenos Aires, el biministro Claudio Alvarado respaldó al titular de Defensa afirmando que «él nunca ha manifestado una posición contraria a la del gobierno», reafirmando de forma categórica que la postura histórica de Chile se mantiene firme desde 1992 en apoyo a la reclamación de soberanía de Argentina —respaldada también en la reciente declaración conjunta entre los presidentes José Antonio Kast y Javier Milei— y precisando que la línea oficial la definen el Mandatario y la Cancillería.",
+   "resumen": "",
+   "url": null
+  },
+  {
+   "titulo": "Noticia",
+   "resumen": "",
+   "url": "https://www.latercera.com/politica/noticia/alvarado-respalda-a-barros-por-sus-dichos-sobre-malvinas-el-nunca-ha-manifestado-una-posicion-contraria-a-la-del-gobierno/"
   },
   {
    "titulo": "LA TERCERA",
@@ -29,49 +39,54 @@
    "url": null
   },
   {
-   "titulo": "KAST ANUNCIA SU PRIMER PRESUPUESTO CON ALZA DEL GASTO DE 1,5% Y CON FOCO EN EMPLEO, SEGURIDAD Y SALUD",
+   "titulo": "PROBABILIDAD DE TROMBAS MARINAS PARA ESTE MIÉRCOLES: ARMADA EMITE AVISO POR FORMACIÓN DE NUBES CONVECTIVAS EN DOS REGIONES",
    "resumen": "",
    "url": null
   },
   {
-   "titulo": "El Presidente José Antonio Kast presentó en cadena nacional su primer proyecto de Ley de Presupuestos, marcando un incremento del 1,5% en el gasto público respecto a la ejecución del año actual, lo que equivale a un erario total superior a los $90 billones (aprox. US$ 93.000 millones). El Gobierno enfatizó que el presupuesto está completamente financiado y cumple con la meta de déficit fiscal.",
-   "resumen": "",
-   "url": null
-  },
-  {
-   "titulo": "Prioridades:",
-   "resumen": "",
-   "url": null
-  },
-  {
-   "titulo": "• Crecimiento, trabajo y reconstrucción.",
-   "resumen": "• Seguridad: Se asignan 7 billones de pesos (un 9,1% más), reasignando recursos a Carabineros en las calles, control fronterizo y la custodia de recintos penitenciarios. • Protección a la infancia. • Beneficios sociales y educación.",
-   "url": null
-  },
-  {
-   "titulo": "Noticia",
-   "resumen": "",
-   "url": "https://www.latercera.com/pulso/noticia/kast-anuncia-su-primer-presupuesto-con-alza-del-gasto-de-15-y-con-foco-en-empleo-seguridad-y-salud/"
-  },
-  {
-   "titulo": "LA TERCERA",
-   "resumen": "",
-   "url": null
-  },
-  {
-   "titulo": "DÉFICIT DE 5.000 EFECTIVOS: ¿POR QUÉ ACTUALMENTE HAY MENOS CARABINEROS EN LAS CALLES?",
-   "resumen": "",
-   "url": null
-  },
-  {
-   "titulo": "El déficit de Carabineros y su menor presencia en las calles se debe a una combinación de factores que incluyen el aumento de la violencia del crimen organizado, la falta de incentivos laborales y de certeza jurídica ante el uso de la fuerza, el desgaste profesional y el cambio en las expectativas de las nuevas generaciones, a lo que se suma que una gran cantidad de efectivos operativos termina realizando labores administrativas o secundarias que podrían delegarse en personal civil, volviendo la recuperación de la dotación un desafío estructural complejo y sumamente gradual.",
+   "titulo": "La Armada emitió un aviso sobre la posibilidad de trombas marinas para este miércoles, debido a la formación de nubes convectivas en las regiones de Valparaíso y Biobío. Se advierte del riesgo asociado a este fenómeno meteorológico y se recomienda a la población mantener precauciones, especialmente en las cercanías del mar.",
    "resumen": "",
    "url": null
   },
   {
    "titulo": "Noticia",
    "resumen": "",
-   "url": "https://www.latercera.com/lt-board/noticia/deficit-de-5000-efectivos-por-que-actualmente-hay-menos-carabineros-en-las-calles/"
+   "url": "https://www.latercera.com/nacional/noticia/probabilidad-de-trombas-marinas-para-este-miercoles-armada-emite-aviso-por-formacion-de-nubes-convectivas-en-dos-regiones/"
+  },
+  {
+   "titulo": "EL MERCURIO DE SANTIAGO",
+   "resumen": "",
+   "url": null
+  },
+  {
+   "titulo": "EL MERCURIO DE SANTIAGO",
+   "resumen": "",
+   "url": null
+  },
+  {
+   "titulo": "INFOGATE",
+   "resumen": "",
+   "url": null
+  },
+  {
+   "titulo": "DIPUTADO BIANCHI RECUERDA QUE RELACIONES ENTRE MAGALLANES Y LAS FALKLAND DATAN DE 1876",
+   "resumen": "",
+   "url": null
+  },
+  {
+   "titulo": "El diputado independiente-PPD por Magallanes, Carlos Bianchi, respaldó los dichos del ministro de Defensa, Fernando Barros, sobre el derecho de Punta Arenas a comerciar con las islas Falkland (Malvinas), enfatizando que estas relaciones comerciales son históricas y datan de 1876; al mismo tiempo, el parlamentario criticó la gestión del ministro de Relaciones Exteriores por la falta de un liderazgo diplomático claro, esto en el marco de un encuentro entre empresarios magallánicos y de las islas para potenciar sus vínculos económicos locales.",
+   "resumen": "",
+   "url": null
+  },
+  {
+   "titulo": "Noticia",
+   "resumen": "",
+   "url": "https://infogate.cl/2026/09/diputado-bianchi-recuerda-que-relaciones-entre-magallanes-y-las-falkland-datan-de-1876/"
+  },
+  {
+   "titulo": "LAS ÚLTIMAS NOTICIAS",
+   "resumen": "",
+   "url": null
   },
   {
    "titulo": "REDES SOCIALES",
@@ -80,7 +95,7 @@
   },
   {
    "titulo": "Patricia Gorziglia Schmidt",
-   "resumen": "01 de octubre de 2026",
+   "resumen": "30 de septiembre de 2026",
    "url": null
   }
  ]
