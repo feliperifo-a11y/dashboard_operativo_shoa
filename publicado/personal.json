@@ -1,8 +1,8 @@
 {
  "tipo": "personal",
  "version": 1,
- "publicado": "2026-10-04T15:41:00.000Z",
- "total": 22,
+ "publicado": "2026-10-04T15:50:00.000Z",
+ "total": 20,
  "oficiales": {
   "total": 5,
   "grados": {
@@ -410,8 +410,11 @@
  "coherencia": [
   {
    "t": "warn",
-   "x": "El total (20) no coincide con la suma por categoría (22)."
+   "x": "El total (20) no coincide con la suma por categoría (21)."
+  },
+  {
+   "t": "warn",
+   "x": "Oficiales: se indican 4 y se listan 5."
   }
- ],
- "total_informe": 20
+ ]
 }
