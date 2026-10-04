@@ -1,12 +1,12 @@
 {
  "tipo": "personal",
  "version": 1,
- "publicado": "2026-10-04T15:39:00.000Z",
+ "publicado": "2026-10-04T15:41:00.000Z",
  "total": 20,
  "oficiales": {
-  "total": 4,
+  "total": 5,
   "grados": {
-   "CN": 0,
+   "CN": 1,
    "CF": 0,
    "CC": 2,
    "T1": 2,
@@ -25,9 +25,26 @@
    "M1": 4
   }
  },
- "ec": 0,
+ "ec": 1,
  "pac": 2,
  "unidades": [
+  {
+   "nombre": "Colombia",
+   "n": 2,
+   "of": 1,
+   "gm": 0,
+   "ec": 1,
+   "pac": 0,
+   "tipo": "Unidad",
+   "actividad": "Comisión",
+   "comision": "",
+   "transito": "",
+   "lugar": "",
+   "lat": null,
+   "lon": null,
+   "aprox": false,
+   "notas": []
+  },
   {
    "nombre": "Pelure",
    "n": 5,
@@ -390,5 +407,10 @@
  ],
  "difusiones": "No hay",
  "otras": "No hay. Atte. ODG T2 Diego Angulo Muga",
- "coherencia": []
+ "coherencia": [
+  {
+   "t": "warn",
+   "x": "El total (20) no coincide con la suma por categoría (22)."
+  }
+ ]
 }
