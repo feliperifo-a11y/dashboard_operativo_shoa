@@ -1,7 +1,7 @@
 {
  "tipo": "personal",
  "version": 1,
- "publicado": "2026-10-04T14:43:00.000Z",
+ "publicado": "2026-10-04T15:39:00.000Z",
  "total": 20,
  "oficiales": {
   "total": 4,
@@ -37,7 +37,7 @@
    "pac": 0,
    "tipo": "Unidad",
    "actividad": "Sondaje",
-   "comision": "Levantamiento PELURE",
+   "comision": "*Levantamiento PELURE*",
    "transito": "",
    "lugar": "",
    "lat": null,
@@ -54,7 +54,7 @@
    "pac": 1,
    "tipo": "Unidad",
    "actividad": "Comisión",
-   "comision": "Cabrales-Punta Arenas",
+   "comision": "*Cabrales-Punta Arenas*",
    "transito": "",
    "lugar": "Punta Arenas",
    "lat": -53.163,
@@ -71,7 +71,7 @@
    "pac": 1,
    "tipo": "Unidad",
    "actividad": "Comisión",
-   "comision": "Traslado boya Watchkeeper Valparaíso a Iquique",
+   "comision": "*Traslado boya Watchkeeper Valparaíso a Iquique*",
    "transito": "",
    "lugar": "",
    "lat": null,
@@ -141,9 +141,8 @@
  ],
  "comisiones": [
   {
-   "nombre": "Levantamiento PELURE",
+   "nombre": "*Levantamiento PELURE*",
    "avance": [],
-   "avance_total": 65.3,
    "items": [
     {
      "label": "Personal",
@@ -203,13 +202,9 @@
      "label": "Geodésicos",
      "kind": "otro",
      "valor": "100%",
-     "lineas": []
-    },
-    {
-     "label": "Estado avance total",
-     "kind": "avance_total",
-     "valor": "65,3%",
-     "lineas": []
+     "lineas": [
+      "*6. Estado avance total: 65,3%*"
+     ]
     },
     {
      "label": "Comentarios Jefe de grupo",
@@ -224,9 +219,8 @@
    ]
   },
   {
-   "nombre": "Cabrales-Punta Arenas",
+   "nombre": "*Cabrales-Punta Arenas*",
    "avance": [],
-   "avance_total": 21,
    "items": [
     {
      "label": "Personal",
@@ -245,7 +239,7 @@
      "kind": "ult24",
      "valor": "",
      "lineas": [
-      "• Sondaje acceso oceánico Bahía Cook."
+      "– Sondaje acceso oceánico Bahía Cook."
      ]
     },
     {
@@ -253,14 +247,8 @@
      "kind": "prox24",
      "valor": "",
      "lineas": [
-      "• Sondaje acceso oceanico Bahía Cook."
-     ]
-    },
-    {
-     "label": "Avance de la Comisión",
-     "kind": "avance_total",
-     "valor": "21%",
-     "lineas": [
+      "– Sondaje acceso oceanico Bahía Cook.",
+      "*5. Avance de la Comisión: 21%.*",
       "Comentarios Jefe de grupo:",
       "No hay."
      ]
@@ -268,9 +256,8 @@
    ]
   },
   {
-   "nombre": "Traslado boya Watchkeeper Valparaíso a Iquique",
+   "nombre": "*Traslado boya Watchkeeper Valparaíso a Iquique*",
    "avance": [],
-   "avance_total": 40,
    "items": [
     {
      "label": "Personal",
@@ -305,14 +292,9 @@
      "kind": "otro",
      "valor": "",
      "lineas": [
-      "40%"
+      "40%",
+      "*6. Estado avance total: 40%*"
      ]
-    },
-    {
-     "label": "Estado avance total",
-     "kind": "avance_total",
-     "valor": "40%",
-     "lineas": []
     },
     {
      "label": "Comentarios Jefe de grupo",
@@ -327,7 +309,7 @@
    ]
   },
   {
-   "nombre": "Fondeo boya Watchkeeper Iquique y despliegue Glider.",
+   "nombre": "*Fondeo boya Watchkeeper Iquique y despliegue Glider.*",
    "avance": [],
    "items": [
     {
@@ -395,7 +377,7 @@
    "v": "ALCAMARCRU"
   }
  ],
- "instrumental": "• Mareógrafo Isla Promontorio",
+ "instrumental": "* Mareógrafo Isla Promontorio",
  "logistica": [
   {
    "k": "",
@@ -407,6 +389,6 @@
   }
  ],
  "difusiones": "No hay",
- "otras": "No hay. Atte",
+ "otras": "No hay. Atte. ODG T2 Diego Angulo Muga",
  "coherencia": []
 }
