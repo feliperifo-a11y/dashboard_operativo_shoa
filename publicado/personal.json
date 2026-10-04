@@ -1,50 +1,33 @@
 {
  "tipo": "personal",
  "version": 1,
- "publicado": "2026-10-02T19:56:00.000Z",
- "total": 17,
+ "publicado": "2026-10-04T14:43:00.000Z",
+ "total": 20,
  "oficiales": {
-  "total": 3,
+  "total": 4,
   "grados": {
    "CN": 0,
-   "CF": 1,
+   "CF": 0,
    "CC": 2,
-   "T1": 0,
+   "T1": 2,
    "T2": 0,
    "ST": 0
   }
  },
  "gm": {
-  "total": 13,
+  "total": 14,
   "grados": {
-   "SO": 0,
+   "SO": 1,
    "S1": 0,
    "S2": 1,
-   "C1": 4,
-   "C2": 4,
+   "C1": 3,
+   "C2": 5,
    "M1": 4
   }
  },
  "ec": 0,
- "pac": 1,
+ "pac": 2,
  "unidades": [
-  {
-   "nombre": "OPV Pardo",
-   "n": 4,
-   "of": 1,
-   "gm": 3,
-   "ec": 0,
-   "pac": 0,
-   "tipo": "Buque",
-   "actividad": "Comisión",
-   "comision": "",
-   "transito": "",
-   "lugar": "Talcahuano",
-   "lat": -36.7,
-   "lon": -73.105,
-   "aprox": true,
-   "notas": []
-  },
   {
    "nombre": "Pelure",
    "n": 5,
@@ -54,12 +37,12 @@
    "pac": 0,
    "tipo": "Unidad",
    "actividad": "Sondaje",
-   "comision": "levantamiento PELURE",
+   "comision": "Levantamiento PELURE",
    "transito": "",
-   "lugar": "Chungungo",
-   "lat": -29.42,
-   "lon": -71.32,
-   "aprox": true,
+   "lugar": "",
+   "lat": null,
+   "lon": null,
+   "aprox": false,
    "notas": []
   },
   {
@@ -70,9 +53,43 @@
    "ec": 0,
    "pac": 1,
    "tipo": "Unidad",
-   "actividad": "En tránsito",
+   "actividad": "Comisión",
    "comision": "Cabrales-Punta Arenas",
-   "transito": "Arop - Bahía Cook",
+   "transito": "",
+   "lugar": "Punta Arenas",
+   "lat": -53.163,
+   "lon": -70.904,
+   "aprox": true,
+   "notas": []
+  },
+  {
+   "nombre": "Iquique",
+   "n": 5,
+   "of": 1,
+   "gm": 3,
+   "ec": 0,
+   "pac": 1,
+   "tipo": "Unidad",
+   "actividad": "Comisión",
+   "comision": "Traslado boya Watchkeeper Valparaíso a Iquique",
+   "transito": "",
+   "lugar": "",
+   "lat": null,
+   "lon": null,
+   "aprox": false,
+   "notas": []
+  },
+  {
+   "nombre": "Canada",
+   "n": 1,
+   "of": 1,
+   "gm": 0,
+   "ec": 0,
+   "pac": 0,
+   "tipo": "Unidad",
+   "actividad": "Comisión",
+   "comision": "",
+   "transito": "",
    "lugar": "",
    "lat": null,
    "lon": null,
@@ -118,28 +135,142 @@
  ],
  "traslados": [
   {
-   "destino": "traslado personal a Talcahuano",
-   "n": 1
+   "destino": "Traslado boya",
+   "n": 2
   }
  ],
  "comisiones": [
   {
-   "nombre": "levantamiento PELURE",
-   "avance": [
+   "nombre": "Levantamiento PELURE",
+   "avance": [],
+   "avance_total": 65.3,
+   "items": [
     {
-     "k": "Batimétricos",
-     "v": 46.4
+     "label": "Personal",
+     "kind": "personal",
+     "valor": "S/N",
+     "lineas": []
     },
     {
-     "k": "Fotogramétricos",
-     "v": 40
+     "label": "Material",
+     "kind": "material",
+     "valor": "S/N",
+     "lineas": []
     },
     {
-     "k": "Geodésicos",
-     "v": 100
+     "label": "Últimas 24 hrs",
+     "kind": "ult24",
+     "valor": "",
+     "lineas": []
+    },
+    {
+     "label": "Continuar mediciones GNSS (F3",
+     "kind": "otro",
+     "valor": "100%)",
+     "lineas": []
+    },
+    {
+     "label": "Próximas 24 hrs",
+     "kind": "prox24",
+     "valor": "",
+     "lineas": []
+    },
+    {
+     "label": "Trabajos administrativos y mantención a equipos utilizados durante la comisión.",
+     "kind": "otro",
+     "valor": "",
+     "lineas": []
+    },
+    {
+     "label": "Estado avance requerimientos / general",
+     "kind": "avance_req",
+     "valor": "",
+     "lineas": []
+    },
+    {
+     "label": "Batimétricos",
+     "kind": "otro",
+     "valor": "49,5%",
+     "lineas": []
+    },
+    {
+     "label": "Fotogramétricos",
+     "kind": "otro",
+     "valor": "100%",
+     "lineas": []
+    },
+    {
+     "label": "Geodésicos",
+     "kind": "otro",
+     "valor": "100%",
+     "lineas": []
+    },
+    {
+     "label": "Estado avance total",
+     "kind": "avance_total",
+     "valor": "65,3%",
+     "lineas": []
+    },
+    {
+     "label": "Comentarios Jefe de grupo",
+     "kind": "comentarios",
+     "valor": "",
+     "lineas": [
+      "– Con las trabajos efectuados hoy, doy por finalizadas las mediciones GNSS (geodésicos y fotogramétricos) de la comisión al 100%.",
+      "– Condiciones meteorológicas (viento y ola) actuales en Choros concuerdan con el pronóstico. Se mantienen NO aptas para efectuar trabajos batimétricos en el AROP.",
+      "– Mantengo el monitoreo del nuevo frente meteorológico entre OCT 8 y OCT 14."
+     ]
     }
-   ],
-   "avance_total": 50.8,
+   ]
+  },
+  {
+   "nombre": "Cabrales-Punta Arenas",
+   "avance": [],
+   "avance_total": 21,
+   "items": [
+    {
+     "label": "Personal",
+     "kind": "personal",
+     "valor": "S/N",
+     "lineas": []
+    },
+    {
+     "label": "Material",
+     "kind": "material",
+     "valor": "S/N",
+     "lineas": []
+    },
+    {
+     "label": "Ultimas 24 hrs",
+     "kind": "ult24",
+     "valor": "",
+     "lineas": [
+      "• Sondaje acceso oceánico Bahía Cook."
+     ]
+    },
+    {
+     "label": "Próximas 24 hrs",
+     "kind": "prox24",
+     "valor": "",
+     "lineas": [
+      "• Sondaje acceso oceanico Bahía Cook."
+     ]
+    },
+    {
+     "label": "Avance de la Comisión",
+     "kind": "avance_total",
+     "valor": "21%",
+     "lineas": [
+      "Comentarios Jefe de grupo:",
+      "No hay."
+     ]
+    }
+   ]
+  },
+  {
+   "nombre": "Traslado boya Watchkeeper Valparaíso a Iquique",
+   "avance": [],
+   "avance_total": 40,
    "items": [
     {
      "label": "Personal",
@@ -158,8 +289,7 @@
      "kind": "ult24",
      "valor": "",
      "lineas": [
-      "A. Pta.Choros / continuar trabajos batimétricos (B1: 6%).",
-      "B. Traslado G.H. a Pta. Choros."
+      "Traslado desde Iquique a Taltal."
      ]
     },
     {
@@ -167,24 +297,21 @@
      "kind": "prox24",
      "valor": "",
      "lineas": [
-      "A. Pta. Choros / continuar trabajos batimétricos.",
-      "B. Continuar mediciones GNSS."
+      "Traslado desde Taltal a Coquimbo"
      ]
     },
     {
-     "label": "Estado avance requerimientos / general",
-     "kind": "avance_req",
+     "label": "Estado avance",
+     "kind": "otro",
      "valor": "",
      "lineas": [
-      "A. Batimétricos: 46,4%",
-      "B. Fotogramétricos: 40%",
-      "C. Geodésicos: 100%"
+      "40%"
      ]
     },
     {
      "label": "Estado avance total",
      "kind": "avance_total",
-     "valor": "50,8%",
+     "valor": "40%",
      "lineas": []
     },
     {
@@ -192,17 +319,16 @@
      "kind": "comentarios",
      "valor": "",
      "lineas": [
-      "– Mantengo el monitoreo del frente meteorológico entre OCT 2 y 5.",
-      "– Con el propósito de contar con un mayor número de fuentes de información para el monitoreo y toma de decisiones, coordine con CENMETEOVALP y a contar de SEP 29, me enviarán pronóstico dedicado para punta de Choros.",
-      "– Condiciones meteorológicas y estado de mar dentro de parámetros seguros de operación para efectuar el sondaje, con resultados positivos."
+      "a. Se embarcaron 02 bultos enviados del IQUEABAS al DIRSOMAR",
+      "b. 01 bulto enviado de la Partida de Salvataje al CENTRAVALP.",
+      "Mañana 09:00 se inicia traslado desde Taltal a Coquimbo."
      ]
     }
    ]
   },
   {
-   "nombre": "Cabrales-Punta Arenas",
+   "nombre": "Fondeo boya Watchkeeper Iquique y despliegue Glider.",
    "avance": [],
-   "avance_total": 0,
    "items": [
     {
      "label": "Personal",
@@ -217,64 +343,39 @@
      "lineas": []
     },
     {
-     "label": "Ultimas 24 hrs",
+     "label": "Últimas 24 hrs",
      "kind": "ult24",
      "valor": "",
      "lineas": [
-      "A. Zarpe para tránsito hacia Arop - Bahía Cook",
-      "B. Entrenamiento Interno (incendio alta carga termica sala de máquinas/Emermar"
+      "a. Preparación maniobra de fondeo.",
+      "b. Reunión con OFMANIOBRA y CONTRAMAESTRE para planificación de la maniobra.",
+      "c. Compra insumos.",
+      "d. Preparación despliegue Glider."
      ]
     },
     {
-     "label": "Próximas 24 hrs",
+     "label": "Próximas 24 hrs.",
      "kind": "prox24",
      "valor": "",
      "lineas": [
-      "A. Instalación Mareógrafo Bahía Cook",
-      "B. Calibración LH Albatros",
-      "C. Sondaje Area Bahía Cook"
+      "a. Despliegue Glider."
      ]
     },
     {
-     "label": "Avance de la Comisión",
-     "kind": "avance_total",
-     "valor": "0%",
-     "lineas": []
-    }
-   ]
-  },
-  {
-   "nombre": "Retiro BPR Constitución",
-   "avance": [],
-   "avance_total": null,
-   "items": [
-    {
-     "label": "Personal",
-     "kind": "personal",
-     "valor": "S/N",
-     "lineas": []
-    },
-    {
-     "label": "Material",
+     "label": "Estado de avance",
      "kind": "otro",
-     "valor": "S/N",
-     "lineas": []
-    },
-    {
-     "label": "Ultimas 24 hrs",
-     "kind": "ult24",
      "valor": "",
      "lineas": [
-      "Recuperacion del BPR Constitución conforme"
+      "a. Fondeo boya: 30%.",
+      "b. Despliegue Glider: 20%."
      ]
     },
     {
-     "label": "Proximas 24 hrs",
-     "kind": "prox24",
+     "label": "Comentarios Jefe Grupo",
+     "kind": "comentarios",
      "valor": "",
      "lineas": [
-      "A. Se efectuará desembarco de instrumental boyas y mesa de fibra BPR, desde unidad hasta Talcabas.",
-      "B. Traslado de grupo a Valparaíso"
+      "No hay."
      ]
     }
    ]
@@ -291,10 +392,10 @@
   },
   {
    "k": "Pelure",
-   "v": "Chungungo"
+   "v": "ALCAMARCRU"
   }
  ],
- "instrumental": "No hay",
+ "instrumental": "• Mareógrafo Isla Promontorio",
  "logistica": [
   {
    "k": "",
@@ -306,11 +407,6 @@
   }
  ],
  "difusiones": "No hay",
- "otras": "No hay",
- "coherencia": [
-  {
-   "t": "info",
-   "x": "levantamiento PELURE: el avance total (50,8 %) no es el promedio simple de sus componentes (62,1 %); se entiende que usa ponderaciones."
-  }
- ]
+ "otras": "No hay. Atte",
+ "coherencia": []
 }
