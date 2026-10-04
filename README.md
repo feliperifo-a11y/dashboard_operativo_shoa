@@ -74,6 +74,16 @@ Lo que ven todos los que abren el link está en la carpeta `publicado/`:
 
 El sitio es público. Por eso el área 2 nunca publica nombres, y el registro de unidades con dotación nominal solo existe en la vista local de cada equipo.
 
+## Resumen de prensa diario (área 3)
+
+En **Cargar información** del área 3, el botón **Abrir resumen de prensa (.docx)** lee directamente el Word que llega cada día. El documento debe seguir su formato habitual: FUENTE en negrita, TÍTULO en negrita, texto y enlace.
+
+- En la página principal aparece cada noticia con su **fuente**, su **título** y el enlace **Ver noticia ↗** al medio.
+- **Ver resumen completo →** abre el resumen entero, con textos e imágenes, en la dirección `…/#prensa`. Se puede compartir, imprimir o guardar como PDF.
+- Cuando una noticia viene solo como imagen (sin título escrito), el título se toma del enlace.
+- La firma del documento no se incorpora.
+- Para publicarlo para todos: en modo editor, **Preparar publicación para todos** y luego el mismo paso de copiar y pegar en GitHub. El archivo publicado (`publicado/noticias.json`) pesa alrededor de 100 KB, porque las imágenes se comprimen.
+
 ## Probar sin red
 
 ```
