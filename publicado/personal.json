@@ -2,7 +2,7 @@
  "tipo": "personal",
  "version": 1,
  "publicado": "2026-10-04T15:41:00.000Z",
- "total": 20,
+ "total": 22,
  "oficiales": {
   "total": 5,
   "grados": {
@@ -412,5 +412,6 @@
    "t": "warn",
    "x": "El total (20) no coincide con la suma por categoría (22)."
   }
- ]
+ ],
+ "total_informe": 20
 }

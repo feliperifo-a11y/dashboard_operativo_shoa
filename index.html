@@ -1026,6 +1026,7 @@ svg.leaflet-image-layer.leaflet-interactive path {
   .area .nItem img { width: 96px; height: 70px; }
   .persTop { display: flex; align-items: center; gap: 12px; margin-bottom: 10px; }
   .persTot { display: flex; flex-direction: column; align-items: center; background: var(--accent-soft); border-radius: 10px; padding: 6px 14px; }
+  .persTot .totInf { font-size: 10px; color: #b26a00; font-style: normal; margin-top: 2px; }
   .persTot b { font-size: 26px; color: var(--navy); line-height: 1; } .persTot span { font-size: 10.5px; color: var(--accent); font-weight: 600; }
   .units { display: flex; flex-direction: column; gap: 8px; }
   .unit { border: 1px solid var(--line); border-left: 3px solid var(--accent); border-radius: 8px; padding: 8px 10px; }
@@ -2503,7 +2504,9 @@ function resumirPersonal(d, recibido) {
     // si se declara una cantidad sin listar personas (p. ej. "Empleados Civiles: 00"), se respeta lo declarado
     if (declarado.ec != null && declarado.ec > res.ec) res.ec = declarado.ec;
     if (declarado.pac != null && declarado.pac > res.pac) res.pac = declarado.pac;
-    if (res.total == null) res.total = res.oficiales.total + res.gm.total + res.ec + res.pac;
+    // el total es el conteo real por categoría; la cifra escrita en el informe queda como referencia
+    const suma = res.oficiales.total + res.gm.total + res.ec + res.pac;
+    if (suma > 0) { if (res.total != null && res.total !== suma) res.total_informe = res.total; res.total = suma; }
     const { unidades, traslados } = unidadesDe(d);
     res.unidades = unidades.map(u => {
       const cnt = { of: 0, gm: 0, ec: 0, pac: 0 }; for (const x of u.dotacion) cnt[catDe(x.grado, x._cat)]++;
@@ -2628,7 +2631,7 @@ function renderPersonal() {
   sello('per');
   const r = resumenPer();
   if (!r) { pers.innerHTML = `<div class="emptyNote">Aún no hay personal publicado.</div>`; return; }
-  let p = `<div class="persTop"><div class="persTot"><b>${r.total ?? '—'}</b><span>en comisión</span></div>` +
+  let p = `<div class="persTop"><div class="persTot"><b>${r.total ?? '—'}</b><span>en comisión</span>${r.total_informe != null ? `<em class="totInf" title="Cifra escrita en el informe">informe: ${r.total_informe}</em>` : ''}</div>` +
     `<div class="srCats"><span>Oficiales <b>${r.oficiales.total}</b></span><span>Gente de mar <b>${r.gm.total}</b></span><span>EC <b>${r.ec}</b></span><span>PAC <b>${r.pac}</b></span></div></div>`;
   p += `<div class="grTab"><div class="grRow"><span class="grL">Oficiales</span><div class="grs">${gradosHTML(r.oficiales.grados, GRADOS_OF)}</div></div>` +
     `<div class="grRow"><span class="grL">Gente de mar</span><div class="grs">${gradosHTML(r.gm.grados, GRADOS_GM)}</div></div>` +
