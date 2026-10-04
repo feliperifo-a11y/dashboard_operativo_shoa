@@ -1,102 +1,67 @@
 {
  "tipo": "noticias",
- "version": 1,
+ "version": 2,
  "publicado": "2026-10-04T15:10:00.000Z",
  "items": [
   {
-   "titulo": "RESUMEN DE PRENSA 30 DE SEPTIEMBRE DE 2026",
-   "resumen": "",
-   "url": null
-  },
-  {
-   "titulo": "MEDIOS DE COMUNICACIÓN / PÁGINAS WEB",
-   "resumen": "",
-   "url": null
-  },
-  {
-   "titulo": "LA TERCERA",
-   "resumen": "",
-   "url": null
-  },
-  {
    "titulo": "ALVARADO RESPALDA A BARROS POR SUS DICHOS SOBRE MALVINAS: “ÉL NUNCA HA MANIFESTADO UNA POSICIÓN CONTRARIA A LA DEL GOBIERNO”",
-   "resumen": "",
-   "url": null
-  },
-  {
-   "titulo": "El ministro de Defensa, Fernando Barros, generó controversia al señalar que, aunque Chile apoya la pretensión trasandina sobre las Islas Malvinas, existe una «situación de hecho» dada por los 200 años de presencia británica en el archipiélago. Ante las críticas desde Buenos Aires, el biministro Claudio Alvarado respaldó al titular de Defensa afirmando que «él nunca ha manifestado una posición contraria a la del gobierno», reafirmando de forma categórica que la postura histórica de Chile se mantiene firme desde 1992 en apoyo a la reclamación de soberanía de Argentina —respaldada también en la reciente declaración conjunta entre los presidentes José Antonio Kast y Javier Milei— y precisando que la línea oficial la definen el Mandatario y la Cancillería.",
-   "resumen": "",
-   "url": null
-  },
-  {
-   "titulo": "Noticia",
-   "resumen": "",
+   "fuente": "LA TERCERA",
+   "resumen": "El ministro de Defensa, Fernando Barros, generó controversia al señalar que, aunque Chile apoya la pretensión trasandina sobre las Islas Malvinas, existe una «situación de hecho» dada por los 200 años de presencia británica en el archipiélago. Ante las críticas desde Buenos Aires, el biministro Clau",
    "url": "https://www.latercera.com/politica/noticia/alvarado-respalda-a-barros-por-sus-dichos-sobre-malvinas-el-nunca-ha-manifestado-una-posicion-contraria-a-la-del-gobierno/"
   },
   {
-   "titulo": "LA TERCERA",
-   "resumen": "",
-   "url": null
-  },
-  {
    "titulo": "PROBABILIDAD DE TROMBAS MARINAS PARA ESTE MIÉRCOLES: ARMADA EMITE AVISO POR FORMACIÓN DE NUBES CONVECTIVAS EN DOS REGIONES",
-   "resumen": "",
-   "url": null
-  },
-  {
-   "titulo": "La Armada emitió un aviso sobre la posibilidad de trombas marinas para este miércoles, debido a la formación de nubes convectivas en las regiones de Valparaíso y Biobío. Se advierte del riesgo asociado a este fenómeno meteorológico y se recomienda a la población mantener precauciones, especialmente en las cercanías del mar.",
-   "resumen": "",
-   "url": null
-  },
-  {
-   "titulo": "Noticia",
-   "resumen": "",
+   "fuente": "LA TERCERA",
+   "resumen": "La Armada emitió un aviso sobre la posibilidad de trombas marinas para este miércoles, debido a la formación de nubes convectivas en las regiones de Valparaíso y Biobío. Se advierte del riesgo asociado a este fenómeno meteorológico y se recomienda a la población mantener precauciones, especialmente ",
    "url": "https://www.latercera.com/nacional/noticia/probabilidad-de-trombas-marinas-para-este-miercoles-armada-emite-aviso-por-formacion-de-nubes-convectivas-en-dos-regiones/"
   },
   {
-   "titulo": "EL MERCURIO DE SANTIAGO",
-   "resumen": "",
-   "url": null
-  },
-  {
-   "titulo": "EL MERCURIO DE SANTIAGO",
-   "resumen": "",
-   "url": null
-  },
-  {
-   "titulo": "INFOGATE",
-   "resumen": "",
-   "url": null
-  },
-  {
    "titulo": "DIPUTADO BIANCHI RECUERDA QUE RELACIONES ENTRE MAGALLANES Y LAS FALKLAND DATAN DE 1876",
-   "resumen": "",
-   "url": null
-  },
-  {
-   "titulo": "El diputado independiente-PPD por Magallanes, Carlos Bianchi, respaldó los dichos del ministro de Defensa, Fernando Barros, sobre el derecho de Punta Arenas a comerciar con las islas Falkland (Malvinas), enfatizando que estas relaciones comerciales son históricas y datan de 1876; al mismo tiempo, el parlamentario criticó la gestión del ministro de Relaciones Exteriores por la falta de un liderazgo diplomático claro, esto en el marco de un encuentro entre empresarios magallánicos y de las islas para potenciar sus vínculos económicos locales.",
-   "resumen": "",
-   "url": null
-  },
-  {
-   "titulo": "Noticia",
-   "resumen": "",
+   "fuente": "INFOGATE",
+   "resumen": "El diputado independiente-PPD por Magallanes, Carlos Bianchi, respaldó los dichos del ministro de Defensa, Fernando Barros, sobre el derecho de Punta Arenas a comerciar con las islas Falkland (Malvinas), enfatizando que estas relaciones comerciales son históricas y datan de 1876; al mismo tiempo, el",
    "url": "https://infogate.cl/2026/09/diputado-bianchi-recuerda-que-relaciones-entre-magallanes-y-las-falkland-datan-de-1876/"
-  },
-  {
-   "titulo": "LAS ÚLTIMAS NOTICIAS",
-   "resumen": "",
-   "url": null
-  },
-  {
-   "titulo": "REDES SOCIALES",
-   "resumen": "",
-   "url": null
-  },
-  {
-   "titulo": "Patricia Gorziglia Schmidt",
-   "resumen": "30 de septiembre de 2026",
-   "url": null
   }
- ]
+ ],
+ "prensa": {
+  "titulo": "RESUMEN DE PRENSA 30 DE SEPTIEMBRE DE 2026",
+  "fecha": "2026-09-30T11:00:00.000Z",
+  "items": [
+   {
+    "fuente": "LA TERCERA",
+    "nota": "",
+    "titulo": "ALVARADO RESPALDA A BARROS POR SUS DICHOS SOBRE MALVINAS: “ÉL NUNCA HA MANIFESTADO UNA POSICIÓN CONTRARIA A LA DEL GOBIERNO”",
+    "tituloAuto": false,
+    "parrafos": [
+     "El ministro de Defensa, Fernando Barros, generó controversia al señalar que, aunque Chile apoya la pretensión trasandina sobre las Islas Malvinas, existe una «situación de hecho» dada por los 200 años de presencia británica en el archipiélago. Ante las críticas desde Buenos Aires, el biministro Claudio Alvarado respaldó al titular de Defensa afirmando que «él nunca ha manifestado una posición contraria a la del gobierno», reafirmando de forma categórica que la postura histórica de Chile se mantiene firme desde 1992 en apoyo a la reclamación de soberanía de Argentina —respaldada también en la reciente declaración conjunta entre los presidentes José Antonio Kast y Javier Milei— y precisando que la línea oficial la definen el Mandatario y la Cancillería."
+    ],
+    "imagenes": [],
+    "url": "https://www.latercera.com/politica/noticia/alvarado-respalda-a-barros-por-sus-dichos-sobre-malvinas-el-nunca-ha-manifestado-una-posicion-contraria-a-la-del-gobierno/",
+    "resumen": "El ministro de Defensa, Fernando Barros, generó controversia al señalar que, aunque Chile apoya la pretensión trasandina sobre las Islas Malvinas, existe una «situación de hecho» dada por los 200 años de presencia británica en el archipiélago. Ante las críticas desde Buenos Aires, el biministro Clau"
+   },
+   {
+    "fuente": "LA TERCERA",
+    "nota": "",
+    "titulo": "PROBABILIDAD DE TROMBAS MARINAS PARA ESTE MIÉRCOLES: ARMADA EMITE AVISO POR FORMACIÓN DE NUBES CONVECTIVAS EN DOS REGIONES",
+    "tituloAuto": false,
+    "parrafos": [
+     "La Armada emitió un aviso sobre la posibilidad de trombas marinas para este miércoles, debido a la formación de nubes convectivas en las regiones de Valparaíso y Biobío. Se advierte del riesgo asociado a este fenómeno meteorológico y se recomienda a la población mantener precauciones, especialmente en las cercanías del mar."
+    ],
+    "imagenes": [],
+    "url": "https://www.latercera.com/nacional/noticia/probabilidad-de-trombas-marinas-para-este-miercoles-armada-emite-aviso-por-formacion-de-nubes-convectivas-en-dos-regiones/",
+    "resumen": "La Armada emitió un aviso sobre la posibilidad de trombas marinas para este miércoles, debido a la formación de nubes convectivas en las regiones de Valparaíso y Biobío. Se advierte del riesgo asociado a este fenómeno meteorológico y se recomienda a la población mantener precauciones, especialmente "
+   },
+   {
+    "fuente": "INFOGATE",
+    "nota": "",
+    "titulo": "DIPUTADO BIANCHI RECUERDA QUE RELACIONES ENTRE MAGALLANES Y LAS FALKLAND DATAN DE 1876",
+    "tituloAuto": false,
+    "parrafos": [
+     "El diputado independiente-PPD por Magallanes, Carlos Bianchi, respaldó los dichos del ministro de Defensa, Fernando Barros, sobre el derecho de Punta Arenas a comerciar con las islas Falkland (Malvinas), enfatizando que estas relaciones comerciales son históricas y datan de 1876; al mismo tiempo, el parlamentario criticó la gestión del ministro de Relaciones Exteriores por la falta de un liderazgo diplomático claro, esto en el marco de un encuentro entre empresarios magallánicos y de las islas para potenciar sus vínculos económicos locales."
+    ],
+    "imagenes": [],
+    "url": "https://infogate.cl/2026/09/diputado-bianchi-recuerda-que-relaciones-entre-magallanes-y-las-falkland-datan-de-1876/",
+    "resumen": "El diputado independiente-PPD por Magallanes, Carlos Bianchi, respaldó los dichos del ministro de Defensa, Fernando Barros, sobre el derecho de Punta Arenas a comerciar con las islas Falkland (Malvinas), enfatizando que estas relaciones comerciales son históricas y datan de 1876; al mismo tiempo, el"
+   }
+  ]
+ }
 }

@@ -2223,6 +2223,11 @@ function estructurarPrensa(parrafos, nombreArchivo) {
       const corto = p.texto.length <= 60;
       if (!cur || cur.url || (cur.parrafos.length && corto)) { nuevo(p.texto.replace(/\s+/g, ' ')); continue; }
       if (!cur.titulo && !cur.parrafos.length) { cur.titulo = p.texto.replace(/\s+/g, ' '); continue; }
+      // encabezado de sección antes de la fuente («MEDIOS DE COMUNICACIÓN» → «LA TERCERA» → titular)
+      if (cur.titulo && !cur.parrafos.length && !cur.imagenes.length && cur.titulo.length <= 60) {
+        if (corto) { nuevo(p.texto.replace(/\s+/g, ' ')); continue; }
+        cur.fuente = cur.titulo; cur.nota = ''; cur.titulo = p.texto.replace(/\s+/g, ' '); continue;
+      }
       cur.parrafos.push(p.texto); continue;
     }
     if (!cur) continue;            // texto suelto antes de la primera fuente
@@ -2231,7 +2236,9 @@ function estructurarPrensa(parrafos, nombreArchivo) {
     cur.imagenes.push(...p.imagenes);
     if (p.enlaces.length && !cur.url) cur.url = p.enlaces[0];
   }
-  const limpios = items.filter(it => it.url || it.titulo || it.parrafos.length).map(it => {
+  // sin enlace ni contenido = encabezado suelto; lo que sigue al último enlace es firma o cierre
+  let ultimo = -1; items.forEach((it, i) => { if (it.url) ultimo = i; });
+  const limpios = items.filter((it, i) => (it.url || it.parrafos.length || it.imagenes.length) && (ultimo < 0 || i <= ultimo || it.imagenes.length)).map(it => {
     if (!it.titulo) { const t = it.url ? tituloDesdeUrl(it.url) : ''; it.titulo = (t || it.fuente) + (it.nota ? ` (${it.nota.charAt(0) + it.nota.slice(1).toLowerCase()})` : ''); it.tituloAuto = true; }
     it.resumen = it.parrafos.join(' ').slice(0, 300);
     return it;
@@ -2239,6 +2246,25 @@ function estructurarPrensa(parrafos, nombreArchivo) {
   const fecha = fechaDesdeTexto(titulo) || fechaDesdeTexto(nombreArchivo || '') || new Date();
   if (!titulo) titulo = 'RESUMEN DE PRENSA ' + fecha.toLocaleDateString('es-CL', { day: 'numeric', month: 'long', year: 'numeric' }).toUpperCase();
   return { titulo, fecha: fecha.toISOString(), items: limpios };
+}
+
+// Resumen pegado como texto (sin negritas): los renglones en mayúsculas cumplen el papel de la negrita
+const RX_ETIQ = /^(ver\s+)?(noticia|nota|link|enlace|aqu[ií]|ver m[aá]s|leer m[aá]s)\s*[:\-–]?\s*/i;
+function pareceMayus(t) { const l = t.replace(/[^A-Za-zÁÉÍÓÚÜÑáéíóúüñ]/g, ''); return l.length >= 4 && l.replace(/[^A-ZÁÉÍÓÚÜÑ]/g, '').length / l.length >= 0.85; }
+function prensaDesdeTexto(texto) {
+  const ps = [];
+  for (let ln of String(texto).split(/\r?\n/)) {
+    ln = ln.trim(); if (!ln) continue;
+    const enlaces = [...ln.matchAll(/https?:\/\/[^\s<>"]+/g)].map(m => m[0]);
+    if (enlaces.length) ln = ln.replace(RX_ETIQ, '').replace(/[()]/g, ' ').trim();
+    else if (RX_ETIQ.test(ln) && ln.replace(RX_ETIQ, '').length < 3) continue;   // «Noticia» sin enlace
+    ps.push({ texto: ln, negrita: !enlaces.length && pareceMayus(ln), enlaces, imagenes: [] });
+  }
+  return estructurarPrensa(ps, '');
+}
+function esResumenPrensa(texto) {
+  const urls = (String(texto).match(/https?:\/\//g) || []).length;
+  return /resumen\s+de\s+prensa/i.test(texto) || (urls >= 2 && String(texto).split(/\n/).filter(l => pareceMayus(l.trim())).length >= 2);
 }
 
 async function prensaDesdeArchivo(file) {
@@ -2671,6 +2697,10 @@ function construirPublicacion(k, texto, fecha) {
   }
   if (k === 'per') { const r = resumirPersonal(parseSitrep(texto), fecha); r.publicado = fecha; return r; }
   if (pendientePrensa) { const pr = pendientePrensa; return { tipo: 'noticias', version: 2, publicado: fecha, items: pr.items.map(it => ({ titulo: it.titulo, fuente: it.fuente, resumen: it.resumen, url: it.url })), prensa: pr }; }
+  if (esResumenPrensa(texto)) {
+    const pr = prensaDesdeTexto(texto);
+    if (pr.items.length) return { tipo: 'noticias', version: 2, publicado: fecha, items: pr.items.map(it => ({ titulo: it.titulo, fuente: it.fuente, resumen: it.resumen, url: it.url })), prensa: pr };
+  }
   return { tipo: 'noticias', version: 1, publicado: fecha, items: parseNoticias(texto) };
 }
 function vistaPrevia(k, obj) {
