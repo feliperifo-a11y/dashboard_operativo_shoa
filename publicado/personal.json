@@ -1,7 +1,7 @@
 {
  "tipo": "personal",
  "version": 1,
- "publicado": "2026-10-04T15:51:00.000Z",
+ "publicado": "2026-10-05T00:35:00.000Z",
  "total": 22,
  "oficiales": {
   "total": 5,
@@ -28,6 +28,23 @@
  "ec": 1,
  "pac": 2,
  "unidades": [
+  {
+   "nombre": "Cartagena",
+   "n": 1,
+   "of": 1,
+   "gm": 0,
+   "ec": 0,
+   "pac": 0,
+   "tipo": "Unidad",
+   "actividad": "Comisión",
+   "comision": "",
+   "transito": "",
+   "lugar": "",
+   "lat": null,
+   "lon": null,
+   "aprox": false,
+   "notas": []
+  },
   {
    "nombre": "Pelure",
    "n": 5,
@@ -71,7 +88,7 @@
    "pac": 1,
    "tipo": "Unidad",
    "actividad": "Comisión",
-   "comision": "Traslado boya Watchkeeper Valparaíso a Iquique",
+   "comision": "Traslado boya Watchkeeper Iquique a Valparaíso",
    "transito": "",
    "lugar": "",
    "lat": null,
@@ -97,7 +114,7 @@
    "notas": []
   },
   {
-   "nombre": "Colombia",
+   "nombre": "CHRPSE",
    "n": 1,
    "of": 0,
    "gm": 0,
@@ -152,10 +169,6 @@
  ],
  "traslados": [
   {
-   "destino": "Sin destino",
-   "n": 1
-  },
-  {
    "destino": "Traslado boya",
    "n": 2
   }
@@ -185,9 +198,9 @@
      "lineas": []
     },
     {
-     "label": "Continuar mediciones GNSS (F3",
+     "label": "Trabajos administrativos y mantención a equipos utilizados durante comisión.",
      "kind": "otro",
-     "valor": "100%)",
+     "valor": "",
      "lineas": []
     },
     {
@@ -237,7 +250,6 @@
      "kind": "comentarios",
      "valor": "",
      "lineas": [
-      "– Con las trabajos efectuados hoy, doy por finalizadas las mediciones GNSS (geodésicos y fotogramétricos) de la comisión al 100%.",
       "– Condiciones meteorológicas (viento y ola) actuales en Choros concuerdan con el pronóstico. Se mantienen NO aptas para efectuar trabajos batimétricos en el AROP.",
       "– Mantengo el monitoreo del nuevo frente meteorológico entre OCT 8 y OCT 14."
      ]
@@ -247,7 +259,7 @@
   {
    "nombre": "Cabrales-Punta Arenas",
    "avance": [],
-   "avance_total": 21,
+   "avance_total": 25,
    "items": [
     {
      "label": "Personal",
@@ -266,7 +278,7 @@
      "kind": "ult24",
      "valor": "",
      "lineas": [
-      "– Sondaje acceso oceánico Bahía Cook."
+      "• Sondaje acceso oceánico Bahía Cook."
      ]
     },
     {
@@ -274,13 +286,14 @@
      "kind": "prox24",
      "valor": "",
      "lineas": [
-      "– Sondaje acceso oceanico Bahía Cook."
+      "• Sondaje acceso oceanico Bahía Cook.",
+      "• Sondaje paso Christmas, Figueroa y fuentes."
      ]
     },
     {
      "label": "Avance de la Comisión",
      "kind": "avance_total",
-     "valor": "21%",
+     "valor": "25%",
      "lineas": [
       "Comentarios Jefe de grupo:",
       "No hay."
@@ -289,9 +302,8 @@
    ]
   },
   {
-   "nombre": "Traslado boya Watchkeeper Valparaíso a Iquique",
+   "nombre": "Traslado boya Watchkeeper Iquique a Valparaíso",
    "avance": [],
-   "avance_total": 40,
    "items": [
     {
      "label": "Personal",
@@ -310,7 +322,7 @@
      "kind": "ult24",
      "valor": "",
      "lineas": [
-      "Traslado desde Iquique a Taltal."
+      "• Traslado desde Taltal a coquimbo"
      ]
     },
     {
@@ -318,31 +330,16 @@
      "kind": "prox24",
      "valor": "",
      "lineas": [
-      "Traslado desde Taltal a Coquimbo"
+      "• Traslado desde coquimbo a Valparaíso.",
+      "5 Estado avance total: 80%"
      ]
-    },
-    {
-     "label": "Estado avance",
-     "kind": "otro",
-     "valor": "",
-     "lineas": [
-      "40%"
-     ]
-    },
-    {
-     "label": "Estado avance total",
-     "kind": "avance_total",
-     "valor": "40%",
-     "lineas": []
     },
     {
      "label": "Comentarios Jefe de grupo",
      "kind": "comentarios",
      "valor": "",
      "lineas": [
-      "a. Se embarcaron 02 bultos enviados del IQUEABAS al DIRSOMAR",
-      "b. 01 bulto enviado de la Partida de Salvataje al CENTRAVALP.",
-      "Mañana 09:00 se inicia traslado desde Taltal a Coquimbo."
+      "a. 0830 inicia traslado."
      ]
     }
    ]
@@ -350,6 +347,7 @@
   {
    "nombre": "Fondeo boya Watchkeeper Iquique y despliegue Glider.",
    "avance": [],
+   "avance_total": 60,
    "items": [
     {
      "label": "Personal",
@@ -368,35 +366,39 @@
      "kind": "ult24",
      "valor": "",
      "lineas": [
-      "a. Preparación maniobra de fondeo.",
-      "b. Reunión con OFMANIOBRA y CONTRAMAESTRE para planificación de la maniobra.",
-      "c. Compra insumos.",
-      "d. Preparación despliegue Glider."
+      "Despliegue Glider.",
+      "• Mantenimiento y orden contenedor."
      ]
     },
     {
-     "label": "Próximas 24 hrs.",
+     "label": "Próximas 24 hrs",
      "kind": "prox24",
      "valor": "",
      "lineas": [
-      "a. Despliegue Glider."
+      "• briefing Cuarzona y fondeo boya Watchkeeper"
      ]
     },
     {
-     "label": "Estado de avance",
+     "label": "Estado avance",
      "kind": "otro",
      "valor": "",
      "lineas": [
-      "a. Fondeo boya: 30%.",
-      "b. Despliegue Glider: 20%."
+      "30% fondeo boya",
+      "100% Despliegue Glider"
      ]
     },
     {
-     "label": "Comentarios Jefe Grupo",
+     "label": "Estado avance total",
+     "kind": "avance_total",
+     "valor": "60%",
+     "lineas": []
+    },
+    {
+     "label": "Comentarios Jefe de grupo",
      "kind": "comentarios",
      "valor": "",
      "lineas": [
-      "No hay."
+      "a. Glider desplegado S/n"
      ]
     }
    ]
@@ -416,7 +418,7 @@
    "v": "ALCAMARCRU"
   }
  ],
- "instrumental": "Mareógrafo Isla Promontorio",
+ "instrumental": "• Mareógrafo Isla Promontorio",
  "logistica": [
   {
    "k": "",
@@ -428,6 +430,12 @@
   }
  ],
  "difusiones": "No hay",
- "otras": "No hay. Atte. ODG T2 Diego Angulo Muga",
- "coherencia": []
+ "otras": "No hay. Atte",
+ "coherencia": [
+  {
+   "t": "warn",
+   "x": "El total (20) no coincide con la suma por categoría (22)."
+  }
+ ],
+ "total_informe": 20
 }
