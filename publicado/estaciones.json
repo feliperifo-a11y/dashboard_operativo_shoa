@@ -1,6 +1,6 @@
 {
  "tipo": "estaciones",
  "version": 1,
- "publicado": "2026-10-05T00:37:00.000Z",
- "texto": "BOYAS DART:\nF/E: 5\nNo operativas: 1\nBoya DART de Constitución: siniestrada.\n\nBOYAS METEOCEAN:\nF/E: 6\nNo operativas: 2\nBoya WarchKeeper Iquique: En Iquique (se desplegará el próximo lunes).\nBoya WatchKeeper Puerto Montt: No Instalada.\n\nGLIDER:\nDesplegado. Navegando hacia WP1 a 6.8 Km al W de Iquique rumbo 270"
+ "publicado": "2026-10-05T00:39:00.000Z",
+ "texto": "ESTACIONES DE NIVEL DEL MAR:\nF/E: 52\nNo operativas: 0\n\nBOYAS DART:\nF/E: 5\nNo operativas: 1\nBoya DART de Constitución: siniestrada.\n\nBOYAS METEOCEAN:\nF/E: 6\nNo operativas: 2\nBoya WarchKeeper Iquique: En Iquique (se desplegará el próximo lunes).\nBoya WatchKeeper Puerto Montt: No Instalada.\n\nGLIDER:\nEn Iquique. Próximo despliegue mañana 09:00 hrs. app."
 }
