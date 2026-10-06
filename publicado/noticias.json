@@ -1,364 +1,149 @@
 {
  "tipo": "noticias",
  "version": 2,
- "publicado": "2026-10-06T11:20:00.000Z",
+ "publicado": "2026-10-06T13:54:00.000Z",
  "items": [
   {
-   "titulo": "PROTECCIÓN DE DATOS PERSONALES: OPOSICIÓN PIDE REDUCIR EL PLAZO DE POSTERGACIÓN DE LA LEY QUE PROPUSO EL GOBIERNO",
-   "fuente": "LA TERCERA",
-   "resumen": "Senadores de oposición y oficialistas han cuestionado la propuesta del Gobierno chileno de postergar por un año la entrada en vigencia de la nueva Ley de Protección de Datos Personales —prevista para diciembre—, calificando el plazo de \"excesivo\" y planteando en su lugar reducir la prórroga a solo s",
-   "url": "https://www.latercera.com/pulso/noticia/proteccion-de-datos-personales-oposicion-pide-reducir-el-plazo-de-postergacion-de-la-ley-que-propuso-el-gobierno/"
-  },
-  {
-   "titulo": "EL NEGOCIO DE LAS ISLAS REMOTAS: LA NAVIERA QUE QUIERE ZARPAR DE PUNTA ARENAS A LAS ISLAS MALVINAS",
-   "fuente": "LA TERCEREA",
-   "resumen": "Easter Island Logistics nació en 2018 de la mano de tres profesionales de la salud y construyó su negocio abasteciendo a Rapa Nui. Después entró a la Antártica, intentó expandirse a Juan Fernández y ahora prepara su primer zarpe desde Punta Arenas a las Malvinas para abrir una ruta mensual desde nov",
-   "url": "https://www.latercera.com/pulso/noticia/el-negocio-de-las-islas-remotas-la-naviera-que-quiere-zarpar-de-punta-arenas-a-las-islas-malvinas/"
-  },
-  {
-   "titulo": "NUEVA REFORMA DE SEGURIDAD PERMITIRÍA A PRESIDENTE DE LA REPÚBLICA DECRETAR ESTADO DE EXCEPCIÓN ANTE AMENAZAS A LA SEGURIDAD",
-   "fuente": "LA TERCERA",
-   "resumen": "Una nueva propuesta de reforma constitucional en materia de seguridad —trabajada por senadores de forma alternativa al proyecto inicial del Ejecutivo— busca articularse en tres ejes principales: combate al crimen organizado, segregación carcelaria y ajustes al estado de excepción de emergencia. Entr",
-   "url": "https://www.latercera.com/politica/noticia/nueva-reforma-de-seguridad-permitiria-a-presidente-de-la-republica-decretar-estado-de-excepcion-ante-amenazas-a-la-seguridad/"
-  },
-  {
-   "titulo": "COMPLEJO VOLCÁNICO NEVADOS DE CHILLÁN SIGUE BAJO ALERTA: REPORTAN AUMENTO EN LA ACTIVIDAD EXPLOSIVA Y DE TEMPERATURA EN SUPERFICIE",
-   "fuente": "LA TERCERA",
-   "resumen": "Las comunas de Pinto y Coihueco, en la Región de Ñuble, se mantienen bajo Alerta Temprana Preventiva en nivel amarillo debido a que el complejo volcánico Nevados de Chillán registró un incremento en su actividad explosiva —con incandescencia constante y proyección de material balístico— junto a un a",
+   "titulo": "MERCURIO DE VALPARAISO",
+   "fuente": "MERCURIO DE VALPARAISO",
+   "resumen": "En una entrevista, Sir Nick Hine, exvicealmirante de la Royal Navy y ejecutivo de Babcock International Group, plantea la posibilidad de establecer una alianza estratégica de largo plazo con Chile para la construcción local de fragatas basadas en el diseño Arrowhead 140. La propuesta busca transferi",
    "url": null
   },
   {
-   "titulo": "Recorte de prensa",
-   "fuente": "EL MERCURIO DE SANTIAGO",
-   "resumen": "",
+   "titulo": "MERCURIO DE SANTIAGO",
+   "fuente": "MERCURIO DE SANTIAGO",
+   "resumen": "El proyecto de Ley de Presupuesto 2027 contempla una caída nominal del 7,4% para el Ministerio de Ciencia, Tecnología, Conocimiento e Innovación respecto a 2026. Esta reducción impacta a diversos fondos e instrumentos, como Becas Chile —cuyos recursos disminuyen un 8% (cerca de $2.000 millones)— y e",
    "url": null
   },
   {
-   "titulo": "Recorte de prensa",
-   "fuente": "EL MERCURIO DE VALPARAÍSO",
-   "resumen": "",
-   "url": null
+   "titulo": "Diputado valenzuela y diferencia de sueldos entre ffaa y carabineros me",
+   "fuente": "CARABINERO RECIÉN EGRESADO",
+   "resumen": "El diputado e integrante de la comisión de Defensa, Daniel Valenzuela, manifestó su deseo de equiparar los sueldos de los soldados de tropa de las Fuerzas Armadas con los de los carabineros recién egresados —explicando que actualmente un carabinero raso percibe cerca de $900 mil frente a los $600 mi",
+   "url": "https://infogate.cl/2026/10/diputado-valenzuela-y-diferencia-de-sueldos-entre-ffaa-y-carabineros-me-"
   },
   {
-   "titulo": "Recorte de prensa",
-   "fuente": "LA ESTRELLA DE VALPARAÍSO",
-   "resumen": "Gracias a las intensas lluvias invernales y a las inversiones de Esval, los embalses de la Región de Valparaíso alcanzaron un 42% de llenado conjunto, logrando su mayor nivel en más de diez años y garantizando el abastecimiento hídrico para las zonas urbanas durante el verano y la temporada 2027. En",
-   "url": null
+   "titulo": "LA DISPUTA EQUIVOCADA",
+   "fuente": "VIVE",
+   "resumen": "El artículo de opinión firmado por el exembajador argentino Jorge Argüello sostiene que Argentina y Chile están incurriendo en un error estratégico al interrelacionar tensiones recientes —como las declaraciones e imprecisiones jurídicas argentinas sobre el Estrecho de Magallanes y la proyectada ruta",
+   "url": "https://vive.click/la-disputa-equivocada/"
   },
   {
-   "titulo": "Recorte de prensa",
-   "fuente": "LAS ULTIMAS NOTICIAS",
-   "resumen": "",
-   "url": "http://www.lun.com/Pages/NewsDetail.aspx?dt=2026-10-03&EsAviso=0&PaginaId=7&bodyid=0"
-  },
-  {
-   "titulo": "Recorte de prensa",
-   "fuente": "LAS ULTIMAS NOTICIAS",
-   "resumen": "",
-   "url": "http://www.lun.com/Pages/NewsDetail.aspx?dt=2026-10-03&EsAviso=0&PaginaId=6&bodyid=0"
-  },
-  {
-   "titulo": "Recorte de prensa",
-   "fuente": "LA ESTRELLA DE VALPARAISO",
-   "resumen": "",
-   "url": null
-  },
-  {
-   "titulo": "Recorte de prensa",
-   "fuente": "EL MERCURIO DE VALPARAÍSO",
-   "resumen": "En el marco del Día Nacional de las Ciencias, la Tecnología, el Conocimiento y la Innovación, el texto plantea que Chile debe priorizar el conocimiento como un motor de desarrollo sostenible y autonomía, destacando el rol fundamental de las universidades —como las del CRUCH, que generan el 77% de lo",
-   "url": null
-  },
-  {
-   "titulo": "Recorte de prensa",
-   "fuente": "EL MERCURIO DE VALPARAÍSO",
-   "resumen": "Las recientes declaraciones del ministro de Defensa chileno sobre la soberanía de facto del Reino Unido en las islas Malvinas generaron tensión comunicacional con Argentina, exponiendo contradicciones frente a un reciente comunicado conjunto donde Chile se comprometió a intentar evitar el apoyo logí",
-   "url": null
-  },
-  {
-   "titulo": "Recorte de prensa",
-   "fuente": "EL MERCURIO DE SANTIAGO",
-   "resumen": "El economista Felipe Larraín argumenta que el verdadero aspecto clave del Presupuesto 2027 es que el crecimiento proyectado del gasto público (1,5%) es inferior al crecimiento estimado del PIB (2,9%), lo que evita que el sector público se expanda por encima del tamaño de la economía. El autor resta ",
-   "url": null
-  },
-  {
-   "titulo": "Recorte de prensa",
-   "fuente": "LA ESTRELLA DE VALPARAISO",
-   "resumen": "",
-   "url": null
-  },
-  {
-   "titulo": "Recorte de prensa",
-   "fuente": "REDES SOCIALES",
-   "resumen": "",
-   "url": "https://youtu.be/eiRbPg0CcTg?si=RG_VIC7LNZHtQ25k"
+   "titulo": "Rumbo al oceano profundo imo zarpa con dos misiones cientificas a bordo del",
+   "fuente": "DEL CABO DE HORNOS",
+   "resumen": "El Instituto Milenio de Oceanografía (IMO), en conjunto con la Universidad de Concepción, la Pontificia Universidad Católica de Chile y el apoyo de la Armada, zarpa en el buque oceanográfico Cabo de Hornos para llevar a cabo una expedición científica de más de tres semanas en la Fosa de Atacama. La ",
+   "url": "https://imo.udec.cl/rumbo-al-oceano-profundo-imo-zarpa-con-dos-misiones-cientificas-a-bordo-del-"
   }
  ],
  "prensa": {
-  "titulo": "RESUMEN DE PRENSA 02,03, 04 y 05 DE OCTUBRE DE 2026",
-  "fecha": "2026-10-05T11:00:00.000Z",
+  "titulo": "RESUMEN DE PRENSA 06 DE OCTUBRE DE 2026",
+  "fecha": "2026-10-06T11:00:00.000Z",
   "items": [
    {
-    "fuente": "LA TERCERA",
+    "fuente": "MERCURIO DE VALPARAISO",
     "nota": "",
-    "dia": "VIERNES 02 DE OCTUBRE",
-    "titulo": "PROTECCIÓN DE DATOS PERSONALES: OPOSICIÓN PIDE REDUCIR EL PLAZO DE POSTERGACIÓN DE LA LEY QUE PROPUSO EL GOBIERNO",
-    "tituloAuto": false,
+    "dia": "",
+    "titulo": "MERCURIO DE VALPARAISO",
+    "tituloAuto": true,
     "parrafos": [
-     "Senadores de oposición y oficialistas han cuestionado la propuesta del Gobierno chileno de postergar por un año la entrada en vigencia de la nueva Ley de Protección de Datos Personales —prevista para diciembre—, calificando el plazo de \"excesivo\" y planteando en su lugar reducir la prórroga a solo seis meses o aplicarla de forma gradual. Esta solicitud de postergación surge debido a los retrasos y falta de acuerdos en la conformación del consejo directivo de la nueva Agencia de Protección de Datos Personales (APDP), entidad clave para fijar los reglamentos operacionales de la norma, lo que ha llevado al Ejecutivo a proponer también aumentar de tres a cinco los miembros de dicho organismo para destrabar sus nombramientos."
-    ],
-    "imagenes": [],
-    "minis": [],
-    "url": "https://www.latercera.com/pulso/noticia/proteccion-de-datos-personales-oposicion-pide-reducir-el-plazo-de-postergacion-de-la-ley-que-propuso-el-gobierno/",
-    "resumen": "Senadores de oposición y oficialistas han cuestionado la propuesta del Gobierno chileno de postergar por un año la entrada en vigencia de la nueva Ley de Protección de Datos Personales —prevista para diciembre—, calificando el plazo de \"excesivo\" y planteando en su lugar reducir la prórroga a solo s"
-   },
-   {
-    "fuente": "LA TERCEREA",
-    "nota": "",
-    "dia": "DOMINGO 04 DE OCTUBRE",
-    "titulo": "EL NEGOCIO DE LAS ISLAS REMOTAS: LA NAVIERA QUE QUIERE ZARPAR DE PUNTA ARENAS A LAS ISLAS MALVINAS",
-    "tituloAuto": false,
-    "parrafos": [
-     "Easter Island Logistics nació en 2018 de la mano de tres profesionales de la salud y construyó su negocio abasteciendo a Rapa Nui. Después entró a la Antártica, intentó expandirse a Juan Fernández y ahora prepara su primer zarpe desde Punta Arenas a las Malvinas para abrir una ruta mensual desde noviembre. El municipio calcula un intercambio de al menos US$20 millones al año y los empresarios esperan que, al sumar servicios, turismo y empleos estacionales, la cifra pueda ser mayor."
-    ],
-    "imagenes": [],
-    "minis": [],
-    "url": "https://www.latercera.com/pulso/noticia/el-negocio-de-las-islas-remotas-la-naviera-que-quiere-zarpar-de-punta-arenas-a-las-islas-malvinas/",
-    "resumen": "Easter Island Logistics nació en 2018 de la mano de tres profesionales de la salud y construyó su negocio abasteciendo a Rapa Nui. Después entró a la Antártica, intentó expandirse a Juan Fernández y ahora prepara su primer zarpe desde Punta Arenas a las Malvinas para abrir una ruta mensual desde nov"
-   },
-   {
-    "fuente": "LA TERCERA",
-    "nota": "",
-    "dia": "LUNES 05 DE OCTUBRE",
-    "titulo": "NUEVA REFORMA DE SEGURIDAD PERMITIRÍA A PRESIDENTE DE LA REPÚBLICA DECRETAR ESTADO DE EXCEPCIÓN ANTE AMENAZAS A LA SEGURIDAD",
-    "tituloAuto": false,
-    "parrafos": [
-     "Una nueva propuesta de reforma constitucional en materia de seguridad —trabajada por senadores de forma alternativa al proyecto inicial del Ejecutivo— busca articularse en tres ejes principales: combate al crimen organizado, segregación carcelaria y ajustes al estado de excepción de emergencia. Entre sus medidas clave, la iniciativa permitiría al Presidente de la República decretar el estado de emergencia de manera preventiva ante una «amenaza grave a la Seguridad Pública» sin esperar a que ocurran hechos consumados, mientras otorga mayores facultades de fiscalización y revocación al Congreso, equipara los delitos de crimen organizado a los de terrorismo y otorga rango constitucional a las facultades de Gendarmería para separar a reos de alta peligrosidad."
-    ],
-    "imagenes": [],
-    "minis": [],
-    "url": "https://www.latercera.com/politica/noticia/nueva-reforma-de-seguridad-permitiria-a-presidente-de-la-republica-decretar-estado-de-excepcion-ante-amenazas-a-la-seguridad/",
-    "resumen": "Una nueva propuesta de reforma constitucional en materia de seguridad —trabajada por senadores de forma alternativa al proyecto inicial del Ejecutivo— busca articularse en tres ejes principales: combate al crimen organizado, segregación carcelaria y ajustes al estado de excepción de emergencia. Entr"
-   },
-   {
-    "fuente": "LA TERCERA",
-    "nota": "",
-    "dia": "LUNES 05 DE OCTUBRE",
-    "titulo": "COMPLEJO VOLCÁNICO NEVADOS DE CHILLÁN SIGUE BAJO ALERTA: REPORTAN AUMENTO EN LA ACTIVIDAD EXPLOSIVA Y DE TEMPERATURA EN SUPERFICIE",
-    "tituloAuto": false,
-    "parrafos": [
-     "Las comunas de Pinto y Coihueco, en la Región de Ñuble, se mantienen bajo Alerta Temprana Preventiva en nivel amarillo debido a que el complejo volcánico Nevados de Chillán registró un incremento en su actividad explosiva —con incandescencia constante y proyección de material balístico— junto a un aumento en la temperatura de superficie detectado por sensores satelitales, por lo que las autoridades del Sernageomin y Senapred decidieron conservar el perímetro de seguridad de 2 kilómetros alrededor del centro emisor y no descartan la ocurrencia de nuevos eventos de similar o mayor energía."
+     "En una entrevista, Sir Nick Hine, exvicealmirante de la Royal Navy y ejecutivo de Babcock International Group,",
+     "plantea la posibilidad de establecer una alianza estratégica de largo plazo con Chile para la construcción local de",
+     "fragatas basadas en el diseño Arrowhead 140. La propuesta busca transferir conocimientos, tecnología y",
+     "capacidades técnicas a la industria nacional (como Asmar) para que el país fabrique sus propios buques de",
+     "guerra de última generación, fortaleciendo el desarrollo industrial chileno y convirtiendo a Chile en una potencia",
+     "regional en construcción naval defensiva."
     ],
     "imagenes": [],
     "minis": [],
     "url": null,
-    "resumen": "Las comunas de Pinto y Coihueco, en la Región de Ñuble, se mantienen bajo Alerta Temprana Preventiva en nivel amarillo debido a que el complejo volcánico Nevados de Chillán registró un incremento en su actividad explosiva —con incandescencia constante y proyección de material balístico— junto a un a"
+    "resumen": "En una entrevista, Sir Nick Hine, exvicealmirante de la Royal Navy y ejecutivo de Babcock International Group, plantea la posibilidad de establecer una alianza estratégica de largo plazo con Chile para la construcción local de fragatas basadas en el diseño Arrowhead 140. La propuesta busca transferi"
    },
    {
-    "fuente": "EL MERCURIO DE SANTIAGO",
+    "fuente": "MERCURIO DE SANTIAGO",
     "nota": "",
-    "dia": "VIERNES 02 DE OCTUBRE",
-    "titulo": "Recorte de prensa",
-    "tituloAuto": true,
-    "parrafos": [],
-    "imagenes": [
-     "publicado/prensa/muwlj3vb_4_0.jpg",
-     "publicado/prensa/muwlj3vb_4_1.jpg"
-    ],
-    "minis": [
-     "publicado/prensa/muwlj3vb_4_0_m.jpg",
-     "publicado/prensa/muwlj3vb_4_1_m.jpg"
-    ],
-    "url": null,
-    "resumen": ""
-   },
-   {
-    "fuente": "EL MERCURIO DE VALPARAÍSO",
-    "nota": "",
-    "dia": "VIERNES 02 DE OCTUBRE",
-    "titulo": "Recorte de prensa",
-    "tituloAuto": true,
-    "parrafos": [],
-    "imagenes": [
-     "publicado/prensa/muwlj3vb_5_0.jpg"
-    ],
-    "minis": [
-     "publicado/prensa/muwlj3vb_5_0_m.jpg"
-    ],
-    "url": null,
-    "resumen": ""
-   },
-   {
-    "fuente": "LA ESTRELLA DE VALPARAÍSO",
-    "nota": "",
-    "dia": "VIERNES 02 DE OCTUBRE",
-    "titulo": "Recorte de prensa",
+    "dia": "",
+    "titulo": "MERCURIO DE SANTIAGO",
     "tituloAuto": true,
     "parrafos": [
-     "Gracias a las intensas lluvias invernales y a las inversiones de Esval, los embalses de la Región de Valparaíso alcanzaron un 42% de llenado conjunto, logrando su mayor nivel en más de diez años y garantizando el abastecimiento hídrico para las zonas urbanas durante el verano y la temporada 2027. En el desglose destaca el embalse Los Aromos, que se encuentra al 97% de su capacidad total con 34,1 millones de metros cúbicos, así como el Tranque La Luz en su máxima capacidad (5,9 millones de m³), el Lago Peñuelas sobre los 16 millones de m³ y un importante superávit de precipitaciones y nieve acumulada en la cordillera en comparación con el año pasado."
+     "El proyecto de Ley de Presupuesto 2027 contempla una caída nominal del 7,4% para el Ministerio de Ciencia,",
+     "Tecnología, Conocimiento e Innovación respecto a 2026. Esta reducción impacta a diversos fondos e",
+     "instrumentos, como Becas Chile —cuyos recursos disminuyen un 8% (cerca de $2.000 millones)— y el Fondo de",
+     "Equipamiento Científico y Tecnológico (Fondequip), que sufre una baja cercana al 80%, además de severos",
+     "recortes en programas de equipamiento, inserción de investigadores y capacidades tecnológicas. Por su parte,",
+     "aunque la ministra Ximena Lincolao destaca el resguardo de compromisos adquiridos y un leve aumento",
+     "nominal para Fondecyt, diversos programas regionales e instrumentos clave sufren importantes contracciones",
+     "en sus asignaciones."
     ],
-    "imagenes": [
-     "publicado/prensa/muwlj3vb_6_0.jpg"
-    ],
-    "minis": [
-     "publicado/prensa/muwlj3vb_6_0_m.jpg"
-    ],
+    "imagenes": [],
+    "minis": [],
     "url": null,
-    "resumen": "Gracias a las intensas lluvias invernales y a las inversiones de Esval, los embalses de la Región de Valparaíso alcanzaron un 42% de llenado conjunto, logrando su mayor nivel en más de diez años y garantizando el abastecimiento hídrico para las zonas urbanas durante el verano y la temporada 2027. En"
+    "resumen": "El proyecto de Ley de Presupuesto 2027 contempla una caída nominal del 7,4% para el Ministerio de Ciencia, Tecnología, Conocimiento e Innovación respecto a 2026. Esta reducción impacta a diversos fondos e instrumentos, como Becas Chile —cuyos recursos disminuyen un 8% (cerca de $2.000 millones)— y e"
    },
    {
-    "fuente": "LAS ULTIMAS NOTICIAS",
+    "fuente": "CARABINERO RECIÉN EGRESADO",
     "nota": "",
-    "dia": "SÁBADO 03 DE OCTUBRE",
-    "titulo": "Recorte de prensa",
-    "tituloAuto": true,
-    "parrafos": [],
-    "imagenes": [
-     "publicado/prensa/muwlj3vb_7_0.jpg"
-    ],
-    "minis": [
-     "publicado/prensa/muwlj3vb_7_0_m.jpg"
-    ],
-    "url": "http://www.lun.com/Pages/NewsDetail.aspx?dt=2026-10-03&EsAviso=0&PaginaId=7&bodyid=0",
-    "resumen": ""
-   },
-   {
-    "fuente": "LAS ULTIMAS NOTICIAS",
-    "nota": "",
-    "dia": "SÁBADO 03 DE OCTUBRE",
-    "titulo": "Recorte de prensa",
-    "tituloAuto": true,
-    "parrafos": [],
-    "imagenes": [
-     "publicado/prensa/muwlj3vb_8_0.jpg"
-    ],
-    "minis": [
-     "publicado/prensa/muwlj3vb_8_0_m.jpg"
-    ],
-    "url": "http://www.lun.com/Pages/NewsDetail.aspx?dt=2026-10-03&EsAviso=0&PaginaId=6&bodyid=0",
-    "resumen": ""
-   },
-   {
-    "fuente": "LA ESTRELLA DE VALPARAISO",
-    "nota": "",
-    "dia": "SÁBADO 03 DE OCTUBRE",
-    "titulo": "Recorte de prensa",
-    "tituloAuto": true,
-    "parrafos": [],
-    "imagenes": [
-     "publicado/prensa/muwlj3vb_9_0.jpg",
-     "publicado/prensa/muwlj3vb_9_1.jpg"
-    ],
-    "minis": [
-     "publicado/prensa/muwlj3vb_9_0_m.jpg",
-     "publicado/prensa/muwlj3vb_9_1_m.jpg"
-    ],
-    "url": null,
-    "resumen": ""
-   },
-   {
-    "fuente": "EL MERCURIO DE VALPARAÍSO",
-    "nota": "",
-    "dia": "DOMINGO 04 DE OCTUBRE",
-    "titulo": "Recorte de prensa",
+    "dia": "",
+    "titulo": "Diputado valenzuela y diferencia de sueldos entre ffaa y carabineros me",
     "tituloAuto": true,
     "parrafos": [
-     "En el marco del Día Nacional de las Ciencias, la Tecnología, el Conocimiento y la Innovación, el texto plantea que Chile debe priorizar el conocimiento como un motor de desarrollo sostenible y autonomía, destacando el rol fundamental de las universidades —como las del CRUCH, que generan el 77% de los artículos científicos del país— en la transformación económica y social. Para consolidar este impacto, especialmente en regiones como Valparaíso, se enfatiza que la investigación requiere rigor, libertad y tiempo, así como transitar desde los fondos concursables hacia un financiamiento estructural de largo plazo mediante la colaboración entre instituciones de educación superior, el Estado y el sector privado."
+     "El diputado e integrante de la comisión de Defensa, Daniel Valenzuela, manifestó su deseo de",
+     "equiparar los sueldos de los soldados de tropa de las Fuerzas Armadas con los de los carabineros",
+     "recién egresados —explicando que actualmente un carabinero raso percibe cerca de $900 mil frente a",
+     "los $600 mil aproximados de un soldado de tropa—, aunque advirtió que las limitaciones",
+     "presupuestarias imponen complejos dilemas de priorización en el gasto público. Asimismo, ante las",
+     "peticiones de desplegar militares para enfrentar el crimen organizado, señaló que las Fuerzas",
+     "Armadas pueden colaborar en casos excepcionales pero requieren de atribuciones claras y un",
+     "respaldo institucional adecuado, recordando las consecuencias judiciales que enfrentaron efectivos",
+     "tras el estallido social.",
+     "gustar-a-que-los-soldados-y-tropa-ganen-lo-mismo-que-va-a-ganar-un-carabinero-reci-n-egresado/"
     ],
-    "imagenes": [
-     "publicado/prensa/muwlj3vb_10_0.jpg",
-     "publicado/prensa/muwlj3vb_10_1.jpg"
-    ],
-    "minis": [
-     "publicado/prensa/muwlj3vb_10_0_m.jpg",
-     "publicado/prensa/muwlj3vb_10_1_m.jpg"
-    ],
-    "url": null,
-    "resumen": "En el marco del Día Nacional de las Ciencias, la Tecnología, el Conocimiento y la Innovación, el texto plantea que Chile debe priorizar el conocimiento como un motor de desarrollo sostenible y autonomía, destacando el rol fundamental de las universidades —como las del CRUCH, que generan el 77% de lo"
+    "imagenes": [],
+    "minis": [],
+    "url": "https://infogate.cl/2026/10/diputado-valenzuela-y-diferencia-de-sueldos-entre-ffaa-y-carabineros-me-",
+    "resumen": "El diputado e integrante de la comisión de Defensa, Daniel Valenzuela, manifestó su deseo de equiparar los sueldos de los soldados de tropa de las Fuerzas Armadas con los de los carabineros recién egresados —explicando que actualmente un carabinero raso percibe cerca de $900 mil frente a los $600 mi"
    },
    {
-    "fuente": "EL MERCURIO DE VALPARAÍSO",
+    "fuente": "VIVE",
     "nota": "",
-    "dia": "DOMINGO 04 DE OCTUBRE",
-    "titulo": "Recorte de prensa",
+    "dia": "",
+    "titulo": "LA DISPUTA EQUIVOCADA",
+    "tituloAuto": false,
+    "parrafos": [
+     "El artículo de opinión firmado por el exembajador argentino Jorge Argüello sostiene que Argentina y",
+     "Chile están incurriendo en un error estratégico al interrelacionar tensiones recientes —como las",
+     "declaraciones e imprecisiones jurídicas argentinas sobre el Estrecho de Magallanes y la proyectada",
+     "ruta marítima comercial entre Punta Arenas y las Islas Malvinas—, convirtiendo en recelos bilaterales",
+     "lo que son asuntos de distinta naturaleza; ante ello, enfatiza que la soberanía chilena sobre el",
+     "Estrecho no está en duda y que la verdadera controversia territorial sobre las Malvinas es",
+     "exclusivamente con el Reino Unido, por lo que llama a la rectificación formal, al diálogo oportuno y a la",
+     "cooperación entre ambas naciones para evitar fricciones innecesarias que solo benefician los intereses",
+     "británicos en la región."
+    ],
+    "imagenes": [],
+    "minis": [],
+    "url": "https://vive.click/la-disputa-equivocada/",
+    "resumen": "El artículo de opinión firmado por el exembajador argentino Jorge Argüello sostiene que Argentina y Chile están incurriendo en un error estratégico al interrelacionar tensiones recientes —como las declaraciones e imprecisiones jurídicas argentinas sobre el Estrecho de Magallanes y la proyectada ruta"
+   },
+   {
+    "fuente": "DEL CABO DE HORNOS",
+    "nota": "",
+    "dia": "",
+    "titulo": "Rumbo al oceano profundo imo zarpa con dos misiones cientificas a bordo del",
     "tituloAuto": true,
     "parrafos": [
-     "Las recientes declaraciones del ministro de Defensa chileno sobre la soberanía de facto del Reino Unido en las islas Malvinas generaron tensión comunicacional con Argentina, exponiendo contradicciones frente a un reciente comunicado conjunto donde Chile se comprometió a intentar evitar el apoyo logístico desde Punta Arenas a las actividades económicas en las zonas disputadas. La falta de consulta a los intereses de la Región de Magallanes —que busca mantener lazos comerciales con las islas—, sumada a las divergentes interpretaciones diplomáticas sobre el alcance obligatorio de dicho acuerdo, deja en evidencia la necesidad de que Chile defina una estrategia coordinada y clara ante Argentina que defienda el libre tránsito marítimo, fortalezca sus capacidades de disuasión y exija reciprocidad económica."
+     "El Instituto Milenio de Oceanografía (IMO), en conjunto con la Universidad de Concepción, la Pontificia",
+     "Universidad Católica de Chile y el apoyo de la Armada, zarpa en el buque oceanográfico Cabo de",
+     "Hornos para llevar a cabo una expedición científica de más de tres semanas en la Fosa de Atacama.",
+     "La misión abarca dos investigaciones paralelas: por un lado, la reinstalación del sistema IDOOS para",
+     "monitorear en tiempo real variables físicas, químicas y biológicas en el océano profundo y evaluar los",
+     "impactos del fenómeno de El Niño; por el otro, un estudio geofísico inédito mediante sonares de alta",
+     "resolución para mapear fallas tectónicas y sedimentos en la laguna sísmica frente a Taltal y Mejillones,",
+     "ofreciendo además una valiosa oportunidad formativa para estudiantes a bordo.",
+     "cabo-de-hornos/"
     ],
-    "imagenes": [
-     "publicado/prensa/muwlj3vb_11_0.jpg",
-     "publicado/prensa/muwlj3vb_11_1.jpg"
-    ],
-    "minis": [
-     "publicado/prensa/muwlj3vb_11_0_m.jpg",
-     "publicado/prensa/muwlj3vb_11_1_m.jpg"
-    ],
-    "url": null,
-    "resumen": "Las recientes declaraciones del ministro de Defensa chileno sobre la soberanía de facto del Reino Unido en las islas Malvinas generaron tensión comunicacional con Argentina, exponiendo contradicciones frente a un reciente comunicado conjunto donde Chile se comprometió a intentar evitar el apoyo logí"
-   },
-   {
-    "fuente": "EL MERCURIO DE SANTIAGO",
-    "nota": "",
-    "dia": "LUNES 05 DE OCTUBRE",
-    "titulo": "Recorte de prensa",
-    "tituloAuto": true,
-    "parrafos": [
-     "El economista Felipe Larraín argumenta que el verdadero aspecto clave del Presupuesto 2027 es que el crecimiento proyectado del gasto público (1,5%) es inferior al crecimiento estimado del PIB (2,9%), lo que evita que el sector público se expanda por encima del tamaño de la economía. El autor resta importancia al debate sobre si es mejor comparar el gasto con la Ley de Presupuestos anterior o con la ejecución estimada de 2026, señalando que ambas fórmulas son válidas mientras exista transparencia. Finalmente, destaca que un manejo prudente del gasto y el cumplimiento de las metas fiscales son fundamentales para controlar la deuda pública, reducir las tasas de interés de largo plazo y recuperar la credibilidad económica de Chile ante los mercados e inversionistas internacionales."
-    ],
-    "imagenes": [
-     "publicado/prensa/muwlj3vb_12_0.jpg",
-     "publicado/prensa/muwlj3vb_12_1.jpg"
-    ],
-    "minis": [
-     "publicado/prensa/muwlj3vb_12_0_m.jpg",
-     "publicado/prensa/muwlj3vb_12_1_m.jpg"
-    ],
-    "url": null,
-    "resumen": "El economista Felipe Larraín argumenta que el verdadero aspecto clave del Presupuesto 2027 es que el crecimiento proyectado del gasto público (1,5%) es inferior al crecimiento estimado del PIB (2,9%), lo que evita que el sector público se expanda por encima del tamaño de la economía. El autor resta "
-   },
-   {
-    "fuente": "LA ESTRELLA DE VALPARAISO",
-    "nota": "",
-    "dia": "LUNES 05 DE OCTUBRE",
-    "titulo": "Recorte de prensa",
-    "tituloAuto": true,
-    "parrafos": [],
-    "imagenes": [
-     "publicado/prensa/muwlj3vb_13_0.jpg",
-     "publicado/prensa/muwlj3vb_13_1.jpg"
-    ],
-    "minis": [
-     "publicado/prensa/muwlj3vb_13_0_m.jpg",
-     "publicado/prensa/muwlj3vb_13_1_m.jpg"
-    ],
-    "url": null,
-    "resumen": ""
-   },
-   {
-    "fuente": "REDES SOCIALES",
-    "nota": "",
-    "dia": "LUNES 05 DE OCTUBRE",
-    "titulo": "Recorte de prensa",
-    "tituloAuto": true,
-    "parrafos": [],
-    "imagenes": [
-     "publicado/prensa/muwlj3vb_14_0.jpg",
-     "publicado/prensa/muwlj3vb_14_1.jpg",
-     "publicado/prensa/muwlj3vb_14_2.jpg",
-     "publicado/prensa/muwlj3vb_14_3.jpg",
-     "publicado/prensa/muwlj3vb_14_4.jpg",
-     "publicado/prensa/muwlj3vb_14_5.jpg"
-    ],
-    "minis": [
-     "publicado/prensa/muwlj3vb_14_0_m.jpg",
-     "publicado/prensa/muwlj3vb_14_1_m.jpg",
-     "publicado/prensa/muwlj3vb_14_2_m.jpg",
-     "publicado/prensa/muwlj3vb_14_3_m.jpg",
-     "publicado/prensa/muwlj3vb_14_4_m.jpg",
-     "publicado/prensa/muwlj3vb_14_5_m.jpg"
-    ],
-    "url": "https://youtu.be/eiRbPg0CcTg?si=RG_VIC7LNZHtQ25k",
-    "resumen": ""
+    "imagenes": [],
+    "minis": [],
+    "url": "https://imo.udec.cl/rumbo-al-oceano-profundo-imo-zarpa-con-dos-misiones-cientificas-a-bordo-del-",
+    "resumen": "El Instituto Milenio de Oceanografía (IMO), en conjunto con la Universidad de Concepción, la Pontificia Universidad Católica de Chile y el apoyo de la Armada, zarpa en el buque oceanográfico Cabo de Hornos para llevar a cabo una expedición científica de más de tres semanas en la Fosa de Atacama. La "
    }
   ]
  }
