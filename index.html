@@ -1128,6 +1128,7 @@ svg.leaflet-image-layer.leaflet-interactive path {
   .prRow { display: grid; grid-template-columns: 1fr auto; grid-template-areas: "src lnk" "tit lnk"; column-gap: 8px; padding: 7px 0; border-top: 1px solid #eef1f5; }
   .prSrc { grid-area: src; font-size: 10.5px; font-weight: 800; letter-spacing: .6px; color: var(--accent); }
   .prTit { grid-area: tit; font-size: 12.5px; line-height: 1.35; color: var(--ink); }
+  .prLks { grid-area: lnk; align-self: center; display: flex; flex-direction: column; align-items: flex-end; gap: 3px; }
   .prRow a { grid-area: lnk; align-self: center; font-size: 11.5px; font-weight: 600; color: var(--accent); white-space: nowrap; text-decoration: none; }
   .prRow a:hover { text-decoration: underline; }
   .prDia { font-weight: 600; letter-spacing: 0; color: var(--muted); }
@@ -2351,7 +2352,9 @@ function prensaResumenHTML() {
     pr.items.map((it, i) => (it.imagenes.length && (i === 0 || !pr.items[i - 1].imagenes.length) ? `<div class="prSep">Recortes de prensa · pulse una imagen para verla en grande</div>` : '') +
       `<div class="prRow${it.imagenes.length ? ' conImg' : ''}"><span class="prSrc">${escH(it.fuente)}${it.dia ? ` <span class="prDia">· ${escH(diaCorto(it.dia))}</span>` : ''}</span>` +
       `<span class="prTit">${escH(it.tituloAuto && it.resumen ? it.resumen.slice(0, 140) + (it.resumen.length > 140 ? '…' : '') : it.titulo)}</span>` +
-      (it.url ? `<a href="${escH(it.url)}" target="_blank" rel="noopener" title="${escH(it.url)}">Ver noticia ↗</a>` : '') +
+      ((it.url || it.imagenes.length) ? `<span class="prLks">` +
+        (it.imagenes.length ? `<a href="#" class="verImg" data-g="${i}" data-j="0">${it.imagenes.length > 1 ? `Ver imágenes (${it.imagenes.length})` : 'Ver imagen'} 🖼</a>` : '') +
+        (it.url ? `<a href="${escH(it.url)}" target="_blank" rel="noopener" title="${escH(it.url)}">Ver noticia ↗</a>` : '') + `</span>` : '') +
       (it.imagenes.length ? `<div class="prThumbs">${it.imagenes.map((src, j) => `<img src="${escH(imgSrc((it.minis && it.minis[j]) || src))}" alt="Recorte de ${escH(it.fuente)}" loading="lazy" class="zoom" data-g="${i}" data-j="${j}">`).join('')}</div>` : '') +
       `</div>`).join('') +
     `<a class="prAll" href="#prensa">Ver resumen completo →</a></div>`;
@@ -2368,7 +2371,7 @@ function diaCorto(d) { const m = String(d).match(/^(\S+)\s+(\d{1,2})/); return m
   const pinta = () => { lb.querySelector('img').src = imgSrc(lista[pos]); lb.querySelector('figcaption').textContent = cap + (lista.length > 1 ? ` · ${pos + 1} de ${lista.length}` : ''); lb.classList.toggle('multi', lista.length > 1); };
   const cerrar = () => lb.classList.remove('on');
   document.addEventListener('click', (e) => {
-    const im = e.target.closest('img.zoom');
+    const im = e.target.closest('img.zoom, a.verImg');
     if (im) {
       const a = prensaActual(); const it = a && a.pr.items[+im.dataset.g]; if (!it) return;
       e.preventDefault(); lista = it.imagenes; pos = +im.dataset.j || 0; cap = it.fuente + (it.dia ? ' · ' + diaCorto(it.dia) : ''); pinta(); lb.classList.add('on'); return;
