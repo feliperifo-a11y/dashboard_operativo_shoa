@@ -1130,6 +1130,26 @@ svg.leaflet-image-layer.leaflet-interactive path {
   .prTit { grid-area: tit; font-size: 12.5px; line-height: 1.35; color: var(--ink); }
   .prRow a { grid-area: lnk; align-self: center; font-size: 11.5px; font-weight: 600; color: var(--accent); white-space: nowrap; text-decoration: none; }
   .prRow a:hover { text-decoration: underline; }
+  .prDia { font-weight: 600; letter-spacing: 0; color: var(--muted); }
+  .prSep { margin-top: 8px; padding: 6px 0 2px; border-top: 1px solid var(--line); font-size: 10.5px; font-weight: 700; color: var(--muted); letter-spacing: .3px; }
+  .prRow.conImg .prTit { color: var(--muted); font-size: 12px; }
+  .prThumbs { grid-column: 1 / -1; display: flex; gap: 6px; overflow-x: auto; padding: 6px 0 2px; }
+  .prThumbs img { height: 74px; width: auto; max-width: 160px; object-fit: cover; border: 1px solid var(--line); border-radius: 5px; cursor: zoom-in; background: #fff; flex: none; }
+  .prThumbs img:hover { border-color: var(--accent); }
+  .prIt img.zoom { cursor: zoom-in; }
+  .prNimg { font-size: 11px; color: var(--muted); font-weight: 600; }
+  #lbox { position: fixed; inset: 0; z-index: 5000; background: rgba(10, 18, 30, .88); display: none; align-items: center; justify-content: center; }
+  #lbox.on { display: flex; }
+  #lbox figure { margin: 0; max-width: 94vw; max-height: 92vh; display: flex; flex-direction: column; align-items: center; }
+  #lbox img { max-width: 94vw; max-height: 86vh; object-fit: contain; background: #fff; border-radius: 4px; box-shadow: 0 6px 30px rgba(0,0,0,.4); }
+  #lbox figcaption { color: #e6edf5; font-size: 13px; margin-top: 8px; text-align: center; }
+  #lbox button { position: absolute; background: rgba(255,255,255,.14); color: #fff; border: 0; border-radius: 50%; width: 44px; height: 44px; font-size: 26px; line-height: 1; cursor: pointer; }
+  #lbox button:hover { background: rgba(255,255,255,.28); }
+  #lbox .lbX { top: 14px; right: 14px; font-size: 20px; }
+  #lbox .lbP { left: 14px; top: 50%; transform: translateY(-50%); display: none; }
+  #lbox .lbN { right: 14px; top: 50%; transform: translateY(-50%); display: none; }
+  #lbox.multi .lbP, #lbox.multi .lbN { display: block; }
+  @media print { #lbox { display: none !important; } }
   .prAll { display: inline-block; margin-top: 6px; font-size: 12.5px; font-weight: 700; color: var(--accent); text-decoration: none; }
   @media print { body[data-vista="prensa"] .prTop { display: none; } #prensaDoc { border: 0; box-shadow: none; padding: 0; } .prIdx { display: none; } }
 
@@ -2135,7 +2155,7 @@ function fechaDesdeTexto(t) {
   return new Date(+m[3], mes, +m[1], 8, 0, 0);
 }
 
-async function comprimirImagen(blob, maxW = 900) {
+async function comprimirImagen(blob, maxW = 1400, q = 0.8) {
   try {
     const url = URL.createObjectURL(blob);
     const img = await new Promise((res, rej) => { const i = new Image(); i.onload = () => res(i); i.onerror = rej; i.src = url; });
@@ -2143,7 +2163,7 @@ async function comprimirImagen(blob, maxW = 900) {
     const c = document.createElement('canvas'); c.width = Math.round(img.naturalWidth * k); c.height = Math.round(img.naturalHeight * k);
     const g = c.getContext('2d'); g.fillStyle = '#fff'; g.fillRect(0, 0, c.width, c.height); g.drawImage(img, 0, 0, c.width, c.height);
     URL.revokeObjectURL(url);
-    return c.toDataURL('image/jpeg', 0.78);
+    return c.toDataURL('image/jpeg', q);
   } catch (e) { return null; }
 }
 
@@ -2166,7 +2186,7 @@ async function leerDocx(buf) {
   for (const p of todos) {
     if (enTxbx(p)) continue;
     let texto = '', bTotal = 0, nTotal = 0;
-    const enlaces = [], imagenes = [];
+    const enlaces = [], imagenes = [], minis = [];
     for (const r of p.getElementsByTagNameNS(W_NS, 'r')) {
       if (enTxbx(r)) continue;
       const t = [...r.childNodes].map(n => n.localName === 't' ? n.textContent : n.localName === 'tab' ? '\t' : n.localName === 'br' ? '\n' : '').join('');
@@ -2178,24 +2198,27 @@ async function leerDocx(buf) {
     }
     for (const h of p.getElementsByTagNameNS(W_NS, 'hyperlink')) {
       const id = h.getAttributeNS(R_NS, 'id'), anc = h.getAttributeNS(W_NS, 'anchor');
-      if (id && rels[id]) enlaces.push(rels[id].target + (anc ? '#' + anc : ''));
+      if (id && rels[id]) enlaces.push(normUrl(rels[id].target + (anc ? '#' + anc : '')));
     }
-    // enlaces escritos como texto plano
-    for (const m of texto.matchAll(/https?:\/\/[^\s<>"]+/g)) if (!enlaces.some(u => u.startsWith(m[0].slice(0, 40)))) enlaces.push(m[0]);
+    // enlaces escritos como texto plano (también «www.…» sin https://)
+    for (const m of texto.matchAll(RX_URL)) { const u = normUrl(m[0]); if (!enlaces.some(x => x.slice(0, 40) === u.slice(0, 40))) enlaces.push(u); }
     for (const bl of p.getElementsByTagName('a:blip')) {
       const id = bl.getAttributeNS(R_NS, 'embed') || bl.getAttribute('r:embed');
       const rel = id && rels[id]; if (!rel) continue;
       const ruta = ('word/' + rel.target).replace(/word\/\.\.\//, '');
       const f = zip.file(ruta); if (!f) continue;
-      const dataUrl = await comprimirImagen(await f.async('blob'));
-      if (dataUrl) imagenes.push(dataUrl);
+      const blob = await f.async('blob');
+      const full = await comprimirImagen(blob, 1400, 0.8), mini = await comprimirImagen(blob, 360, 0.72);
+      if (full) { imagenes.push(full); minis.push(mini || full); }
     }
-    parrafos.push({ texto: texto.replace(/\s+\n/g, '\n').trim(), negrita: nTotal > 0 && bTotal / nTotal > 0.8, enlaces, imagenes });
+    parrafos.push({ texto: texto.replace(/\s+\n/g, '\n').trim(), negrita: nTotal > 0 && bTotal / nTotal > 0.8, enlaces, imagenes, minis });
   }
   return parrafos;
 }
 
-const soloEnlace = (p) => p.enlaces.length && p.texto.replace(/https?:\/\/\S+/g, '').trim().length < 3;
+const RX_URL = /(?:https?:\/\/|www\.)[^\s<>"]+/g;
+const normUrl = (u) => { u = String(u).trim().replace(/[.,;)]+$/, ''); return /^https?:\/\//i.test(u) ? u : 'https://' + u.replace(/^\/+/, ''); };
+const soloEnlace = (p) => p.enlaces.length && p.texto.replace(RX_URL, '').replace(RX_ETIQ, '').trim().length < 3;
 function tituloDesdeUrl(u) {
   try {
     const seg = new URL(u).pathname.split('/').filter(Boolean).filter(s => !/^\d+$/.test(s) && !/^\d{4}-\d{2}-\d{2}$/.test(s));
@@ -2206,52 +2229,58 @@ function tituloDesdeUrl(u) {
 function fuenteDesdeUrl(u) { try { return new URL(u).hostname.replace(/^www\./, ''); } catch (e) { return ''; } }
 
 // párrafos → { titulo, fecha, items[] }
+// Estructura del resumen: TÍTULO · secciones (MEDIOS…, REDES SOCIALES) · días (VIERNES 02 DE OCTUBRE)
+// · por noticia: MEDIO (negrita) → TITULAR (negrita) → texto y/o recortes (imágenes) → enlace. Al final, la firma.
+const RX_DIA = /^(lunes|martes|mi[eé]rcoles|jueves|viernes|s[aá]bado|domingo)\s+\d{1,2}(\s+de\s+[a-záéíóú]+)?(\s+de\s+\d{4})?\s*$/i;
+const RX_SECC = /^(medios de comunicaci[oó]n|p[aá]ginas web|redes sociales|prensa escrita|prensa digital|radio|televisi[oó]n)\b/i;
 function estructurarPrensa(parrafos, nombreArchivo) {
-  const ps = parrafos.filter(p => p.texto || p.imagenes.length);
+  const ps = parrafos.filter(p => p.texto || p.imagenes.length).map(p => ({ ...p, minis: p.minis || p.imagenes }));
   let titulo = '', i0 = 0;
-  if (ps[0] && ps[0].negrita && /resumen|prensa/i.test(ps[0].texto)) { titulo = ps[0].texto; i0 = 1; }
-  const items = []; let cur = null;
+  if (ps[0] && (ps[0].negrita || pareceMayus(ps[0].texto)) && /resumen|prensa/i.test(ps[0].texto)) { titulo = ps[0].texto.replace(/\s+/g, ' '); i0 = 1; }
+  // la firma: texto suelto después del último recorte o enlace del documento
+  let fin = ps.length - 1;
+  while (fin >= i0 && !ps[fin].imagenes.length && !ps[fin].enlaces.length && !ps[fin].negrita) fin--;
+  const items = []; let cur = null, dia = '', seccion = '';
+  const tieneAlgo = (c) => c && (c.titulo || c.parrafos.length || c.imagenes.length || c.url);
   const nuevo = (txt) => {
     const m = String(txt).match(/^([^(]+?)\s*\(([^)]*)\)\s*$/);   // «INACH (CON PUBLICACIÓN PARA DESCARGA)»
     const fuente = (m ? m[1] : txt).trim(), nota = m ? m[2].replace(/\s+/g, ' ').trim() : '';
-    cur = { fuente, nota, titulo: '', tituloAuto: false, parrafos: [], imagenes: [], url: null }; items.push(cur);
+    cur = { fuente, nota, dia, titulo: '', tituloAuto: false, parrafos: [], imagenes: [], minis: [], url: null }; items.push(cur);
   };
-  for (let i = i0; i < ps.length; i++) {
-    const p = ps[i];
-    if (soloEnlace(p)) {
-      if (!cur) nuevo(fuenteDesdeUrl(p.enlaces[0]).toUpperCase());
-      if (!cur.url) cur.url = p.enlaces[0];
-      continue;
-    }
-    if (p.negrita && p.texto && !p.imagenes.length) {
-      const corto = p.texto.length <= 60;
-      if (!cur || cur.url || (cur.parrafos.length && corto)) { nuevo(p.texto.replace(/\s+/g, ' ')); continue; }
-      if (!cur.titulo && !cur.parrafos.length) { cur.titulo = p.texto.replace(/\s+/g, ' '); continue; }
-      // encabezado de sección antes de la fuente («MEDIOS DE COMUNICACIÓN» → «LA TERCERA» → titular)
-      if (cur.titulo && !cur.parrafos.length && !cur.imagenes.length && cur.titulo.length <= 60) {
-        if (corto) { nuevo(p.texto.replace(/\s+/g, ' ')); continue; }
-        cur.fuente = cur.titulo; cur.nota = ''; cur.titulo = p.texto.replace(/\s+/g, ' '); continue;
+  for (let i = i0; i <= fin; i++) {
+    const p = ps[i], txt = p.texto.replace(/\s+/g, ' ').trim();
+    if (soloEnlace(p)) { if (!cur) nuevo(seccion || fuenteDesdeUrl(p.enlaces[0]).toUpperCase()); if (!cur.url) cur.url = p.enlaces[0]; continue; }
+    if (p.negrita && txt && !p.imagenes.length) {
+      if (RX_DIA.test(txt)) { dia = txt; cur = null; continue; }
+      if (RX_SECC.test(txt)) { seccion = /redes/i.test(txt) ? 'REDES SOCIALES' : ''; cur = null; if (seccion) nuevo(seccion); continue; }
+      const corto = txt.length <= 60;
+      if (cur && !tieneAlgo(cur)) {                       // tras el medio: el titular
+        cur.titulo = txt; continue;
       }
-      cur.parrafos.push(p.texto); continue;
+      if (corto) { nuevo(txt); continue; }                 // nuevo medio
+      if (cur && !cur.titulo && !cur.parrafos.length) { cur.titulo = txt; continue; }
+      const f = cur ? cur.fuente : seccion; nuevo(f); cur.titulo = txt; continue;   // otro titular del mismo medio
     }
-    if (!cur) continue;            // texto suelto antes de la primera fuente
-    if (cur.url) { cur = null; continue; } // texto posterior al enlace (firma, notas): se omite
-    if (p.texto) cur.parrafos.push(p.texto);
-    cur.imagenes.push(...p.imagenes);
+    if (!cur) nuevo(seccion || 'PRENSA');
+    if (txt) cur.parrafos.push(p.texto);
+    cur.imagenes.push(...p.imagenes); cur.minis.push(...p.minis);
     if (p.enlaces.length && !cur.url) cur.url = p.enlaces[0];
   }
-  // sin enlace ni contenido = encabezado suelto; lo que sigue al último enlace es firma o cierre
-  let ultimo = -1; items.forEach((it, i) => { if (it.url) ultimo = i; });
-  const limpios = items.filter((it, i) => (it.url || it.parrafos.length || it.imagenes.length) && (ultimo < 0 || i <= ultimo || it.imagenes.length)).map(it => {
-    if (!it.titulo) { const t = it.url ? tituloDesdeUrl(it.url) : ''; it.titulo = (t || it.fuente) + (it.nota ? ` (${it.nota.charAt(0) + it.nota.slice(1).toLowerCase()})` : ''); it.tituloAuto = true; }
+  const limpios = items.filter(it => it.url || it.parrafos.length || it.imagenes.length).map(it => {
+    if (!it.titulo) {
+      const t = it.url ? tituloDesdeUrl(it.url) : '';
+      it.titulo = t || (it.imagenes.length ? 'Recorte de prensa' : it.fuente) + (it.nota ? ` (${it.nota.charAt(0) + it.nota.slice(1).toLowerCase()})` : '');
+      it.tituloAuto = true;
+    }
     it.resumen = it.parrafos.join(' ').slice(0, 300);
     return it;
   });
+  // las noticias con imágenes (recortes) van al final, conservando el orden del documento
+  const ordenados = [...limpios.filter(it => !it.imagenes.length), ...limpios.filter(it => it.imagenes.length)];
   const fecha = fechaDesdeTexto(titulo) || fechaDesdeTexto(nombreArchivo || '') || new Date();
   if (!titulo) titulo = 'RESUMEN DE PRENSA ' + fecha.toLocaleDateString('es-CL', { day: 'numeric', month: 'long', year: 'numeric' }).toUpperCase();
-  return { titulo, fecha: fecha.toISOString(), items: limpios };
+  return { titulo, fecha: fecha.toISOString(), items: ordenados };
 }
-
 // Resumen pegado como texto (sin negritas): los renglones en mayúsculas cumplen el papel de la negrita
 const RX_ETIQ = /^(ver\s+)?(noticia|nota|link|enlace|aqu[ií]|ver m[aá]s|leer m[aá]s)\s*[:\-–]?\s*/i;
 function pareceMayus(t) { const l = t.replace(/[^A-Za-zÁÉÍÓÚÜÑáéíóúüñ]/g, ''); return l.length >= 4 && l.replace(/[^A-ZÁÉÍÓÚÜÑ]/g, '').length / l.length >= 0.85; }
@@ -2303,11 +2332,11 @@ function renderPrensaCompleta() {
   const { pr, local } = a;
   document.getElementById('prensaSub').textContent = `${fechaLarga(pr.fecha)} · ${pr.items.length} noticias${local ? ' · vista local (solo este equipo)' : ''}`;
   box.innerHTML = `<h1 class="prT">${escH(pr.titulo)}</h1>` +
-    `<nav class="prIdx">${pr.items.map((it, i) => `<a href="#prensa-${i}" data-i="${i}"><b>${escH(it.fuente)}</b> · ${escH(it.titulo)}</a>`).join('')}</nav>` +
+    `<nav class="prIdx">${pr.items.map((it, i) => `<a href="#prensa-${i}" data-i="${i}"><b>${escH(it.fuente)}</b> · ${escH(it.titulo)}${it.imagenes.length ? ` <span class="prNimg">🖼 ${it.imagenes.length}</span>` : ''}</a>`).join('')}</nav>` +
     pr.items.map((it, i) => `<article class="prIt" id="prensa-${i}">` +
-      `<div class="prF">${escH(it.fuente)}</div>` +
+      `<div class="prF">${escH(it.fuente)}${it.dia ? ` <span class="prDia">· ${escH(diaCorto(it.dia))}</span>` : ''}</div>` +
       (it.tituloAuto ? '' : `<h2>${escH(it.titulo)}</h2>`) +
-      it.imagenes.map(src => `<img src="${src}" alt="">`).join('') +
+      it.imagenes.map((src, j) => `<img src="${escH(imgSrc(src))}" alt="Recorte de ${escH(it.fuente)}" loading="lazy" class="zoom" data-g="${i}" data-j="${j}">`).join('') +
       it.parrafos.map(t => `<p>${escH(t)}</p>`).join('') +
       (it.url ? `<a class="prL" href="${escH(it.url)}" target="_blank" rel="noopener">Ver la noticia en ${escH(fuenteDesdeUrl(it.url))} ↗</a>` : '') +
       `</article>`).join('');
@@ -2319,11 +2348,43 @@ function prensaResumenHTML() {
   const a = prensaActual(); if (!a) return '';
   const { pr, local } = a;
   return `<div class="prBox"><div class="prHead"><b>Resumen de prensa</b><span>${escH(new Date(pr.fecha).toLocaleDateString('es-CL', { day: 'numeric', month: 'long', year: 'numeric' }))}${local ? ' · vista local' : ''}</span></div>` +
-    pr.items.map(it => `<div class="prRow"><span class="prSrc">${escH(it.fuente)}</span>` +
-      `<span class="prTit">${escH(it.titulo)}</span>` +
-      (it.url ? `<a href="${escH(it.url)}" target="_blank" rel="noopener" title="${escH(it.url)}">Ver noticia ↗</a>` : '') + `</div>`).join('') +
+    pr.items.map((it, i) => (it.imagenes.length && (i === 0 || !pr.items[i - 1].imagenes.length) ? `<div class="prSep">Recortes de prensa · pulse una imagen para verla en grande</div>` : '') +
+      `<div class="prRow${it.imagenes.length ? ' conImg' : ''}"><span class="prSrc">${escH(it.fuente)}${it.dia ? ` <span class="prDia">· ${escH(diaCorto(it.dia))}</span>` : ''}</span>` +
+      `<span class="prTit">${escH(it.tituloAuto && it.resumen ? it.resumen.slice(0, 140) + (it.resumen.length > 140 ? '…' : '') : it.titulo)}</span>` +
+      (it.url ? `<a href="${escH(it.url)}" target="_blank" rel="noopener" title="${escH(it.url)}">Ver noticia ↗</a>` : '') +
+      (it.imagenes.length ? `<div class="prThumbs">${it.imagenes.map((src, j) => `<img src="${escH(imgSrc((it.minis && it.minis[j]) || src))}" alt="Recorte de ${escH(it.fuente)}" loading="lazy" class="zoom" data-g="${i}" data-j="${j}">`).join('')}</div>` : '') +
+      `</div>`).join('') +
     `<a class="prAll" href="#prensa">Ver resumen completo →</a></div>`;
 }
+
+// ---- Imágenes: rutas publicadas y visor ampliado ----
+function imgSrc(s) { return /^(data:|https?:|blob:)/.test(s) ? s : (typeof BASE_PUB !== 'undefined' ? BASE_PUB : '') + s; }
+function diaCorto(d) { const m = String(d).match(/^(\S+)\s+(\d{1,2})/); return m ? m[1].charAt(0) + m[1].slice(1).toLowerCase() + ' ' + (+m[2]) : d; }
+(function visor() {
+  const lb = document.createElement('div'); lb.id = 'lbox'; lb.setAttribute('role', 'dialog'); lb.setAttribute('aria-label', 'Imagen ampliada');
+  lb.innerHTML = '<button type="button" class="lbX" aria-label="Cerrar">✕</button><button type="button" class="lbP" aria-label="Anterior">‹</button><figure><img alt=""><figcaption></figcaption></figure><button type="button" class="lbN" aria-label="Siguiente">›</button>';
+  document.body.appendChild(lb);
+  let lista = [], pos = 0, cap = '';
+  const pinta = () => { lb.querySelector('img').src = imgSrc(lista[pos]); lb.querySelector('figcaption').textContent = cap + (lista.length > 1 ? ` · ${pos + 1} de ${lista.length}` : ''); lb.classList.toggle('multi', lista.length > 1); };
+  const cerrar = () => lb.classList.remove('on');
+  document.addEventListener('click', (e) => {
+    const im = e.target.closest('img.zoom');
+    if (im) {
+      const a = prensaActual(); const it = a && a.pr.items[+im.dataset.g]; if (!it) return;
+      e.preventDefault(); lista = it.imagenes; pos = +im.dataset.j || 0; cap = it.fuente + (it.dia ? ' · ' + diaCorto(it.dia) : ''); pinta(); lb.classList.add('on'); return;
+    }
+    if (!lb.classList.contains('on')) return;
+    if (e.target.closest('.lbP')) { pos = (pos - 1 + lista.length) % lista.length; pinta(); return; }
+    if (e.target.closest('.lbN')) { pos = (pos + 1) % lista.length; pinta(); return; }
+    if (e.target === lb || e.target.closest('.lbX') || e.target.tagName === 'FIGURE') cerrar();
+  });
+  document.addEventListener('keydown', (e) => {
+    if (!lb.classList.contains('on')) return;
+    if (e.key === 'Escape') cerrar();
+    else if (e.key === 'ArrowLeft' && lista.length > 1) { pos = (pos - 1 + lista.length) % lista.length; pinta(); }
+    else if (e.key === 'ArrowRight' && lista.length > 1) { pos = (pos + 1) % lista.length; pinta(); }
+  });
+})();
 
 // =================== Informes cargados por área ===================
 // Cada área del resumen se alimenta con su propio texto pegado:
@@ -2359,7 +2420,9 @@ async function cargarPublicado() {
       if (!r.ok) continue;
       const d = await r.json();
       if (!d || (!d.publicado && k !== 'uni')) continue;
-      if (JSON.stringify(d) !== JSON.stringify(PUB[k])) { PUB[k] = d; cambio = true; }
+      if (PUB[k] && PUB[k]._enviado && Date.now() - PUB[k]._enviado < 6 * 60e3 && d.publicado !== PUB[k].publicado) continue;  // el sitio aún no muestra lo recién publicado
+      const { _enviado, _rutas, _datos, ...actual } = PUB[k] || {};
+      if (JSON.stringify(d) !== JSON.stringify(PUB[k] ? actual : undefined)) { PUB[k] = d; cambio = true; }
     } catch (e) { /* abierto como archivo local o sin publicación */ }
   }
   // una vista local antigua no tapa lo publicado: si lo publicado es del mismo informe o más reciente, se descarta
@@ -2753,6 +2816,8 @@ document.getElementById('srModal').addEventListener('click', e => { if (e.target
 const fechaModal = () => { const f = document.getElementById('srFecha').value; return f ? new Date(f).toISOString() : new Date().toISOString(); };
 document.getElementById('srFileBtn').onclick = () => document.getElementById('srFile').click();
 let pendientePrensa = null;
+// si el texto se edita a mano, se publica el texto (sin la estructura ni las imágenes del Word)
+document.getElementById('srTxt').addEventListener('input', () => { if (pendientePrensa) { pendientePrensa = null; const h = document.getElementById('srHint'); if (h) h.textContent = 'Texto editado a mano: se publicará como texto, sin las imágenes del Word.'; } });
 document.getElementById('srFile').onchange = async (e) => {
   const f = e.target.files[0]; if (!f) return;
   const hint = document.getElementById('srHint');
@@ -2767,7 +2832,8 @@ document.getElementById('srFile').onchange = async (e) => {
         pendientePrensa = pr;
         document.getElementById('srTxt').value = prensaComoTexto(pr);
         d = new Date(pr.fecha);
-        hint.textContent = `Resumen de prensa reconocido: ${pr.items.length} noticias de ${new Set(pr.items.map(x => x.fuente)).size} fuentes. Revise y pulse «Cargar en el dashboard».`;
+        const nImg = pr.items.reduce((n, x) => n + x.imagenes.length, 0);
+        hint.textContent = `Resumen de prensa reconocido: ${pr.items.length} noticias de ${new Set(pr.items.map(x => x.fuente)).size} fuentes${nImg ? `, ${nImg} imágenes` : ''}. Revise y publique.`;
       } else {
         document.getElementById('srTxt').value = await textoDesdeDocx(f);
         hint.textContent = 'Texto extraído del documento Word.';
@@ -2781,12 +2847,12 @@ document.getElementById('srFile').onchange = async (e) => {
 };
 document.getElementById('srOk').onclick = () => {
   const texto = document.getElementById('srTxt').value.trim(); if (!texto || !areaModal) return;
-  const pr = (areaModal === 'not' && pendientePrensa && texto === prensaComoTexto(pendientePrensa)) ? pendientePrensa : null;
+  const pr = (areaModal === 'not' && pendientePrensa) ? pendientePrensa : null;
   areaAplicar(areaModal, { texto, recibido: fechaModal(), prensa: pr }, true); pendientePrensa = null; cerrarModal();
 };
 document.getElementById('srPrep').onclick = () => {
   const texto = document.getElementById('srTxt').value.trim(); if (!texto || !areaModal) return;
-  if (pendientePrensa && texto !== prensaComoTexto(pendientePrensa)) pendientePrensa = null;  // el texto se editó a mano
+
   const obj = construirPublicacion(areaModal, texto, fechaModal());
   pubJSON = JSON.stringify(obj, null, 1);
   document.getElementById('pubPrev').textContent = vistaPrevia(areaModal, obj);
@@ -2871,6 +2937,68 @@ async function ghPut(path, obj, mensaje) {
   return p.json();
 }
 
+// ---- Varios archivos en un solo cambio (resumen de prensa con imágenes) ----
+async function ghApi(method, ruta, body) {
+  const tok = ghToken(); if (!tok) throw new Error('sin_token');
+  const { owner, repo } = repoInfo();
+  const r = await ghFetch(`https://api.github.com/repos/${owner}/${repo}/${ruta}`, { method, cache: 'no-store', headers: { ...ghHeaders(tok), 'Content-Type': 'application/json' }, body: body ? JSON.stringify(body) : undefined });
+  if (!r.ok) {
+    let m = ''; try { m = (await r.json()).message || ''; } catch (e) {}
+    if (r.status === 401) throw new Error('El token no es válido o expiró. Conéctese de nuevo.');
+    if (r.status === 403 || r.status === 404) { const e = new Error('GitHub rechazó la escritura' + (m ? ' («' + m + '»)' : '') + '.'); e.ayuda = AYUDA_PERMISO; throw e; }
+    const e = new Error(`GitHub respondió ${r.status}${m ? ': ' + m : ''}.`); e.status = r.status; throw e;
+  }
+  return r.json();
+}
+// archivos: [{ path, b64 }] para crear o reemplazar; borrar: [path] para eliminar
+async function ghCommit(archivos, borrar, mensaje, avance) {
+  const ref = await ghApi('GET', 'git/ref/heads/main');
+  const base = await ghApi('GET', 'git/commits/' + ref.object.sha);
+  const tree = [];
+  let n = 0;
+  for (const a of archivos) {
+    const b = await ghApi('POST', 'git/blobs', { content: a.b64, encoding: 'base64' });
+    tree.push({ path: a.path, mode: '100644', type: 'blob', sha: b.sha });
+    if (avance) avance(++n, archivos.length);
+  }
+  const conBorrado = tree.concat((borrar || []).map(p => ({ path: p, mode: '100644', type: 'blob', sha: null })));
+  let t;
+  try { t = await ghApi('POST', 'git/trees', { base_tree: base.tree.sha, tree: conBorrado }); }
+  catch (e) { if (!borrar || !borrar.length) throw e; t = await ghApi('POST', 'git/trees', { base_tree: base.tree.sha, tree }); }
+  const c = await ghApi('POST', 'git/commits', { message: mensaje, tree: t.sha, parents: [ref.object.sha] });
+  try { await ghApi('PATCH', 'git/refs/heads/main', { sha: c.sha }); }
+  catch (e) { if (e.status === 422) throw new Error('Otro cambio se publicó al mismo tiempo. Intente de nuevo.'); throw e; }
+}
+function rutasPrensa(o) {
+  const r = []; const pr = o && o.prensa; if (!pr) return r;
+  for (const it of pr.items) for (const s of [...(it.imagenes || []), ...(it.minis || [])]) if (/^publicado\/prensa\//.test(s)) r.push(s);
+  return r;
+}
+// Publica noticias.json; si el resumen trae imágenes, van como archivos aparte en publicado/prensa/
+async function publicarNoticias(obj, mensaje, hint) {
+  const pr = obj.prensa;
+  const tieneImg = pr && pr.items.some(it => (it.imagenes || []).some(s => /^data:/.test(s)));
+  if (!tieneImg) return ghPut('publicado/' + PUB_ARCH.not, obj, mensaje);
+  const sello = Date.now().toString(36), archivos = [];
+  const copia = JSON.parse(JSON.stringify(obj));
+  copia.prensa.items.forEach((it, i) => {
+    const conv = (lista, suf) => (lista || []).map((s, j) => {
+      if (!/^data:/.test(s)) return s;
+      const path = `publicado/prensa/${sello}_${i}_${j}${suf}.jpg`;
+      archivos.push({ path, b64: s.slice(s.indexOf(',') + 1) });
+      return path;
+    });
+    it.imagenes = conv(it.imagenes, '');
+    it.minis = conv(it.minis, '_m');
+  });
+  archivos.push({ path: 'publicado/' + PUB_ARCH.not, b64: b64utf8(JSON.stringify(copia, null, 1)) });
+  // imágenes del resumen anterior que ya no se usan
+  const antes = new Set(PUB.not ? [...rutasPrensa(PUB.not), ...(PUB.not._rutas || [])] : []);
+  const nImg = archivos.length - 1;
+  await ghCommit(archivos, [...antes], mensaje, (n, tot) => { if (hint) hint.textContent = `Subiendo imágenes… ${Math.min(n, nImg)} de ${nImg}`; });
+  return copia;
+}
+
 // ---- Estado de conexión (pie de página, solo editor) ----
 function ghPintarEstado() {
   const el = document.getElementById('ghStatus'); if (!el) return;
@@ -2927,8 +3055,7 @@ areaAbrir = function (k, modo) { _areaAbrirBase(k, modo); ajustarModalPublicacio
 
 function textoYPrensaModal() {
   const texto = document.getElementById('srTxt').value.trim();
-  const pr = (areaModal === 'not' && pendientePrensa && texto === prensaComoTexto(pendientePrensa)) ? pendientePrensa : null;
-  if (!pr) pendientePrensa = null;
+  const pr = (areaModal === 'not' && pendientePrensa) ? pendientePrensa : null;
   return { texto, pr };
 }
 const NOMBRE_AREA = { est: 'Monitoreo estaciones', per: 'Personal y unidades', not: 'Noticias SHOA' };
@@ -2945,8 +3072,12 @@ document.getElementById('srOk').onclick = async () => {
   let error = '';
   btn.disabled = true; btn.textContent = 'Publicando…'; hint.textContent = '';
   try {
-    await ghPut('publicado/' + PUB_ARCH[k], obj, `Publica ${NOMBRE_AREA[k]} (${new Date(obj.publicado).toLocaleString('es-CL', { timeZone: TZ })})`);
-    PUB[k] = obj; if (PUB.est) delete PUB.est._datos;
+    const msj = `Publica ${NOMBRE_AREA[k]} (${new Date(obj.publicado).toLocaleString('es-CL', { timeZone: TZ })})`;
+    if (k === 'not') { const r = await publicarNoticias(obj, msj, hint); if (r && r.tipo) obj._rutas = rutasPrensa(r); }
+    else await ghPut('publicado/' + PUB_ARCH[k], obj, msj);
+    obj._enviado = Date.now();      // mientras el sitio se vuelve a publicar, se mantiene esta versión
+    PUB[k] = obj;
+    if (PUB.est) delete PUB.est._datos;
     if (AREA[k]) { AREA[k] = null; areaGuardar(k); }     // lo que ve el editor es lo publicado
     pendientePrensa = null;
     aplicarPublicadoLocal();
