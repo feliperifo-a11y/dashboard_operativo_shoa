@@ -2217,6 +2217,7 @@ async function leerDocx(buf) {
   return parrafos;
 }
 
+const soloImagen = (it) => it.imagenes.length > 0 && !it.parrafos.length;
 const RX_URL = /(?:https?:\/\/|www\.)[^\s<>"]+/g;
 const normUrl = (u) => { u = String(u).trim().replace(/[.,;)]+$/, ''); return /^https?:\/\//i.test(u) ? u : 'https://' + u.replace(/^\/+/, ''); };
 const soloEnlace = (p) => p.enlaces.length && p.texto.replace(RX_URL, '').replace(RX_ETIQ, '').trim().length < 3;
@@ -2276,8 +2277,8 @@ function estructurarPrensa(parrafos, nombreArchivo) {
     it.resumen = it.parrafos.join(' ').slice(0, 300);
     return it;
   });
-  // las noticias con imágenes (recortes) van al final, conservando el orden del documento
-  const ordenados = [...limpios.filter(it => !it.imagenes.length), ...limpios.filter(it => it.imagenes.length)];
+  // los recortes que son solo imagen van al final; las noticias con texto (con o sin imagen) primero, en el orden del documento
+  const ordenados = [...limpios.filter(it => !soloImagen(it)), ...limpios.filter(soloImagen)];
   const fecha = fechaDesdeTexto(titulo) || fechaDesdeTexto(nombreArchivo || '') || new Date();
   if (!titulo) titulo = 'RESUMEN DE PRENSA ' + fecha.toLocaleDateString('es-CL', { day: 'numeric', month: 'long', year: 'numeric' }).toUpperCase();
   return { titulo, fecha: fecha.toISOString(), items: ordenados };
@@ -2349,13 +2350,13 @@ function prensaResumenHTML() {
   const a = prensaActual(); if (!a) return '';
   const { pr, local } = a;
   return `<div class="prBox"><div class="prHead"><b>Resumen de prensa</b><span>${escH(new Date(pr.fecha).toLocaleDateString('es-CL', { day: 'numeric', month: 'long', year: 'numeric' }))}${local ? ' · vista local' : ''}</span></div>` +
-    pr.items.map((it, i) => (it.imagenes.length && (i === 0 || !pr.items[i - 1].imagenes.length) ? `<div class="prSep">Recortes de prensa · pulse una imagen para verla en grande</div>` : '') +
-      `<div class="prRow${it.imagenes.length ? ' conImg' : ''}"><span class="prSrc">${escH(it.fuente)}${it.dia ? ` <span class="prDia">· ${escH(diaCorto(it.dia))}</span>` : ''}</span>` +
-      `<span class="prTit">${escH(it.tituloAuto && it.resumen ? it.resumen.slice(0, 140) + (it.resumen.length > 140 ? '…' : '') : it.titulo)}</span>` +
+    pr.items.map((it, i) => (soloImagen(it) && (i === 0 || !soloImagen(pr.items[i - 1])) ? `<div class="prSep">Recortes de prensa · pulse una imagen para verla en grande</div>` : '') +
+      `<div class="prRow${soloImagen(it) ? ' conImg' : ''}"><span class="prSrc">${escH(it.fuente)}${it.dia ? ` <span class="prDia">· ${escH(diaCorto(it.dia))}</span>` : ''}</span>` +
+      `<span class="prTit">${escH(it.tituloAuto && it.resumen ? it.resumen + (it.parrafos.join(' ').length > it.resumen.length ? '…' : '') : it.titulo)}</span>` +
       ((it.url || it.imagenes.length) ? `<span class="prLks">` +
         (it.imagenes.length ? `<a href="#" class="verImg" data-g="${i}" data-j="0">${it.imagenes.length > 1 ? `Ver imágenes (${it.imagenes.length})` : 'Ver imagen'} 🖼</a>` : '') +
         (it.url ? `<a href="${escH(it.url)}" target="_blank" rel="noopener" title="${escH(it.url)}">Ver noticia ↗</a>` : '') + `</span>` : '') +
-      (it.imagenes.length ? `<div class="prThumbs">${it.imagenes.map((src, j) => `<img src="${escH(imgSrc((it.minis && it.minis[j]) || src))}" alt="Recorte de ${escH(it.fuente)}" loading="lazy" class="zoom" data-g="${i}" data-j="${j}">`).join('')}</div>` : '') +
+      (soloImagen(it) ? `<div class="prThumbs">${it.imagenes.map((src, j) => `<img src="${escH(imgSrc((it.minis && it.minis[j]) || src))}" alt="Recorte de ${escH(it.fuente)}" loading="lazy" class="zoom" data-g="${i}" data-j="${j}">`).join('')}</div>` : '') +
       `</div>`).join('') +
     `<a class="prAll" href="#prensa">Ver resumen completo →</a></div>`;
 }
