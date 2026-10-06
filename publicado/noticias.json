@@ -1,66 +1,208 @@
 {
  "tipo": "noticias",
  "version": 2,
- "publicado": "2026-10-04T15:10:00.000Z",
+ "publicado": "2026-10-06T11:20:00.000Z",
  "items": [
   {
-   "titulo": "ALVARADO RESPALDA A BARROS POR SUS DICHOS SOBRE MALVINAS: “ÉL NUNCA HA MANIFESTADO UNA POSICIÓN CONTRARIA A LA DEL GOBIERNO”",
+   "titulo": "PROTECCIÓN DE DATOS PERSONALES: OPOSICIÓN PIDE REDUCIR EL PLAZO DE POSTERGACIÓN DE LA LEY QUE PROPUSO EL GOBIERNO",
    "fuente": "LA TERCERA",
-   "resumen": "El ministro de Defensa, Fernando Barros, generó controversia al señalar que, aunque Chile apoya la pretensión trasandina sobre las Islas Malvinas, existe una «situación de hecho» dada por los 200 años de presencia británica en el archipiélago. Ante las críticas desde Buenos Aires, el biministro Clau",
-   "url": "https://www.latercera.com/politica/noticia/alvarado-respalda-a-barros-por-sus-dichos-sobre-malvinas-el-nunca-ha-manifestado-una-posicion-contraria-a-la-del-gobierno/"
+   "resumen": "Senadores de oposición y oficialistas han cuestionado la propuesta del Gobierno chileno de postergar por un año la entrada en vigencia de la nueva Ley de Protección de Datos Personales —prevista para diciembre—, calificando el plazo de \"excesivo\" y planteando en su lugar reducir la prórroga a solo s",
+   "url": "https://www.latercera.com/pulso/noticia/proteccion-de-datos-personales-oposicion-pide-reducir-el-plazo-de-postergacion-de-la-ley-que-propuso-el-gobierno/"
   },
   {
-   "titulo": "PROBABILIDAD DE TROMBAS MARINAS PARA ESTE MIÉRCOLES: ARMADA EMITE AVISO POR FORMACIÓN DE NUBES CONVECTIVAS EN DOS REGIONES",
-   "fuente": "LA TERCERA",
-   "resumen": "La Armada emitió un aviso sobre la posibilidad de trombas marinas para este miércoles, debido a la formación de nubes convectivas en las regiones de Valparaíso y Biobío. Se advierte del riesgo asociado a este fenómeno meteorológico y se recomienda a la población mantener precauciones, especialmente ",
-   "url": "https://www.latercera.com/nacional/noticia/probabilidad-de-trombas-marinas-para-este-miercoles-armada-emite-aviso-por-formacion-de-nubes-convectivas-en-dos-regiones/"
+   "titulo": "LA ESTRELLA DE VALPARAÍSO",
+   "fuente": "LA ESTRELLA DE VALPARAÍSO",
+   "resumen": "Gracias a las intensas lluvias invernales y a las inversiones de Esval, los embalses de la Región de Valparaíso alcanzaron un 42% de llenado conjunto, logrando su mayor nivel en más de diez años y garantizando el abastecimiento hídrico para las zonas urbanas durante el verano y la temporada 2027. En",
+   "url": null
   },
   {
-   "titulo": "DIPUTADO BIANCHI RECUERDA QUE RELACIONES ENTRE MAGALLANES Y LAS FALKLAND DATAN DE 1876",
-   "fuente": "INFOGATE",
-   "resumen": "El diputado independiente-PPD por Magallanes, Carlos Bianchi, respaldó los dichos del ministro de Defensa, Fernando Barros, sobre el derecho de Punta Arenas a comerciar con las islas Falkland (Malvinas), enfatizando que estas relaciones comerciales son históricas y datan de 1876; al mismo tiempo, el",
-   "url": "https://infogate.cl/2026/09/diputado-bianchi-recuerda-que-relaciones-entre-magallanes-y-las-falkland-datan-de-1876/"
+   "titulo": "LAS ULTIMAS NOTICIAS",
+   "fuente": "SÁBADO 03 DE OCTUBRE",
+   "resumen": "www.lun.com/Pages/NewsDetail.aspx?dt=2026-10-03&EsAviso=0&PaginaId=7&bodyid=0",
+   "url": null
+  },
+  {
+   "titulo": "LAS ULTIMAS NOTICIAS",
+   "fuente": "LAS ULTIMAS NOTICIAS",
+   "resumen": "www.lun.com/Pages/NewsDetail.aspx?dt=2026-10-03&EsAviso=0&PaginaId=6&bodyid=0",
+   "url": null
+  },
+  {
+   "titulo": "EL MERCURIO DE VALPARAÍSO",
+   "fuente": "EL MERCURIO DE VALPARAÍSO",
+   "resumen": "En el marco del Día Nacional de las Ciencias, la Tecnología, el Conocimiento y la Innovación, el texto plantea que Chile debe priorizar el conocimiento como un motor de desarrollo sostenible y autonomía, destacando el rol fundamental de las universidades —como las del CRUCH, que generan el 77% de lo",
+   "url": null
+  },
+  {
+   "titulo": "EL MERCURIO DE VALPARAÍSO",
+   "fuente": "EL MERCURIO DE VALPARAÍSO",
+   "resumen": "Las recientes declaraciones del ministro de Defensa chileno sobre la soberanía de facto del Reino Unido en las islas Malvinas generaron tensión comunicacional con Argentina, exponiendo contradicciones frente a un reciente comunicado conjunto donde Chile se comprometió a intentar evitar el apoyo logí",
+   "url": null
+  },
+  {
+   "titulo": "EL NEGOCIO DE LAS ISLAS REMOTAS: LA NAVIERA QUE QUIERE ZARPAR DE PUNTA ARENAS A LAS ISLAS MALVINAS",
+   "fuente": "LA TERCEREA",
+   "resumen": "Easter Island Logistics nació en 2018 de la mano de tres profesionales de la salud y construyó su negocio abasteciendo a Rapa Nui. Después entró a la Antártica, intentó expandirse a Juan Fernández y ahora prepara su primer zarpe desde Punta Arenas a las Malvinas para abrir una ruta mensual desde nov",
+   "url": "https://www.latercera.com/pulso/noticia/el-negocio-de-las-islas-remotas-la-naviera-que-quiere-zarpar-de-punta-arenas-a-las-islas-malvinas/"
+  },
+  {
+   "titulo": "NUEVA REFORMA DE SEGURIDAD PERMITIRÍA A PRESIDENTE DE LA REPÚBLICA DECRETAR ESTADO DE EXCEPCIÓN ANTE AMENAZAS A LA SEGURIDAD",
+   "fuente": "LA TERCERA",
+   "resumen": "Una nueva propuesta de reforma constitucional en materia de seguridad —trabajada por senadores de forma alternativa al proyecto inicial del Ejecutivo— busca articularse en tres ejes principales: combate al crimen organizado, segregación carcelaria y ajustes al estado de excepción de emergencia. Entr",
+   "url": "https://www.latercera.com/politica/noticia/nueva-reforma-de-seguridad-permitiria-a-presidente-de-la-republica-decretar-estado-de-excepcion-ante-amenazas-a-la-seguridad/"
+  },
+  {
+   "titulo": "COMPLEJO VOLCÁNICO NEVADOS DE CHILLÁN SIGUE BAJO ALERTA: REPORTAN AUMENTO EN LA ACTIVIDAD EXPLOSIVA Y DE TEMPERATURA EN SUPERFICIE",
+   "fuente": "LA TERCERA",
+   "resumen": "Las comunas de Pinto y Coihueco, en la Región de Ñuble, se mantienen bajo Alerta Temprana Preventiva en nivel amarillo debido a que el complejo volcánico Nevados de Chillán registró un incremento en su actividad explosiva —con incandescencia constante y proyección de material balístico— junto a un a",
+   "url": null
+  },
+  {
+   "titulo": "EL MERCURIO DE SANTIAGO",
+   "fuente": "EL MERCURIO DE SANTIAGO",
+   "resumen": "El economista Felipe Larraín argumenta que el verdadero aspecto clave del Presupuesto 2027 es que el crecimiento proyectado del gasto público (1,5%) es inferior al crecimiento estimado del PIB (2,9%), lo que evita que el sector público se expanda por encima del tamaño de la economía. El autor resta ",
+   "url": null
+  },
+  {
+   "titulo": "REDES SOCIALES",
+   "fuente": "LA ESTRELLA DE VALPARAISO",
+   "resumen": "",
+   "url": "https://youtu.be/eiRbPg0CcTg?si=RG_VIC7LNZHtQ25k"
   }
  ],
  "prensa": {
-  "titulo": "RESUMEN DE PRENSA 30 DE SEPTIEMBRE DE 2026",
-  "fecha": "2026-09-30T11:00:00.000Z",
+  "titulo": "RESUMEN DE PRENSA 02,03, 04 y 05 DE OCTUBRE DE 2026",
+  "fecha": "2026-10-05T11:00:00.000Z",
   "items": [
    {
     "fuente": "LA TERCERA",
     "nota": "",
-    "titulo": "ALVARADO RESPALDA A BARROS POR SUS DICHOS SOBRE MALVINAS: “ÉL NUNCA HA MANIFESTADO UNA POSICIÓN CONTRARIA A LA DEL GOBIERNO”",
+    "titulo": "PROTECCIÓN DE DATOS PERSONALES: OPOSICIÓN PIDE REDUCIR EL PLAZO DE POSTERGACIÓN DE LA LEY QUE PROPUSO EL GOBIERNO",
     "tituloAuto": false,
     "parrafos": [
-     "El ministro de Defensa, Fernando Barros, generó controversia al señalar que, aunque Chile apoya la pretensión trasandina sobre las Islas Malvinas, existe una «situación de hecho» dada por los 200 años de presencia británica en el archipiélago. Ante las críticas desde Buenos Aires, el biministro Claudio Alvarado respaldó al titular de Defensa afirmando que «él nunca ha manifestado una posición contraria a la del gobierno», reafirmando de forma categórica que la postura histórica de Chile se mantiene firme desde 1992 en apoyo a la reclamación de soberanía de Argentina —respaldada también en la reciente declaración conjunta entre los presidentes José Antonio Kast y Javier Milei— y precisando que la línea oficial la definen el Mandatario y la Cancillería."
+     "Senadores de oposición y oficialistas han cuestionado la propuesta del Gobierno chileno de postergar por un año la entrada en vigencia de la nueva Ley de Protección de Datos Personales —prevista para diciembre—, calificando el plazo de \"excesivo\" y planteando en su lugar reducir la prórroga a solo seis meses o aplicarla de forma gradual. Esta solicitud de postergación surge debido a los retrasos y falta de acuerdos en la conformación del consejo directivo de la nueva Agencia de Protección de Datos Personales (APDP), entidad clave para fijar los reglamentos operacionales de la norma, lo que ha llevado al Ejecutivo a proponer también aumentar de tres a cinco los miembros de dicho organismo para destrabar sus nombramientos."
     ],
     "imagenes": [],
-    "url": "https://www.latercera.com/politica/noticia/alvarado-respalda-a-barros-por-sus-dichos-sobre-malvinas-el-nunca-ha-manifestado-una-posicion-contraria-a-la-del-gobierno/",
-    "resumen": "El ministro de Defensa, Fernando Barros, generó controversia al señalar que, aunque Chile apoya la pretensión trasandina sobre las Islas Malvinas, existe una «situación de hecho» dada por los 200 años de presencia británica en el archipiélago. Ante las críticas desde Buenos Aires, el biministro Clau"
+    "url": "https://www.latercera.com/pulso/noticia/proteccion-de-datos-personales-oposicion-pide-reducir-el-plazo-de-postergacion-de-la-ley-que-propuso-el-gobierno/",
+    "resumen": "Senadores de oposición y oficialistas han cuestionado la propuesta del Gobierno chileno de postergar por un año la entrada en vigencia de la nueva Ley de Protección de Datos Personales —prevista para diciembre—, calificando el plazo de \"excesivo\" y planteando en su lugar reducir la prórroga a solo s"
+   },
+   {
+    "fuente": "LA ESTRELLA DE VALPARAÍSO",
+    "nota": "",
+    "titulo": "LA ESTRELLA DE VALPARAÍSO",
+    "tituloAuto": true,
+    "parrafos": [
+     "Gracias a las intensas lluvias invernales y a las inversiones de Esval, los embalses de la Región de Valparaíso alcanzaron un 42% de llenado conjunto, logrando su mayor nivel en más de diez años y garantizando el abastecimiento hídrico para las zonas urbanas durante el verano y la temporada 2027. En el desglose destaca el embalse Los Aromos, que se encuentra al 97% de su capacidad total con 34,1 millones de metros cúbicos, así como el Tranque La Luz en su máxima capacidad (5,9 millones de m³), el Lago Peñuelas sobre los 16 millones de m³ y un importante superávit de precipitaciones y nieve acumulada en la cordillera en comparación con el año pasado."
+    ],
+    "imagenes": [],
+    "url": null,
+    "resumen": "Gracias a las intensas lluvias invernales y a las inversiones de Esval, los embalses de la Región de Valparaíso alcanzaron un 42% de llenado conjunto, logrando su mayor nivel en más de diez años y garantizando el abastecimiento hídrico para las zonas urbanas durante el verano y la temporada 2027. En"
+   },
+   {
+    "fuente": "SÁBADO 03 DE OCTUBRE",
+    "nota": "",
+    "titulo": "LAS ULTIMAS NOTICIAS",
+    "tituloAuto": false,
+    "parrafos": [
+     "www.lun.com/Pages/NewsDetail.aspx?dt=2026-10-03&EsAviso=0&PaginaId=7&bodyid=0"
+    ],
+    "imagenes": [],
+    "url": null,
+    "resumen": "www.lun.com/Pages/NewsDetail.aspx?dt=2026-10-03&EsAviso=0&PaginaId=7&bodyid=0"
+   },
+   {
+    "fuente": "LAS ULTIMAS NOTICIAS",
+    "nota": "",
+    "titulo": "LAS ULTIMAS NOTICIAS",
+    "tituloAuto": true,
+    "parrafos": [
+     "www.lun.com/Pages/NewsDetail.aspx?dt=2026-10-03&EsAviso=0&PaginaId=6&bodyid=0"
+    ],
+    "imagenes": [],
+    "url": null,
+    "resumen": "www.lun.com/Pages/NewsDetail.aspx?dt=2026-10-03&EsAviso=0&PaginaId=6&bodyid=0"
+   },
+   {
+    "fuente": "EL MERCURIO DE VALPARAÍSO",
+    "nota": "",
+    "titulo": "EL MERCURIO DE VALPARAÍSO",
+    "tituloAuto": true,
+    "parrafos": [
+     "En el marco del Día Nacional de las Ciencias, la Tecnología, el Conocimiento y la Innovación, el texto plantea que Chile debe priorizar el conocimiento como un motor de desarrollo sostenible y autonomía, destacando el rol fundamental de las universidades —como las del CRUCH, que generan el 77% de los artículos científicos del país— en la transformación económica y social. Para consolidar este impacto, especialmente en regiones como Valparaíso, se enfatiza que la investigación requiere rigor, libertad y tiempo, así como transitar desde los fondos concursables hacia un financiamiento estructural de largo plazo mediante la colaboración entre instituciones de educación superior, el Estado y el sector privado."
+    ],
+    "imagenes": [],
+    "url": null,
+    "resumen": "En el marco del Día Nacional de las Ciencias, la Tecnología, el Conocimiento y la Innovación, el texto plantea que Chile debe priorizar el conocimiento como un motor de desarrollo sostenible y autonomía, destacando el rol fundamental de las universidades —como las del CRUCH, que generan el 77% de lo"
+   },
+   {
+    "fuente": "EL MERCURIO DE VALPARAÍSO",
+    "nota": "",
+    "titulo": "EL MERCURIO DE VALPARAÍSO",
+    "tituloAuto": true,
+    "parrafos": [
+     "Las recientes declaraciones del ministro de Defensa chileno sobre la soberanía de facto del Reino Unido en las islas Malvinas generaron tensión comunicacional con Argentina, exponiendo contradicciones frente a un reciente comunicado conjunto donde Chile se comprometió a intentar evitar el apoyo logístico desde Punta Arenas a las actividades económicas en las zonas disputadas. La falta de consulta a los intereses de la Región de Magallanes —que busca mantener lazos comerciales con las islas—, sumada a las divergentes interpretaciones diplomáticas sobre el alcance obligatorio de dicho acuerdo, deja en evidencia la necesidad de que Chile defina una estrategia coordinada y clara ante Argentina que defienda el libre tránsito marítimo, fortalezca sus capacidades de disuasión y exija reciprocidad económica."
+    ],
+    "imagenes": [],
+    "url": null,
+    "resumen": "Las recientes declaraciones del ministro de Defensa chileno sobre la soberanía de facto del Reino Unido en las islas Malvinas generaron tensión comunicacional con Argentina, exponiendo contradicciones frente a un reciente comunicado conjunto donde Chile se comprometió a intentar evitar el apoyo logí"
+   },
+   {
+    "fuente": "LA TERCEREA",
+    "nota": "",
+    "titulo": "EL NEGOCIO DE LAS ISLAS REMOTAS: LA NAVIERA QUE QUIERE ZARPAR DE PUNTA ARENAS A LAS ISLAS MALVINAS",
+    "tituloAuto": false,
+    "parrafos": [
+     "Easter Island Logistics nació en 2018 de la mano de tres profesionales de la salud y construyó su negocio abasteciendo a Rapa Nui. Después entró a la Antártica, intentó expandirse a Juan Fernández y ahora prepara su primer zarpe desde Punta Arenas a las Malvinas para abrir una ruta mensual desde noviembre. El municipio calcula un intercambio de al menos US$20 millones al año y los empresarios esperan que, al sumar servicios, turismo y empleos estacionales, la cifra pueda ser mayor."
+    ],
+    "imagenes": [],
+    "url": "https://www.latercera.com/pulso/noticia/el-negocio-de-las-islas-remotas-la-naviera-que-quiere-zarpar-de-punta-arenas-a-las-islas-malvinas/",
+    "resumen": "Easter Island Logistics nació en 2018 de la mano de tres profesionales de la salud y construyó su negocio abasteciendo a Rapa Nui. Después entró a la Antártica, intentó expandirse a Juan Fernández y ahora prepara su primer zarpe desde Punta Arenas a las Malvinas para abrir una ruta mensual desde nov"
    },
    {
     "fuente": "LA TERCERA",
     "nota": "",
-    "titulo": "PROBABILIDAD DE TROMBAS MARINAS PARA ESTE MIÉRCOLES: ARMADA EMITE AVISO POR FORMACIÓN DE NUBES CONVECTIVAS EN DOS REGIONES",
+    "titulo": "NUEVA REFORMA DE SEGURIDAD PERMITIRÍA A PRESIDENTE DE LA REPÚBLICA DECRETAR ESTADO DE EXCEPCIÓN ANTE AMENAZAS A LA SEGURIDAD",
     "tituloAuto": false,
     "parrafos": [
-     "La Armada emitió un aviso sobre la posibilidad de trombas marinas para este miércoles, debido a la formación de nubes convectivas en las regiones de Valparaíso y Biobío. Se advierte del riesgo asociado a este fenómeno meteorológico y se recomienda a la población mantener precauciones, especialmente en las cercanías del mar."
+     "Una nueva propuesta de reforma constitucional en materia de seguridad —trabajada por senadores de forma alternativa al proyecto inicial del Ejecutivo— busca articularse en tres ejes principales: combate al crimen organizado, segregación carcelaria y ajustes al estado de excepción de emergencia. Entre sus medidas clave, la iniciativa permitiría al Presidente de la República decretar el estado de emergencia de manera preventiva ante una «amenaza grave a la Seguridad Pública» sin esperar a que ocurran hechos consumados, mientras otorga mayores facultades de fiscalización y revocación al Congreso, equipara los delitos de crimen organizado a los de terrorismo y otorga rango constitucional a las facultades de Gendarmería para separar a reos de alta peligrosidad."
     ],
     "imagenes": [],
-    "url": "https://www.latercera.com/nacional/noticia/probabilidad-de-trombas-marinas-para-este-miercoles-armada-emite-aviso-por-formacion-de-nubes-convectivas-en-dos-regiones/",
-    "resumen": "La Armada emitió un aviso sobre la posibilidad de trombas marinas para este miércoles, debido a la formación de nubes convectivas en las regiones de Valparaíso y Biobío. Se advierte del riesgo asociado a este fenómeno meteorológico y se recomienda a la población mantener precauciones, especialmente "
+    "url": "https://www.latercera.com/politica/noticia/nueva-reforma-de-seguridad-permitiria-a-presidente-de-la-republica-decretar-estado-de-excepcion-ante-amenazas-a-la-seguridad/",
+    "resumen": "Una nueva propuesta de reforma constitucional en materia de seguridad —trabajada por senadores de forma alternativa al proyecto inicial del Ejecutivo— busca articularse en tres ejes principales: combate al crimen organizado, segregación carcelaria y ajustes al estado de excepción de emergencia. Entr"
    },
    {
-    "fuente": "INFOGATE",
+    "fuente": "LA TERCERA",
     "nota": "",
-    "titulo": "DIPUTADO BIANCHI RECUERDA QUE RELACIONES ENTRE MAGALLANES Y LAS FALKLAND DATAN DE 1876",
+    "titulo": "COMPLEJO VOLCÁNICO NEVADOS DE CHILLÁN SIGUE BAJO ALERTA: REPORTAN AUMENTO EN LA ACTIVIDAD EXPLOSIVA Y DE TEMPERATURA EN SUPERFICIE",
     "tituloAuto": false,
     "parrafos": [
-     "El diputado independiente-PPD por Magallanes, Carlos Bianchi, respaldó los dichos del ministro de Defensa, Fernando Barros, sobre el derecho de Punta Arenas a comerciar con las islas Falkland (Malvinas), enfatizando que estas relaciones comerciales son históricas y datan de 1876; al mismo tiempo, el parlamentario criticó la gestión del ministro de Relaciones Exteriores por la falta de un liderazgo diplomático claro, esto en el marco de un encuentro entre empresarios magallánicos y de las islas para potenciar sus vínculos económicos locales."
+     "Las comunas de Pinto y Coihueco, en la Región de Ñuble, se mantienen bajo Alerta Temprana Preventiva en nivel amarillo debido a que el complejo volcánico Nevados de Chillán registró un incremento en su actividad explosiva —con incandescencia constante y proyección de material balístico— junto a un aumento en la temperatura de superficie detectado por sensores satelitales, por lo que las autoridades del Sernageomin y Senapred decidieron conservar el perímetro de seguridad de 2 kilómetros alrededor del centro emisor y no descartan la ocurrencia de nuevos eventos de similar o mayor energía."
     ],
     "imagenes": [],
-    "url": "https://infogate.cl/2026/09/diputado-bianchi-recuerda-que-relaciones-entre-magallanes-y-las-falkland-datan-de-1876/",
-    "resumen": "El diputado independiente-PPD por Magallanes, Carlos Bianchi, respaldó los dichos del ministro de Defensa, Fernando Barros, sobre el derecho de Punta Arenas a comerciar con las islas Falkland (Malvinas), enfatizando que estas relaciones comerciales son históricas y datan de 1876; al mismo tiempo, el"
+    "url": null,
+    "resumen": "Las comunas de Pinto y Coihueco, en la Región de Ñuble, se mantienen bajo Alerta Temprana Preventiva en nivel amarillo debido a que el complejo volcánico Nevados de Chillán registró un incremento en su actividad explosiva —con incandescencia constante y proyección de material balístico— junto a un a"
+   },
+   {
+    "fuente": "EL MERCURIO DE SANTIAGO",
+    "nota": "",
+    "titulo": "EL MERCURIO DE SANTIAGO",
+    "tituloAuto": true,
+    "parrafos": [
+     "El economista Felipe Larraín argumenta que el verdadero aspecto clave del Presupuesto 2027 es que el crecimiento proyectado del gasto público (1,5%) es inferior al crecimiento estimado del PIB (2,9%), lo que evita que el sector público se expanda por encima del tamaño de la economía. El autor resta importancia al debate sobre si es mejor comparar el gasto con la Ley de Presupuestos anterior o con la ejecución estimada de 2026, señalando que ambas fórmulas son válidas mientras exista transparencia. Finalmente, destaca que un manejo prudente del gasto y el cumplimiento de las metas fiscales son fundamentales para controlar la deuda pública, reducir las tasas de interés de largo plazo y recuperar la credibilidad económica de Chile ante los mercados e inversionistas internacionales."
+    ],
+    "imagenes": [],
+    "url": null,
+    "resumen": "El economista Felipe Larraín argumenta que el verdadero aspecto clave del Presupuesto 2027 es que el crecimiento proyectado del gasto público (1,5%) es inferior al crecimiento estimado del PIB (2,9%), lo que evita que el sector público se expanda por encima del tamaño de la economía. El autor resta "
+   },
+   {
+    "fuente": "LA ESTRELLA DE VALPARAISO",
+    "nota": "",
+    "titulo": "REDES SOCIALES",
+    "tituloAuto": false,
+    "parrafos": [],
+    "imagenes": [],
+    "url": "https://youtu.be/eiRbPg0CcTg?si=RG_VIC7LNZHtQ25k",
+    "resumen": ""
    }
   ]
  }
