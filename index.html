@@ -1128,7 +1128,14 @@ svg.leaflet-image-layer.leaflet-interactive path {
   .prRow { display: grid; grid-template-columns: 1fr auto; grid-template-areas: "src lnk" "tit lnk"; column-gap: 8px; padding: 7px 0; border-top: 1px solid #eef1f5; }
   .prSrc { grid-area: src; font-size: 10.5px; font-weight: 800; letter-spacing: .6px; color: var(--accent); }
   .prTit { grid-area: tit; font-size: 12.5px; line-height: 1.35; color: var(--ink); }
-  .prLks { grid-area: lnk; align-self: center; display: flex; flex-direction: column; align-items: flex-end; gap: 3px; }
+  .prRow.abre { cursor: pointer; border-radius: 6px; margin: 0 -6px; padding-left: 6px; padding-right: 6px; transition: background .12s; }
+  .prRow.abre:hover, .prRow.abre:focus-visible { background: #eef4fb; outline: none; }
+  .prRow.abre:hover .prTit { color: var(--navy); }
+  .prIco { grid-area: lnk; align-self: center; font-size: 14px; color: var(--accent); opacity: .7; white-space: nowrap; }
+  .prIco small { font-size: 10px; font-weight: 700; margin-left: 1px; }
+  .prRow.abre:hover .prIco { opacity: 1; }
+  #lbox .lbUrl { margin-top: 6px; color: #9cc8ff; font-size: 13px; font-weight: 600; text-decoration: none; }
+  #lbox .lbUrl:hover { text-decoration: underline; }
   .prRow a { grid-area: lnk; align-self: center; font-size: 11.5px; font-weight: 600; color: var(--accent); white-space: nowrap; text-decoration: none; }
   .prRow a:hover { text-decoration: underline; }
   .prDia { font-weight: 600; letter-spacing: 0; color: var(--muted); }
@@ -2350,12 +2357,10 @@ function prensaResumenHTML() {
   const a = prensaActual(); if (!a) return '';
   const { pr, local } = a;
   return `<div class="prBox"><div class="prHead"><b>Resumen de prensa</b><span>${escH(new Date(pr.fecha).toLocaleDateString('es-CL', { day: 'numeric', month: 'long', year: 'numeric' }))}${local ? ' · vista local' : ''}</span></div>` +
-    pr.items.map((it, i) => (soloImagen(it) && (i === 0 || !soloImagen(pr.items[i - 1])) ? `<div class="prSep">Recortes de prensa · pulse una imagen para verla en grande</div>` : '') +
-      `<div class="prRow${soloImagen(it) ? ' conImg' : ''}"><span class="prSrc">${escH(it.fuente)}${it.dia ? ` <span class="prDia">· ${escH(diaCorto(it.dia))}</span>` : ''}</span>` +
+    pr.items.map((it, i) => (soloImagen(it) && (i === 0 || !soloImagen(pr.items[i - 1])) ? `<div class="prSep">Recortes de prensa</div>` : '') +
+      `<div class="prRow${soloImagen(it) ? ' conImg' : ''}${(it.imagenes.length || it.url) ? ' abre' : ''}" data-g="${i}"${(it.imagenes.length || it.url) ? ` tabindex="0" role="link" title="${it.imagenes.length ? 'Ver imagen' + (it.imagenes.length > 1 ? 'es' : '') : 'Abrir la noticia en ' + escH(fuenteDesdeUrl(it.url))}"` : ''}><span class="prSrc">${escH(it.fuente)}${it.dia ? ` <span class="prDia">· ${escH(diaCorto(it.dia))}</span>` : ''}</span>` +
       `<span class="prTit">${escH(it.tituloAuto && it.resumen ? it.resumen + (it.parrafos.join(' ').length > it.resumen.length ? '…' : '') : it.titulo)}</span>` +
-      ((it.url || it.imagenes.length) ? `<span class="prLks">` +
-        (it.imagenes.length ? `<a href="#" class="verImg" data-g="${i}" data-j="0">${it.imagenes.length > 1 ? `Ver imágenes (${it.imagenes.length})` : 'Ver imagen'} 🖼</a>` : '') +
-        (it.url ? `<a href="${escH(it.url)}" target="_blank" rel="noopener" title="${escH(it.url)}">Ver noticia ↗</a>` : '') + `</span>` : '') +
+      ((it.url || it.imagenes.length) ? `<span class="prIco" aria-hidden="true">${it.imagenes.length ? '🖼' + (it.imagenes.length > 1 ? `<small>${it.imagenes.length}</small>` : '') : '↗'}</span>` : '') +
       (soloImagen(it) ? `<div class="prThumbs">${it.imagenes.map((src, j) => `<img src="${escH(imgSrc((it.minis && it.minis[j]) || src))}" alt="Recorte de ${escH(it.fuente)}" loading="lazy" class="zoom" data-g="${i}" data-j="${j}">`).join('')}</div>` : '') +
       `</div>`).join('') +
     `<a class="prAll" href="#prensa">Ver resumen completo →</a></div>`;
@@ -2366,17 +2371,28 @@ function imgSrc(s) { return /^(data:|https?:|blob:)/.test(s) ? s : (typeof BASE_
 function diaCorto(d) { const m = String(d).match(/^(\S+)\s+(\d{1,2})/); return m ? m[1].charAt(0) + m[1].slice(1).toLowerCase() + ' ' + (+m[2]) : d; }
 (function visor() {
   const lb = document.createElement('div'); lb.id = 'lbox'; lb.setAttribute('role', 'dialog'); lb.setAttribute('aria-label', 'Imagen ampliada');
-  lb.innerHTML = '<button type="button" class="lbX" aria-label="Cerrar">✕</button><button type="button" class="lbP" aria-label="Anterior">‹</button><figure><img alt=""><figcaption></figcaption></figure><button type="button" class="lbN" aria-label="Siguiente">›</button>';
+  lb.innerHTML = '<button type="button" class="lbX" aria-label="Cerrar">✕</button><button type="button" class="lbP" aria-label="Anterior">‹</button><figure><img alt=""><figcaption></figcaption><a class="lbUrl" target="_blank" rel="noopener" hidden></a></figure><button type="button" class="lbN" aria-label="Siguiente">›</button>';
   document.body.appendChild(lb);
   let lista = [], pos = 0, cap = '';
+  const abrir = (it, j) => {
+    lista = it.imagenes; pos = j || 0; cap = it.fuente + (it.dia ? ' · ' + diaCorto(it.dia) : '');
+    const u = lb.querySelector('.lbUrl'); u.hidden = !it.url; if (it.url) { u.href = it.url; u.textContent = 'Ver la noticia en ' + fuenteDesdeUrl(it.url) + ' ↗'; }
+    pinta(); lb.classList.add('on');
+  };
+  const itemDe = (g) => { const a = prensaActual(); return a && a.pr.items[+g]; };
+  // clic en una noticia de la página principal: abre la imagen, o el enlace si no tiene imagen
+  const abrirFila = (row) => {
+    const it = itemDe(row.dataset.g); if (!it) return;
+    if (it.imagenes.length) abrir(it, 0); else if (it.url) window.open(it.url, '_blank', 'noopener');
+  };
+  document.addEventListener('keydown', (e) => { const row = e.target.closest && e.target.closest('.prRow.abre'); if (row && (e.key === 'Enter' || e.key === ' ')) { e.preventDefault(); abrirFila(row); } });
   const pinta = () => { lb.querySelector('img').src = imgSrc(lista[pos]); lb.querySelector('figcaption').textContent = cap + (lista.length > 1 ? ` · ${pos + 1} de ${lista.length}` : ''); lb.classList.toggle('multi', lista.length > 1); };
   const cerrar = () => lb.classList.remove('on');
   document.addEventListener('click', (e) => {
-    const im = e.target.closest('img.zoom, a.verImg');
-    if (im) {
-      const a = prensaActual(); const it = a && a.pr.items[+im.dataset.g]; if (!it) return;
-      e.preventDefault(); lista = it.imagenes; pos = +im.dataset.j || 0; cap = it.fuente + (it.dia ? ' · ' + diaCorto(it.dia) : ''); pinta(); lb.classList.add('on'); return;
-    }
+    const im = e.target.closest('img.zoom');
+    if (im) { const it = itemDe(im.dataset.g); if (!it) return; e.preventDefault(); abrir(it, +im.dataset.j || 0); return; }
+    const row = e.target.closest('.prRow.abre');
+    if (row && !e.target.closest('a')) { abrirFila(row); return; }
     if (!lb.classList.contains('on')) return;
     if (e.target.closest('.lbP')) { pos = (pos - 1 + lista.length) % lista.length; pinta(); return; }
     if (e.target.closest('.lbN')) { pos = (pos + 1) % lista.length; pinta(); return; }
