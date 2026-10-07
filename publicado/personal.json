@@ -1,7 +1,7 @@
 {
  "tipo": "personal",
  "version": 1,
- "publicado": "2026-10-06T10:55:00.000Z",
+ "publicado": "2026-10-07T12:08:00.000Z",
  "total": 20,
  "oficiales": {
   "total": 5,
@@ -53,8 +53,8 @@
    "ec": 0,
    "pac": 0,
    "tipo": "Unidad",
-   "actividad": "Comisión",
-   "comision": "",
+   "actividad": "Sondaje",
+   "comision": "Levantamiento PELURE",
    "transito": "",
    "lugar": "",
    "lat": null,
@@ -71,7 +71,7 @@
    "pac": 1,
    "tipo": "Unidad",
    "actividad": "Comisión",
-   "comision": "",
+   "comision": "Cabrales-Punta Arenas",
    "transito": "",
    "lugar": "Punta Arenas",
    "lat": -53.163,
@@ -88,7 +88,7 @@
    "pac": 1,
    "tipo": "Unidad",
    "actividad": "Comisión",
-   "comision": "",
+   "comision": "Fondeo boya Watchkeeper Iquique y despliegue Glider.",
    "transito": "",
    "lugar": "",
    "lat": null,
@@ -129,14 +129,236 @@
    "lon": null,
    "aprox": false,
    "notas": []
+  },
+  {
+   "nombre": "Orca",
+   "n": 0,
+   "of": 0,
+   "gm": 0,
+   "ec": 0,
+   "pac": 0,
+   "tipo": "Unidad",
+   "actividad": "Comisión",
+   "comision": "",
+   "transito": "",
+   "lugar": "Caleta Higuerillas",
+   "lat": -32.926,
+   "lon": -71.546,
+   "aprox": true,
+   "notas": []
+  },
+  {
+   "nombre": "Vaikava",
+   "n": 0,
+   "of": 0,
+   "gm": 0,
+   "ec": 0,
+   "pac": 0,
+   "tipo": "Unidad",
+   "actividad": "Comisión",
+   "comision": "",
+   "transito": "",
+   "lugar": "",
+   "lat": null,
+   "lon": null,
+   "aprox": false,
+   "notas": [
+    "Embarcación a bordo"
+   ]
   }
  ],
  "traslados": [],
- "comisiones": [],
- "embarcaciones": [],
- "instrumental": "",
- "logistica": [],
- "difusiones": "",
- "otras": "",
- "coherencia": []
+ "comisiones": [
+  {
+   "nombre": "Levantamiento PELURE",
+   "avance": [
+    {
+     "k": "Batimétricos",
+     "v": 58.3
+    },
+    {
+     "k": "Fotogramétricos",
+     "v": 100
+    },
+    {
+     "k": "Geodésicos",
+     "v": 100
+    }
+   ],
+   "avance_total": 68.7,
+   "items": [
+    {
+     "label": "Personal",
+     "kind": "personal",
+     "valor": "S/N",
+     "lineas": []
+    },
+    {
+     "label": "Material",
+     "kind": "material",
+     "valor": "S/N",
+     "lineas": []
+    },
+    {
+     "label": "Últimas 24 hrs",
+     "kind": "ult24",
+     "valor": "",
+     "lineas": [
+      "• Sondaje B1 Pta Choros."
+     ]
+    },
+    {
+     "label": "Próximas 24 hrs",
+     "kind": "prox24",
+     "valor": "",
+     "lineas": [
+      "• Continuación sondaje."
+     ]
+    },
+    {
+     "label": "Estado avance requerimientos / general",
+     "kind": "avance_req",
+     "valor": "",
+     "lineas": [
+      "A. Batimétricos: 58,3%",
+      "B. Fotogramétricos: 100%",
+      "C. Geodésicos: 100%"
+     ]
+    },
+    {
+     "label": "Estado avance total",
+     "kind": "avance_total",
+     "valor": "68,7%",
+     "lineas": []
+    },
+    {
+     "label": "Comentarios Jefe de grupo",
+     "kind": "comentarios",
+     "valor": "",
+     "lineas": [
+      "Se mantiene sondaje CITSU área Pta Choros. Condiciones meteo dentro de parámetros seguros. Según últimas actualización OCT08 aumentará viento y altura ed ola. Por lo anterior, OCT080630 zarpará a Chungungo con la intención de izar Pelure. Retornando a SHOA OCT09."
+     ]
+    }
+   ]
+  },
+  {
+   "nombre": "Cabrales-Punta Arenas",
+   "avance": [],
+   "avance_total": 34,
+   "items": [
+    {
+     "label": "Personal",
+     "kind": "personal",
+     "valor": "S/N",
+     "lineas": []
+    },
+    {
+     "label": "Material",
+     "kind": "material",
+     "valor": "S/N",
+     "lineas": []
+    },
+    {
+     "label": "Ultimas 24 hrs",
+     "kind": "ult24",
+     "valor": "",
+     "lineas": [
+      "• Sondaje acceso oceánico Bahía Cook.",
+      "• Sondaje Paso Christmas, Paso Figueroa y Paso Fuentes."
+     ]
+    },
+    {
+     "label": "Próximas 24 hrs",
+     "kind": "prox24",
+     "valor": "",
+     "lineas": [
+      "• Sondaje Paso Fuentes.",
+      "• Mantenimiento ENM Puerto Williams.",
+      "• Trabajos DG1 con personal ASMARMAG"
+     ]
+    },
+    {
+     "label": "Avance de la Comisión",
+     "kind": "avance_total",
+     "valor": "34%",
+     "lineas": []
+    },
+    {
+     "label": "Comentarios Jefe de grupo",
+     "kind": "comentarios",
+     "valor": "",
+     "lineas": [
+      "No hay."
+     ]
+    }
+   ]
+  },
+  {
+   "nombre": "Fondeo boya Watchkeeper Iquique y despliegue Glider.",
+   "avance": [],
+   "items": [
+    {
+     "label": "Personal",
+     "kind": "personal",
+     "valor": "S/N",
+     "lineas": []
+    },
+    {
+     "label": "Material",
+     "kind": "material",
+     "valor": "S/N",
+     "lineas": []
+    },
+    {
+     "label": "Últimas 24 hrs",
+     "kind": "ult24",
+     "valor": "",
+     "lineas": [
+      "Traslado grupo a Valparaíso. Arribo estimado 062130."
+     ]
+    },
+    {
+     "label": "Próximas 24 hrs",
+     "kind": "prox24",
+     "valor": "",
+     "lineas": [
+      "– "
+     ]
+    }
+   ]
+  }
+ ],
+ "embarcaciones": [
+  {
+   "k": "Orca",
+   "v": "Caleta Higuerillas"
+  },
+  {
+   "k": "Vaikava",
+   "v": "a bordo"
+  },
+  {
+   "k": "Pelure",
+   "v": "ALCAMARCRU"
+  }
+ ],
+ "instrumental": "• Mareógrafo Isla Promontorio",
+ "logistica": [
+  {
+   "k": "",
+   "v": "Combustible S/N"
+  },
+  {
+   "k": "",
+   "v": "Víveres S/N"
+  }
+ ],
+ "difusiones": "No hay",
+ "otras": "No hay. Atte",
+ "coherencia": [
+  {
+   "t": "info",
+   "x": "Levantamiento PELURE: el avance total (68,7 %) no es el promedio simple de sus componentes (86,1 %); se entiende que usa ponderaciones."
+  }
+ ]
 }
