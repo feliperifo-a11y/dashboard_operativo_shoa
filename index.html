@@ -2267,6 +2267,8 @@ function estructurarPrensa(parrafos, nombreArchivo) {
       if (cur && !tieneAlgo(cur)) {                       // tras el medio: el titular
         cur.titulo = txt; continue;
       }
+      // subtítulo dentro de la noticia («Los diputados aprobaron…:»): en minúsculas o terminado en «:»
+      if (cur && (cur.titulo || cur.parrafos.length) && (/:$/.test(txt) || !pareceMayus(txt))) { cur.parrafos.push(p.texto); continue; }
       if (corto) { nuevo(txt); continue; }                 // nuevo medio
       if (cur && !cur.titulo && !cur.parrafos.length) { cur.titulo = txt; continue; }
       const f = cur ? cur.fuente : seccion; nuevo(f); cur.titulo = txt; continue;   // otro titular del mismo medio

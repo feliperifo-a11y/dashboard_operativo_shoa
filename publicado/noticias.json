@@ -16,9 +16,15 @@
    "url": "https://infogate.cl/2026/10/presupuesto-2027-partida-de-defensa-contempla-incremento-de-10-32/"
   },
   {
-   "titulo": "EL MERCURIO DE SANTIAGO",
+   "titulo": "Recorte de prensa",
    "fuente": "EL MERCURIO DE SANTIAGO",
    "resumen": "El Departamento de Estado de EE.UU. presentó la \"Declaración conjunta relativa a la defensa de la soberanía en el Hemisferio\", una iniciativa denominada Escudo de las Américas a la que adhirió Chile junto a otros países de la región. El acuerdo busca fortalecer la resiliencia continental mediante tr",
+   "url": null
+  },
+  {
+   "titulo": "Recorte de prensa",
+   "fuente": "REDES SOCIALES",
+   "resumen": "",
    "url": null
   }
  ],
@@ -66,15 +72,65 @@
     "fuente": "EL MERCURIO DE SANTIAGO",
     "nota": "",
     "dia": "",
-    "titulo": "EL MERCURIO DE SANTIAGO",
+    "titulo": "Recorte de prensa",
     "tituloAuto": true,
     "parrafos": [
      "El Departamento de Estado de EE.UU. presentó la \"Declaración conjunta relativa a la defensa de la soberanía en el Hemisferio\", una iniciativa denominada Escudo de las Américas a la que adhirió Chile junto a otros países de la región. El acuerdo busca fortalecer la resiliencia continental mediante tres pilares fundamentales (económico, de seguridad y coordinación multilateral) para proteger las economías locales, defender la gobernanza democrática y combatir de manera conjunta al narcoterrorismo transnacional. Para operativizar este esfuerzo, los estados participantes acordaron aplicar medidas como la congelación de activos financieros, restricciones de visados y apoyo logístico dirigidos específicamente a 24 organizaciones criminales identificadas (como el Tren de Aragua, el CJNG y la Mara Salvatrucha), solicitando además la convocatoria de un Órgano de Consulta bajo el marco del Tratado Interamericano de Asistencia Recíproca (Tratado de Río)."
     ],
-    "imagenes": [],
-    "minis": [],
+    "imagenes": [
+     "publicado/prensa/muy2zarw_2_0.jpg"
+    ],
+    "minis": [
+     "publicado/prensa/muy2zarw_2_0_m.jpg"
+    ],
     "url": null,
     "resumen": "El Departamento de Estado de EE.UU. presentó la \"Declaración conjunta relativa a la defensa de la soberanía en el Hemisferio\", una iniciativa denominada Escudo de las Américas a la que adhirió Chile junto a otros países de la región. El acuerdo busca fortalecer la resiliencia continental mediante tr"
+   },
+   {
+    "fuente": "REDES SOCIALES",
+    "nota": "",
+    "dia": "",
+    "titulo": "Recorte de prensa",
+    "tituloAuto": true,
+    "parrafos": [],
+    "imagenes": [
+     "publicado/prensa/muy2zarw_3_0.jpg",
+     "publicado/prensa/muy2zarw_3_1.jpg",
+     "publicado/prensa/muy2zarw_3_2.jpg",
+     "publicado/prensa/muy2zarw_3_3.jpg",
+     "publicado/prensa/muy2zarw_3_4.jpg",
+     "publicado/prensa/muy2zarw_3_5.jpg",
+     "publicado/prensa/muy2zarw_3_6.jpg",
+     "publicado/prensa/muy2zarw_3_7.jpg",
+     "publicado/prensa/muy2zarw_3_8.jpg",
+     "publicado/prensa/muy2zarw_3_9.jpg",
+     "publicado/prensa/muy2zarw_3_10.jpg",
+     "publicado/prensa/muy2zarw_3_11.jpg",
+     "publicado/prensa/muy2zarw_3_12.jpg",
+     "publicado/prensa/muy2zarw_3_13.jpg",
+     "publicado/prensa/muy2zarw_3_14.jpg",
+     "publicado/prensa/muy2zarw_3_15.jpg"
+    ],
+    "minis": [
+     "publicado/prensa/muy2zarw_3_0_m.jpg",
+     "publicado/prensa/muy2zarw_3_1_m.jpg",
+     "publicado/prensa/muy2zarw_3_2_m.jpg",
+     "publicado/prensa/muy2zarw_3_3_m.jpg",
+     "publicado/prensa/muy2zarw_3_4_m.jpg",
+     "publicado/prensa/muy2zarw_3_5_m.jpg",
+     "publicado/prensa/muy2zarw_3_6_m.jpg",
+     "publicado/prensa/muy2zarw_3_7_m.jpg",
+     "publicado/prensa/muy2zarw_3_8_m.jpg",
+     "publicado/prensa/muy2zarw_3_9_m.jpg",
+     "publicado/prensa/muy2zarw_3_10_m.jpg",
+     "publicado/prensa/muy2zarw_3_11_m.jpg",
+     "publicado/prensa/muy2zarw_3_12_m.jpg",
+     "publicado/prensa/muy2zarw_3_13_m.jpg",
+     "publicado/prensa/muy2zarw_3_14_m.jpg",
+     "publicado/prensa/muy2zarw_3_15_m.jpg"
+    ],
+    "url": null,
+    "resumen": ""
    }
   ]
  }
