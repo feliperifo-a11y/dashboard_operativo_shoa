@@ -1,158 +1,110 @@
 {
  "tipo": "noticias",
  "version": 2,
- "publicado": "2026-10-06T13:54:00.000Z",
+ "publicado": "2026-10-07T12:10:00.000Z",
  "items": [
   {
-   "titulo": "Recorte de prensa",
-   "fuente": "MERCURIO DE VALPARAISO",
-   "resumen": "En una entrevista, Sir Nick Hine, exvicealmirante de la Royal Navy y ejecutivo de Babcock International Group, plantea la posibilidad de establecer una alianza estratégica de largo plazo con Chile para la construcción local de fragatas basadas en el diseño Arrowhead 140. La propuesta busca transferi",
-   "url": null
+   "titulo": "CHILE ANTE ARGENTINA Y AGILIZAR RENOVACIÓN DE AVIONES DE COMBATE",
+   "fuente": "LA TERCERA",
+   "resumen": "El martes, la Cámara de Diputados celebró una sesión especial sobre la soberanía chilena en el Estrecho de Magallanes, con los ministros de Defensa (Fernando Barros) y Relaciones Exteriores (Francisco Pérez Mackenna) presentes. La sesión se convocó por los cuestionamientos de altos mandos militares ",
+   "url": "https://www.latercera.com/politica/noticia/estrecho-de-magallanes-camara-pide-a-kast-"
   },
   {
-   "titulo": "Recorte de prensa",
-   "fuente": "MERCURIO DE SANTIAGO",
-   "resumen": "El proyecto de Ley de Presupuesto 2027 contempla una caída nominal del 7,4% para el Ministerio de Ciencia, Tecnología, Conocimiento e Innovación respecto a 2026. Esta reducción impacta a diversos fondos e instrumentos, como Becas Chile —cuyos recursos disminuyen un 8% (cerca de $2.000 millones)— y e",
-   "url": null
-  },
-  {
-   "titulo": "DIPUTADO VALENZUELA Y DIFERENCIA DE SUELDOS ENTRE FFAA Y CARABINEROS: \"ME GUSTARÍA QUE LOS SOLDADOS Y TROPA GANEN LO MISMO QUE VA A GANAR UN CARABINERO RECIÉN EGRESADO",
+   "titulo": "PRESUPUESTO 2027: PARTIDA DE DEFENSA CONTEMPLA INCREMENTO DE 10,32%",
    "fuente": "INFOGATE",
-   "resumen": "El diputado e integrante de la comisión de Defensa, Daniel Valenzuela, manifestó su deseo de equiparar los sueldos de los soldados de tropa de las Fuerzas Armadas con los de los carabineros recién egresados —explicando que actualmente un carabinero raso percibe cerca de $900 mil frente a los $600 mi",
-   "url": "https://infogate.cl/2026/10/diputado-valenzuela-y-diferencia-de-sueldos-entre-ffaa-y-carabineros-me-gustar-a-que-los-soldados-y-tropa-ganen-lo-mismo-que-va-a-ganar-un-carabinero-reci-n-egresado/"
+   "resumen": "El Presupuesto 2027 para la partida de Defensa Nacional en Chile contempla un incremento del 10,32% en pesos y un 53,68% en dólares en comparación con 2026, alcanzando un total neto de $2.472.992.708.000 y US$197.940.000. Este aumento se concentra principalmente en asegurar la operatividad de las Fu",
+   "url": "https://infogate.cl/2026/10/presupuesto-2027-partida-de-defensa-contempla-incremento-de-"
   },
   {
-   "titulo": "LA DISPUTA EQUIVOCADA",
-   "fuente": "VIVE",
-   "resumen": "El artículo de opinión firmado por el exembajador argentino Jorge Argüello sostiene que Argentina y Chile están incurriendo en un error estratégico al interrelacionar tensiones recientes —como las declaraciones e imprecisiones jurídicas argentinas sobre el Estrecho de Magallanes y la proyectada ruta",
-   "url": "https://vive.click/la-disputa-equivocada/"
-  },
-  {
-   "titulo": "RUMBO AL OCÉANO PROFUNDO: IMO ZARPA CON DOS MISIONES CIENTÍFICAS A BORDO DEL CABO DE HORNOS",
-   "fuente": "IMO UDEC",
-   "resumen": "El Instituto Milenio de Oceanografía (IMO), en conjunto con la Universidad de Concepción, la Pontificia Universidad Católica de Chile y el apoyo de la Armada, zarpa en el buque oceanográfico Cabo de Hornos para llevar a cabo una expedición científica de más de tres semanas en la Fosa de Atacama. La ",
-   "url": "https://imo.udec.cl/rumbo-al-oceano-profundo-imo-zarpa-con-dos-misiones-cientificas-a-bordo-del-cabo-de-hornos/"
-  },
-  {
-   "titulo": "Recorte de prensa",
-   "fuente": "REDES SOCIALES",
-   "resumen": "",
+   "titulo": "EL MERCURIO DE SANTIAGO",
+   "fuente": "EL MERCURIO DE SANTIAGO",
+   "resumen": "El Departamento de Estado de EE.UU. presentó la &quot;Declaración conjunta relativa a la defensa de la soberanía en el Hemisferio&quot;, una iniciativa denominada Escudo de las Américas a la que adhirió Chile junto a otros países de la región. El acuerdo busca fortalecer la resiliencia continental m",
    "url": null
   }
  ],
  "prensa": {
-  "titulo": "RESUMEN DE PRENSA 06 DE OCTUBRE DE 2026",
-  "fecha": "2026-10-06T11:00:00.000Z",
+  "titulo": "RESUMEN DE PRENSA 07 DE OCTUBRE DE 2026",
+  "fecha": "2026-10-07T11:00:00.000Z",
   "items": [
    {
-    "fuente": "MERCURIO DE VALPARAISO",
+    "fuente": "LA TERCERA",
     "nota": "",
     "dia": "",
-    "titulo": "Recorte de prensa",
-    "tituloAuto": true,
+    "titulo": "CHILE ANTE ARGENTINA Y AGILIZAR RENOVACIÓN DE AVIONES DE COMBATE",
+    "tituloAuto": false,
     "parrafos": [
-     "En una entrevista, Sir Nick Hine, exvicealmirante de la Royal Navy y ejecutivo de Babcock International Group, plantea la posibilidad de establecer una alianza estratégica de largo plazo con Chile para la construcción local de fragatas basadas en el diseño Arrowhead 140. La propuesta busca transferir conocimientos, tecnología y capacidades técnicas a la industria nacional (como Asmar) para que el país fabrique sus propios buques de guerra de última generación, fortaleciendo el desarrollo industrial chileno y convirtiendo a Chile en una potencia regional en construcción naval defensiva."
+     "El martes, la Cámara de Diputados celebró una sesión especial sobre la soberanía chilena en",
+     "el Estrecho de Magallanes, con los ministros de Defensa (Fernando Barros) y Relaciones",
+     "Exteriores (Francisco Pérez Mackenna) presentes. La sesión se convocó por los",
+     "cuestionamientos de altos mandos militares argentinos durante este año: el jefe del Estado",
+     "Mayor de la Fuerza Aérea Argentina, que en agosto incluyó el Estrecho dentro de una",
+     "referencia a la soberanía argentina, y el jefe del Servicio de Hidrografía Naval, que en abril",
+     "planteó que la boca del Estrecho correspondía a Argentina. También se citó el decreto",
+     "argentino de 2021 que describe el Estrecho como un &quot;espacio compartido&quot;, sobre el cual Chile",
+     "ya protestó y busca una modificación.",
+     "Los diputados aprobaron siete solicitudes de resolución:",
+     "1. Reconocer la plena vigencia de los tratados limítrofes con Argentina",
+     "2. Elaborar una política integral de resguardo de los límites en el sur, con horizonte a 2040.",
+     "3. Anteponer los intereses de Chile a la afinidad política con Argentina",
+     "4. Revertir los recortes presupuestarios que afectan a Magallanes.",
+     "5. Resguardar la soberanía y la autonomía de la política exterior frente a eventuales",
+     "intervenciones de grandes potencias.",
+     "6. Formular protestas formales ante nuevas declaraciones argentinas que desconozcan los",
+     "acuerdos vigentes.",
+     "7. Acelerar la renovación de aviones de la FACH para reforzar el control de la zona",
+     "acelerar-renovacion-de-aviones-de-la-fach-y-protestar-ante-nuevos-dichos-de-militares-",
+     "argentinos/"
     ],
-    "imagenes": [
-     "publicado/prensa/muwqtvzs_0_0.jpg",
-     "publicado/prensa/muwqtvzs_0_1.jpg",
-     "publicado/prensa/muwqtvzs_0_2.jpg"
-    ],
-    "minis": [
-     "publicado/prensa/muwqtvzs_0_0_m.jpg",
-     "publicado/prensa/muwqtvzs_0_1_m.jpg",
-     "publicado/prensa/muwqtvzs_0_2_m.jpg"
-    ],
-    "url": null,
-    "resumen": "En una entrevista, Sir Nick Hine, exvicealmirante de la Royal Navy y ejecutivo de Babcock International Group, plantea la posibilidad de establecer una alianza estratégica de largo plazo con Chile para la construcción local de fragatas basadas en el diseño Arrowhead 140. La propuesta busca transferi"
-   },
-   {
-    "fuente": "MERCURIO DE SANTIAGO",
-    "nota": "",
-    "dia": "",
-    "titulo": "Recorte de prensa",
-    "tituloAuto": true,
-    "parrafos": [
-     "El proyecto de Ley de Presupuesto 2027 contempla una caída nominal del 7,4% para el Ministerio de Ciencia, Tecnología, Conocimiento e Innovación respecto a 2026. Esta reducción impacta a diversos fondos e instrumentos, como Becas Chile —cuyos recursos disminuyen un 8% (cerca de $2.000 millones)— y el Fondo de Equipamiento Científico y Tecnológico (Fondequip), que sufre una baja cercana al 80%, además de severos recortes en programas de equipamiento, inserción de investigadores y capacidades tecnológicas. Por su parte, aunque la ministra Ximena Lincolao destaca el resguardo de compromisos adquiridos y un leve aumento nominal para Fondecyt, diversos programas regionales e instrumentos clave sufren importantes contracciones en sus asignaciones."
-    ],
-    "imagenes": [
-     "publicado/prensa/muwqtvzs_1_0.jpg",
-     "publicado/prensa/muwqtvzs_1_1.jpg"
-    ],
-    "minis": [
-     "publicado/prensa/muwqtvzs_1_0_m.jpg",
-     "publicado/prensa/muwqtvzs_1_1_m.jpg"
-    ],
-    "url": null,
-    "resumen": "El proyecto de Ley de Presupuesto 2027 contempla una caída nominal del 7,4% para el Ministerio de Ciencia, Tecnología, Conocimiento e Innovación respecto a 2026. Esta reducción impacta a diversos fondos e instrumentos, como Becas Chile —cuyos recursos disminuyen un 8% (cerca de $2.000 millones)— y e"
+    "imagenes": [],
+    "minis": [],
+    "url": "https://www.latercera.com/politica/noticia/estrecho-de-magallanes-camara-pide-a-kast-",
+    "resumen": "El martes, la Cámara de Diputados celebró una sesión especial sobre la soberanía chilena en el Estrecho de Magallanes, con los ministros de Defensa (Fernando Barros) y Relaciones Exteriores (Francisco Pérez Mackenna) presentes. La sesión se convocó por los cuestionamientos de altos mandos militares "
    },
    {
     "fuente": "INFOGATE",
     "nota": "",
     "dia": "",
-    "titulo": "DIPUTADO VALENZUELA Y DIFERENCIA DE SUELDOS ENTRE FFAA Y CARABINEROS: \"ME GUSTARÍA QUE LOS SOLDADOS Y TROPA GANEN LO MISMO QUE VA A GANAR UN CARABINERO RECIÉN EGRESADO",
+    "titulo": "PRESUPUESTO 2027: PARTIDA DE DEFENSA CONTEMPLA INCREMENTO DE 10,32%",
     "tituloAuto": false,
     "parrafos": [
-     "El diputado e integrante de la comisión de Defensa, Daniel Valenzuela, manifestó su deseo de equiparar los sueldos de los soldados de tropa de las Fuerzas Armadas con los de los carabineros recién egresados —explicando que actualmente un carabinero raso percibe cerca de $900 mil frente a los $600 mil aproximados de un soldado de tropa—, aunque advirtió que las limitaciones presupuestarias imponen complejos dilemas de priorización en el gasto público. Asimismo, ante las peticiones de desplegar militares para enfrentar el crimen organizado, señaló que las Fuerzas Armadas pueden colaborar en casos excepcionales pero requieren de atribuciones claras y un respaldo institucional adecuado, recordando las consecuencias judiciales que enfrentaron efectivos tras el estallido social."
+     "El Presupuesto 2027 para la partida de Defensa Nacional en Chile contempla un incremento",
+     "del 10,32% en pesos y un 53,68% en dólares en comparación con 2026, alcanzando un total",
+     "neto de $2.472.992.708.000 y US$197.940.000. Este aumento se concentra principalmente",
+     "en asegurar la operatividad de las Fuerzas Armadas mediante un alza del 77,95% en Bienes y",
+     "Servicios, mejoras de infraestructura de la DGAC (+27,16%), y mayores recursos en divisas",
+     "para la FACh (+64,85%), la Armada (+48,41%) y el Ejército (+43,70%). Asimismo, el erario",
+     "prioriza la seguridad territorial con fondos asignados a Directemar (incluyendo el combate a la",
+     "pesca ilegal) y al desarrollo logístico del programa antártico, mientras que el Estado Mayor",
+     "Conjunto (EMCO) sufrirá un recorte del 25,84% junto a reducciones drásticas en el Servicio",
+     "de la Deuda en moneda extranjera.",
+     "10-32/"
     ],
     "imagenes": [],
     "minis": [],
-    "url": "https://infogate.cl/2026/10/diputado-valenzuela-y-diferencia-de-sueldos-entre-ffaa-y-carabineros-me-gustar-a-que-los-soldados-y-tropa-ganen-lo-mismo-que-va-a-ganar-un-carabinero-reci-n-egresado/",
-    "resumen": "El diputado e integrante de la comisión de Defensa, Daniel Valenzuela, manifestó su deseo de equiparar los sueldos de los soldados de tropa de las Fuerzas Armadas con los de los carabineros recién egresados —explicando que actualmente un carabinero raso percibe cerca de $900 mil frente a los $600 mi"
+    "url": "https://infogate.cl/2026/10/presupuesto-2027-partida-de-defensa-contempla-incremento-de-",
+    "resumen": "El Presupuesto 2027 para la partida de Defensa Nacional en Chile contempla un incremento del 10,32% en pesos y un 53,68% en dólares en comparación con 2026, alcanzando un total neto de $2.472.992.708.000 y US$197.940.000. Este aumento se concentra principalmente en asegurar la operatividad de las Fu"
    },
    {
-    "fuente": "VIVE",
+    "fuente": "EL MERCURIO DE SANTIAGO",
     "nota": "",
     "dia": "",
-    "titulo": "LA DISPUTA EQUIVOCADA",
-    "tituloAuto": false,
-    "parrafos": [
-     "El artículo de opinión firmado por el exembajador argentino Jorge Argüello sostiene que Argentina y Chile están incurriendo en un error estratégico al interrelacionar tensiones recientes —como las declaraciones e imprecisiones jurídicas argentinas sobre el Estrecho de Magallanes y la proyectada ruta marítima comercial entre Punta Arenas y las Islas Malvinas—, convirtiendo en recelos bilaterales lo que son asuntos de distinta naturaleza; ante ello, enfatiza que la soberanía chilena sobre el Estrecho no está en duda y que la verdadera controversia territorial sobre las Malvinas es exclusivamente con el Reino Unido, por lo que llama a la rectificación formal, al diálogo oportuno y a la cooperación entre ambas naciones para evitar fricciones innecesarias que solo benefician los intereses británicos en la región."
-    ],
-    "imagenes": [],
-    "minis": [],
-    "url": "https://vive.click/la-disputa-equivocada/",
-    "resumen": "El artículo de opinión firmado por el exembajador argentino Jorge Argüello sostiene que Argentina y Chile están incurriendo en un error estratégico al interrelacionar tensiones recientes —como las declaraciones e imprecisiones jurídicas argentinas sobre el Estrecho de Magallanes y la proyectada ruta"
-   },
-   {
-    "fuente": "IMO UDEC",
-    "nota": "",
-    "dia": "",
-    "titulo": "RUMBO AL OCÉANO PROFUNDO: IMO ZARPA CON DOS MISIONES CIENTÍFICAS A BORDO DEL CABO DE HORNOS",
-    "tituloAuto": false,
-    "parrafos": [
-     "El Instituto Milenio de Oceanografía (IMO), en conjunto con la Universidad de Concepción, la Pontificia Universidad Católica de Chile y el apoyo de la Armada, zarpa en el buque oceanográfico Cabo de Hornos para llevar a cabo una expedición científica de más de tres semanas en la Fosa de Atacama. La misión abarca dos investigaciones paralelas: por un lado, la reinstalación del sistema IDOOS para monitorear en tiempo real variables físicas, químicas y biológicas en el océano profundo y evaluar los impactos del fenómeno de El Niño; por el otro, un estudio geofísico inédito mediante sonares de alta resolución para mapear fallas tectónicas y sedimentos en la laguna sísmica frente a Taltal y Mejillones, ofreciendo además una valiosa oportunidad formativa para estudiantes a bordo."
-    ],
-    "imagenes": [],
-    "minis": [],
-    "url": "https://imo.udec.cl/rumbo-al-oceano-profundo-imo-zarpa-con-dos-misiones-cientificas-a-bordo-del-cabo-de-hornos/",
-    "resumen": "El Instituto Milenio de Oceanografía (IMO), en conjunto con la Universidad de Concepción, la Pontificia Universidad Católica de Chile y el apoyo de la Armada, zarpa en el buque oceanográfico Cabo de Hornos para llevar a cabo una expedición científica de más de tres semanas en la Fosa de Atacama. La "
-   },
-   {
-    "fuente": "REDES SOCIALES",
-    "nota": "",
-    "dia": "",
-    "titulo": "Recorte de prensa",
+    "titulo": "EL MERCURIO DE SANTIAGO",
     "tituloAuto": true,
-    "parrafos": [],
-    "imagenes": [
-     "publicado/prensa/muwqtvzs_5_0.jpg",
-     "publicado/prensa/muwqtvzs_5_1.jpg",
-     "publicado/prensa/muwqtvzs_5_2.jpg",
-     "publicado/prensa/muwqtvzs_5_3.jpg",
-     "publicado/prensa/muwqtvzs_5_4.jpg",
-     "publicado/prensa/muwqtvzs_5_5.jpg"
+    "parrafos": [
+     "El Departamento de Estado de EE.UU. presentó la &quot;Declaración conjunta relativa a la defensa de la soberanía en",
+     "el Hemisferio&quot;, una iniciativa denominada Escudo de las Américas a la que adhirió Chile junto a otros países de la",
+     "región. El acuerdo busca fortalecer la resiliencia continental mediante tres pilares fundamentales (económico,",
+     "de seguridad y coordinación multilateral) para proteger las economías locales, defender la gobernanza",
+     "democrática y combatir de manera conjunta al narcoterrorismo transnacional. Para operativizar este esfuerzo,",
+     "los estados participantes acordaron aplicar medidas como la congelación de activos financieros, restricciones de",
+     "visados y apoyo logístico dirigidos específicamente a 24 organizaciones criminales identificadas (como el Tren de",
+     "Aragua, el CJNG y la Mara Salvatrucha), solicitando además la convocatoria de un Órgano de Consulta bajo el",
+     "marco del Tratado Interamericano de Asistencia Recíproca (Tratado de Río)."
     ],
-    "minis": [
-     "publicado/prensa/muwqtvzs_5_0_m.jpg",
-     "publicado/prensa/muwqtvzs_5_1_m.jpg",
-     "publicado/prensa/muwqtvzs_5_2_m.jpg",
-     "publicado/prensa/muwqtvzs_5_3_m.jpg",
-     "publicado/prensa/muwqtvzs_5_4_m.jpg",
-     "publicado/prensa/muwqtvzs_5_5_m.jpg"
-    ],
+    "imagenes": [],
+    "minis": [],
     "url": null,
-    "resumen": ""
+    "resumen": "El Departamento de Estado de EE.UU. presentó la &quot;Declaración conjunta relativa a la defensa de la soberanía en el Hemisferio&quot;, una iniciativa denominada Escudo de las Américas a la que adhirió Chile junto a otros países de la región. El acuerdo busca fortalecer la resiliencia continental m"
    }
   ]
  }
