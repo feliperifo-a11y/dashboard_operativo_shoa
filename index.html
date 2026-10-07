@@ -2246,9 +2246,10 @@ function estructurarPrensa(parrafos, nombreArchivo) {
   const ps = parrafos.filter(p => p.texto || p.imagenes.length).map(p => ({ ...p, minis: p.minis || p.imagenes }));
   let titulo = '', i0 = 0;
   if (ps[0] && (ps[0].negrita || pareceMayus(ps[0].texto)) && /resumen|prensa/i.test(ps[0].texto)) { titulo = ps[0].texto.replace(/\s+/g, ' '); i0 = 1; }
-  // la firma: texto suelto después del último recorte o enlace del documento
+  // la firma al final del documento
   let fin = ps.length - 1;
-  while (fin >= i0 && !ps[fin].imagenes.length && !ps[fin].enlaces.length && !ps[fin].negrita) fin--;
+  // (nombre y fecha: renglones cortos sin punto final)
+  while (fin >= i0 && !ps[fin].imagenes.length && !ps[fin].enlaces.length && !ps[fin].negrita && ps[fin].texto.length <= 60 && !/[.:;!?…]$/.test(ps[fin].texto.trim())) fin--;
   const items = []; let cur = null, dia = '', seccion = '';
   const tieneAlgo = (c) => c && (c.titulo || c.parrafos.length || c.imagenes.length || c.url);
   const nuevo = (txt) => {
@@ -2307,6 +2308,77 @@ function prensaDesdeTexto(texto) {
 function esResumenPrensa(texto) {
   const urls = (String(texto).match(/https?:\/\//g) || []).length;
   return /resumen\s+de\s+prensa/i.test(texto) || (urls >= 2 && String(texto).split(/\n/).filter(l => pareceMayus(l.trim())).length >= 2);
+}
+
+// ---- Resumen pegado desde Word, Outlook o el correo web (portapapeles con formato) ----
+// Word en el escritorio deja las imágenes como file:///…; sus datos vienen en el RTF del mismo portapapeles.
+function imagenesRtf(rtf) {
+  if (!rtf || rtf.indexOf('\\pict') < 0) return [];
+  const grupo = (s, i) => { let d = 0; for (let j = i; j < s.length; j++) { const c = s[j]; if (c === '\\') { j++; continue; } if (c === '{') d++; else if (c === '}') { d--; if (!d) return j; } } return s.length - 1; };
+  // fuera las versiones alternativas (WMF) que Word agrega para programas antiguos
+  let s = rtf, k;
+  while ((k = s.search(/\{\\(\*\\)?nonshppict/)) >= 0) s = s.slice(0, k) + s.slice(grupo(s, k) + 1);
+  const out = []; let i = 0;
+  while ((i = s.indexOf('{\\pict', i)) >= 0) {
+    const f = grupo(s, i), g = s.slice(i + 1, f); i = f + 1;
+    const tipo = /\\pngblip/.test(g) ? 'image/png' : /\\jpegblip/.test(g) ? 'image/jpeg' : null;
+    if (!tipo) { out.push(null); continue; }
+    let sin = g, m; while ((m = sin.search(/\{[^{}]*\}/)) >= 0) sin = sin.replace(/\{[^{}]*\}/, '');
+    const hex = sin.replace(/\\[a-z]+-?\d* ?/gi, '').replace(/[^0-9a-f]/gi, '');
+    const b = new Uint8Array(hex.length >> 1); for (let j = 0; j < b.length; j++) b[j] = parseInt(hex.substr(j * 2, 2), 16);
+    out.push(new Blob([b], { type: tipo }));
+  }
+  return out;
+}
+async function blobDeSrc(src) {
+  if (/^data:/.test(src)) return (await fetch(src)).blob();
+  if (/^https?:/.test(src)) { try { const r = await fetch(src, { mode: 'cors' }); if (r.ok) return r.blob(); } catch (e) {} }
+  return null;
+}
+async function prensaDesdePortapapeles(cd) {
+  const doc = new DOMParser().parseFromString(cd.getData('text/html'), 'text/html');
+  const rtf = imagenesRtf(cd.getData('text/rtf'));
+  const archivos = [...(cd.files || [])].filter(f => /^image\//.test(f.type));
+  let iRtf = 0, faltan = 0;
+  const BLOQ = 'p,h1,h2,h3,h4,h5,h6,li,td,th,div,blockquote,pre';
+  const hojas = [...doc.body.querySelectorAll(BLOQ)].filter(el => !el.querySelector(BLOQ));
+  if (!hojas.length) hojas.push(doc.body);
+  const negr = (n, tope) => { for (let x = n.parentElement; x && x !== tope.parentElement; x = x.parentElement) { if (/^(B|STRONG|H[1-6])$/.test(x.tagName)) return true; const w = (x.getAttribute('style') || '').match(/font-weight\s*:\s*(bold|[6-9]00)/i); if (w) return true; if (/font-weight\s*:\s*(normal|[1-4]00)/i.test(x.getAttribute('style') || '') && x !== tope) return false; } return false; };
+  const ps = [];
+  for (const h of hojas) {
+    let seg = { t: '', b: 0, n: 0, enlaces: [], imgs: [] };
+    const cerrar = () => { const texto = seg.t.replace(/[ \t ]+/g, ' ').trim(); if (texto || seg.imgs.length) ps.push({ texto, negrita: seg.n > 0 && seg.b / seg.n > 0.8, enlaces: seg.enlaces, imgSrc: seg.imgs }); seg = { t: '', b: 0, n: 0, enlaces: [], imgs: [] }; };
+    const walk = (n) => {
+      for (const c of n.childNodes) {
+        if (c.nodeType === 3) { const t = c.textContent; seg.t += t; const l = t.trim().length; if (l) { seg.n += l; if (negr(c, h)) seg.b += l; } }
+        else if (c.nodeType === 1) {
+          if (c.tagName === 'BR') { cerrar(); continue; }
+          if (c.tagName === 'IMG') { seg.imgs.push(c.getAttribute('src') || ''); continue; }
+          if (/^(STYLE|SCRIPT|HEAD|TITLE|META)$/.test(c.tagName)) continue;
+          if (c.tagName === 'A') { const u = c.getAttribute('href') || ''; if (/^(https?:|www\.)/i.test(u)) seg.enlaces.push(normUrl(u)); }
+          walk(c);
+        }
+      }
+    };
+    walk(h); cerrar();
+  }
+  // imágenes: datos incrustados, enlaces web, o las del RTF (Word de escritorio), en el mismo orden
+  for (const p of ps) {
+    for (const m of p.texto.matchAll(RX_URL)) { const u = normUrl(m[0]); if (!p.enlaces.some(x => x.slice(0, 40) === u.slice(0, 40))) p.enlaces.push(u); }
+    p.imagenes = []; p.minis = [];
+    for (const src of p.imgSrc) {
+      let blob = await blobDeSrc(src);
+      if (!blob && !/^(data:|https?:)/.test(src)) { while (iRtf < rtf.length && !blob) blob = rtf[iRtf++]; if (!blob && archivos.length) blob = archivos.shift(); }
+      if (blob) {
+        const full = await comprimirImagen(blob, 1400, 0.8), mini = await comprimirImagen(blob, 360, 0.72);
+        if (full) { p.imagenes.push(full); p.minis.push(mini || full); continue; }
+      }
+      if (/^https?:/.test(src)) { p.imagenes.push(src); p.minis.push(src); continue; }   // sin permiso para copiarla: se enlaza
+      faltan++;
+    }
+    delete p.imgSrc;
+  }
+  return { pr: estructurarPrensa(ps, ''), faltan };
 }
 
 async function prensaDesdeArchivo(file) {
@@ -2838,8 +2910,32 @@ document.getElementById('srFileBtn').onclick = () => document.getElementById('sr
 let pendientePrensa = null;
 // si el texto se edita a mano, se publica el texto (sin la estructura ni las imágenes del Word)
 document.getElementById('srTxt').addEventListener('input', () => { if (pendientePrensa) { pendientePrensa = null; const h = document.getElementById('srHint'); if (h) h.textContent = 'Texto editado a mano: se publicará como texto, sin las imágenes del Word.'; } });
-document.getElementById('srFile').onchange = async (e) => {
-  const f = e.target.files[0]; if (!f) return;
+document.getElementById('srFile').onchange = async (e) => { const f = e.target.files[0]; e.target.value = ''; if (f) await cargarArchivoModal(f); };
+// arrastrar el Word o el .txt sobre la ventana
+['dragover', 'drop'].forEach(ev => document.getElementById('srModal').addEventListener(ev, (e) => {
+  if (!e.dataTransfer || ![...e.dataTransfer.types].includes('Files')) return;
+  e.preventDefault();
+  if (ev === 'drop') { const f = e.dataTransfer.files[0]; if (f) cargarArchivoModal(f); }
+}));
+// pegar el resumen de prensa copiado desde Word o el correo: se conservan negritas, enlaces e imágenes
+document.getElementById('srTxt').addEventListener('paste', async (e) => {
+  if (areaModal !== 'not' || !e.clipboardData) return;
+  const cd = e.clipboardData, html = cd.getData('text/html'), txt = cd.getData('text/plain');
+  if (!html || !esResumenPrensa(txt || html)) return;
+  e.preventDefault();
+  const hint = document.getElementById('srHint'), ta = document.getElementById('srTxt');
+  hint.textContent = 'Leyendo lo pegado…';
+  try {
+    const { pr, faltan } = await prensaDesdePortapapeles(cd);
+    if (!pr.items.length) throw new Error('sin noticias');
+    pendientePrensa = pr; ta.value = prensaComoTexto(pr);
+    const d = new Date(pr.fecha); document.getElementById('srFecha').value = new Date(d.getTime() - d.getTimezoneOffset() * 60000).toISOString().slice(0, 16);
+    const nImg = pr.items.reduce((n, x) => n + x.imagenes.length, 0);
+    hint.innerHTML = escH(`Resumen pegado: ${pr.items.length} noticias${nImg ? `, ${nImg} imágenes` : ''}.`) +
+      (faltan ? ` <span class="err">${faltan} imagen${faltan > 1 ? 'es' : ''} no se pudo copiar desde el portapapeles: para incluir${faltan > 1 ? 'las' : 'la'}, use «Abrir archivo (.docx)» o arrastre el Word a esta ventana.</span>` : '');
+  } catch (err) { ta.value = txt; hint.textContent = 'Se pegó solo el texto. Para incluir las imágenes, use «Abrir archivo (.docx)».'; }
+});
+async function cargarArchivoModal(f) {
   const hint = document.getElementById('srHint');
   let d = new Date(f.lastModified || Date.now());
   pendientePrensa = null;
@@ -2863,8 +2959,7 @@ document.getElementById('srFile').onchange = async (e) => {
     document.getElementById('srTxt').value = await f.text();
   }
   document.getElementById('srFecha').value = new Date(d.getTime() - d.getTimezoneOffset() * 60000).toISOString().slice(0, 16);
-  e.target.value = '';
-};
+}
 document.getElementById('srOk').onclick = () => {
   const texto = document.getElementById('srTxt').value.trim(); if (!texto || !areaModal) return;
   const pr = (areaModal === 'not' && pendientePrensa) ? pendientePrensa : null;
