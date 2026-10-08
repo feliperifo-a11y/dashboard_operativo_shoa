@@ -307,13 +307,8 @@
  "otras": "No hay. Atte",
  "coherencia": [
   {
-   "t": "warn",
-   "x": "El total (14) no coincide con la suma por categoría (15)."
-  },
-  {
    "t": "info",
    "x": "Levantamiento PELURE: el avance total (76,3 %) no es el promedio simple de sus componentes (89,5 %); se entiende que usa ponderaciones."
   }
- ],
- "total_informe": 14
+ ]
 }
