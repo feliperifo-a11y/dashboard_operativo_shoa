@@ -1,136 +1,231 @@
 {
  "tipo": "noticias",
  "version": 2,
- "publicado": "2026-10-07T12:21:00.000Z",
+ "publicado": "2026-10-08T11:00:00.000Z",
  "items": [
   {
-   "titulo": "ESTRECHO DE MAGALLANES: CÁMARA PIDE A KAST PRIORIZAR INTERESES DE CHILE ANTE ARGENTINA Y AGILIZAR RENOVACIÓN DE AVIONES DE COMBATE",
+   "titulo": "EL MERCURIO DE VALPARAÍSO",
+   "fuente": "EL MERCURIO DE VALPARAÍSO",
+   "resumen": "La Comisión Regional de Uso de Borde Costero votará la solicitud de concesión marítima para el proyecto \"Parque Eólico Marino Lir\" frente a Laguna Verde, una iniciativa de 2.564 millones de dólares que busca instalar 66 aerogeneradores en plataformas flotantes para generar energía renovable. A pesar",
+   "url": null
+  },
+  {
+   "titulo": "EL MERCURIO DE VALPARAÍSO",
+   "fuente": "EL MERCURIO DE VALPARAÍSO",
+   "resumen": "Excomandantes en jefe de la Armada valoraron positivamente la propuesta de la firma británica Babcock para construir fragatas Arrowhead 140 en Chile, una alternativa clave ante la urgente necesidad de renovar la Escuadra Nacional, considerando que parte de la flota actual terminará su vida útil a pa",
+   "url": null
+  },
+  {
+   "titulo": "CHILE SE PREPARA PARA EL 6G: QUÉ ES LA NUEVA GENERACIÓN DE REDES MÓVILES Y EN QUÉ SE DIFERENCIA DEL 5G",
    "fuente": "LA TERCERA",
-   "resumen": "El martes, la Cámara de Diputados celebró una sesión especial sobre la soberanía chilena en el Estrecho de Magallanes, con los ministros de Defensa (Fernando Barros) y Relaciones Exteriores (Francisco Pérez Mackenna) presentes. La sesión se convocó por los cuestionamientos de altos mandos militares ",
-   "url": "https://www.latercera.com/politica/noticia/estrecho-de-magallanes-camara-pide-a-kast-acelerar-renovacion-de-aviones-de-la-fach-y-protestar-ante-nuevos-dichos-de-militares-argentinos/"
+   "resumen": "El Plan Nacional Digital 2026-2036, presentado por la Subsecretaría de Telecomunicaciones, busca consolidar a Chile como el hub digital de América Latina mediante una estrategia de siete ejes enfocada en atraer inversiones estimadas en US$2.000 millones para 2030. La iniciativa contempla el desplieg",
+   "url": "https://www.latercera.com/tecnologia/noticia/chile-plan-nacional-digital-subtel-6g/"
   },
   {
-   "titulo": "PRESUPUESTO 2027: PARTIDA DE DEFENSA CONTEMPLA INCREMENTO DE 10,32%",
+   "titulo": "LECCIONES DE RESILIENCIA EN EL FIN DEL MUNDO: MICROORGANISMOS REGENERARON LA VIDA TRAS LA ERUPCIÓN DE UN VOLCÁN ANTÁRTICO",
+   "fuente": "INACH",
+   "resumen": "Un equipo internacional de científicos ha demostrado cómo microorganismos extremófilos recolonizaron y regeneraron la vida en la isla Decepción, en la Antártica, tras las erupciones volcánicas ocurridas entre 1967 y 1970. A través de análisis metagenómicos, el estudio identificó un enorme potencial ",
+   "url": "https://www.inach.cl/lecciones-de-resiliencia-en-el-fin-del-mundo-microorganismos-regeneraron-la-vida-tras-la-erupcion-de-un-volcan-antartico/"
+  },
+  {
+   "titulo": "EMBAJADOR JUDD LO VUELVE A HACER: ADVIERTE QUE SI CHILE QUIERE PROTEGER SUS DERECHOS SOBRE EL ESTRECHO DE MAGALLANES “TENDRÁN QUE TRABAJAR CON NOSOTROS”",
    "fuente": "INFOGATE",
-   "resumen": "El Presupuesto 2027 para la partida de Defensa Nacional en Chile contempla un incremento del 10,32% en pesos y un 53,68% en dólares en comparación con 2026, alcanzando un total neto de $2.472.992.708.000 y US$197.940.000. Este aumento se concentra principalmente en asegurar la operatividad de las Fu",
-   "url": "https://infogate.cl/2026/10/presupuesto-2027-partida-de-defensa-contempla-incremento-de-10-32/"
+   "resumen": "El embajador de Estados Unidos en Chile, Brandon Judd, condicionó el respaldo de Washington en la protección de los derechos de Chile sobre el Estrecho de Magallanes a la cooperación bilateral en prioridades estadounidenses. En respuesta, el canciller chileno Francisco Pérez Mackenna afirmó que la s",
+   "url": "https://infogate.cl/2026/10/embajador-judd-lo-vuelve-a-hacer-advierte-que-si-chile-quiere-proteger-sus-derechos-sobre-el-estrecho-de-magallanes-tendr-n-que-trabajar-con-nosotros/"
   },
   {
-   "titulo": "Recorte de prensa",
-   "fuente": "EL MERCURIO DE SANTIAGO",
-   "resumen": "El Departamento de Estado de EE.UU. presentó la \"Declaración conjunta relativa a la defensa de la soberanía en el Hemisferio\", una iniciativa denominada Escudo de las Américas a la que adhirió Chile junto a otros países de la región. El acuerdo busca fortalecer la resiliencia continental mediante tr",
-   "url": null
+   "titulo": "CHILE AVANZA EN SUS CAPACIDADES ESPACIALES CON LANZAMIENTO DE NUEVO GEOPORTAL DEL SISTEMA NACIONAL ESPACIAL",
+   "fuente": "INFOGATE",
+   "resumen": "Chile ha lanzado el nuevo Geoportal del Sistema Nacional Espacial, una plataforma destinada a unificar e integrar imágenes satelitales y datos geoespaciales para el uso estatal, científico y ciudadano. Este proyecto, desarrollado en colaboración entre el Ministerio de Defensa, el Ministerio de Cienc",
+   "url": "https://infogate.cl/2026/10/chile-avanza-en-sus-capacidades-espaciales-con-lanzamiento-de-nuevo-geoportal-del-sistema-nacional-espacial/"
   },
   {
-   "titulo": "Recorte de prensa",
-   "fuente": "REDES SOCIALES",
+   "titulo": "SE ACABA EL FINANCIAMIENTO: PRESUPUESTO DEL GOBIERNO DEJA SIN RECURSOS AL INSTITUTO CHILENO DE CAMPOS DE HIELO",
+   "fuente": "THE CLINIC",
+   "resumen": "El Gobierno de Chile eliminó el financiamiento estatal para el Instituto Chileno de Campos de Hielo (ICCH) en el proyecto de Presupuestos 2027. La institución privada sin fines de lucro, encargada de investigar el Campo de Hielo Patagónico Sur, dejará de recibir los $46,4 millones de pesos que le as",
+   "url": "https://www.theclinic.cl/2026/10/07/se-acaba-el-financiamiento-presupuesto-del-gobierno-deja-sin-recursos-al-instituto-chileno-de-campos-de-hielo/"
+  },
+  {
+   "titulo": "LAS ÚLTIMAS NOTICIAS",
+   "fuente": "LAS ÚLTIMAS NOTICIAS",
+   "resumen": "Las precipitaciones registradas en octubre en la zona central de Chile son normales para la primavera, pero lo inusual es el alto volumen de agua caída en un periodo tan corto, según explicó el director del Centro de Ciencia del Clima y la Resiliencia (CR2), Roberto Rondanelli, en la edición de LUN.",
+   "url": "http://www.lun.com/Pages/NewsDetail.aspx?dt=2026-10-08&EsAviso=0&PaginaId=3&bodyid=0"
+  },
+  {
+   "titulo": "LAS ÚLTIMAS NOTICIAS",
+   "fuente": "LAS ÚLTIMAS NOTICIAS",
    "resumen": "",
-   "url": null
+   "url": "http://www.lun.com/Pages/NewsDetail.aspx?dt=2026-10-08&EsAviso=0&PaginaId=13&bodyid=0"
+  },
+  {
+   "titulo": "Embajador judd aclara dichos y afirma nunca condiciono la soberania de chile este drama esta siendo tergiversado",
+   "fuente": "LA TERCERA",
+   "resumen": "El embajador de Estados Unidos en Chile, Brandon Judd, aclaró que sus declaraciones sobre el Estrecho de Magallanes fueron sacadas de contexto y aseguró que en ningún momento condicionó el respaldo a la soberanía chilena. La controversia se originó tras sugerir que el apoyo de Washington requería co",
+   "url": "https://www.latercera.com/politica/noticia/embajador-judd-aclara-dichos-y-afirma-nunca-condiciono-la-soberania-de-chile-este-drama-esta-siendo-tergiversado/"
+  },
+  {
+   "titulo": "Los desafios y fortalezas de chile para enfrentar las vicisitudes",
+   "fuente": "EL MERCURIO DE SANTIAGO",
+   "resumen": "Chile rechazó categóricamente las declaraciones del embajador de Estados Unidos, Brandon Judd, quien condicionó el respaldo de su país a la soberanía chilena en el Estrecho de Magallanes a cambio de que Santiago colabore en los asuntos de interés prioritario para Washington, en especial frente a la ",
+   "url": "https://www.empresaoceano.cl/los-desafios-y-fortalezas-de-chile-para-enfrentar-las-vicisitudes"
   }
  ],
  "prensa": {
-  "titulo": "RESUMEN DE PRENSA 07 DE OCTUBRE DE 2026",
-  "fecha": "2026-10-07T11:00:00.000Z",
+  "titulo": "RESUMEN DE PRENSA 08 DE OCTUBRE DE 2026",
+  "fecha": "2026-10-08T11:00:00.000Z",
   "items": [
+   {
+    "fuente": "EL MERCURIO DE VALPARAÍSO",
+    "nota": "",
+    "dia": "",
+    "titulo": "EL MERCURIO DE VALPARAÍSO",
+    "tituloAuto": true,
+    "parrafos": [
+     "La Comisión Regional de Uso de Borde Costero votará la solicitud de concesión marítima para el proyecto \"Parque Eólico Marino Lir\" frente a Laguna Verde, una iniciativa de 2.564 millones de dólares que busca instalar 66 aerogeneradores en plataformas flotantes para generar energía renovable. A pesar del millonario monto, la iniciativa enfrenta duros reparos debido a un informe técnico desfavorable que advierte que la ubicación no es la adecuada, ya que el sector es muy cercano al puerto de Valparaíso y presenta un intenso tráfico de buques comerciales y navales. El delegado presidencial regional, Manuel Millones, y la Municipalidad de Valparaíso manifestaron la necesidad de ser responsables con el impacto territorial y la navegación, sumándose a la fuerte oposición de los vecinos y ambientalistas locales por el daño paisajístico y la degradación del entorno marino."
+    ],
+    "imagenes": [],
+    "minis": [],
+    "url": null,
+    "resumen": "La Comisión Regional de Uso de Borde Costero votará la solicitud de concesión marítima para el proyecto \"Parque Eólico Marino Lir\" frente a Laguna Verde, una iniciativa de 2.564 millones de dólares que busca instalar 66 aerogeneradores en plataformas flotantes para generar energía renovable. A pesar"
+   },
+   {
+    "fuente": "EL MERCURIO DE VALPARAÍSO",
+    "nota": "",
+    "dia": "",
+    "titulo": "EL MERCURIO DE VALPARAÍSO",
+    "tituloAuto": true,
+    "parrafos": [
+     "Excomandantes en jefe de la Armada valoraron positivamente la propuesta de la firma británica Babcock para construir fragatas Arrowhead 140 en Chile, una alternativa clave ante la urgente necesidad de renovar la Escuadra Nacional, considerando que parte de la flota actual terminará su vida útil a partir del año 2032. Los exalmirantes Rodolfo Codina y Jorge Arancibia, junto a especialistas del área, destacaron que esta oferta promueve una alianza estratégica que incluye la transferencia de tecnología y la construcción local en los astilleros de Asmar. No obstante, los expertos advirtieron que la decisión es de carácter estratégico para los próximos 30 o 40 años, por lo que el Estado chileno también deberá evaluar con rigurosidad otras opciones competitivas provenientes de países como Francia, Alemania, Corea del Sur o Japón antes de concretar la multimillonaria renovación."
+    ],
+    "imagenes": [],
+    "minis": [],
+    "url": null,
+    "resumen": "Excomandantes en jefe de la Armada valoraron positivamente la propuesta de la firma británica Babcock para construir fragatas Arrowhead 140 en Chile, una alternativa clave ante la urgente necesidad de renovar la Escuadra Nacional, considerando que parte de la flota actual terminará su vida útil a pa"
+   },
    {
     "fuente": "LA TERCERA",
     "nota": "",
     "dia": "",
-    "titulo": "ESTRECHO DE MAGALLANES: CÁMARA PIDE A KAST PRIORIZAR INTERESES DE CHILE ANTE ARGENTINA Y AGILIZAR RENOVACIÓN DE AVIONES DE COMBATE",
+    "titulo": "CHILE SE PREPARA PARA EL 6G: QUÉ ES LA NUEVA GENERACIÓN DE REDES MÓVILES Y EN QUÉ SE DIFERENCIA DEL 5G",
     "tituloAuto": false,
     "parrafos": [
-     "El martes, la Cámara de Diputados celebró una sesión especial sobre la soberanía chilena en el Estrecho de Magallanes, con los ministros de Defensa (Fernando Barros) y Relaciones Exteriores (Francisco Pérez Mackenna) presentes. La sesión se convocó por los cuestionamientos de altos mandos militares argentinos durante este año: el jefe del Estado Mayor de la Fuerza Aérea Argentina, que en agosto incluyó el Estrecho dentro de una referencia a la soberanía argentina, y el jefe del Servicio de Hidrografía Naval, que en abril planteó que la boca del Estrecho correspondía a Argentina. También se citó el decreto argentino de 2021 que describe el Estrecho como un \"espacio compartido\", sobre el cual Chile ya protestó y busca una modificación.",
-     "Los diputados aprobaron siete solicitudes de resolución:",
-     "1. Reconocer la plena vigencia de los tratados limítrofes con Argentina",
-     "2. Elaborar una política integral de resguardo de los límites en el sur, con horizonte a 2040.",
-     "3. Anteponer los intereses de Chile a la afinidad política con Argentina",
-     "4. Revertir los recortes presupuestarios que afectan a Magallanes.",
-     "5. Resguardar la soberanía y la autonomía de la política exterior frente a eventuales intervenciones de grandes potencias.",
-     "6. Formular protestas formales ante nuevas declaraciones argentinas que desconozcan los acuerdos vigentes.",
-     "7. Acelerar la renovación de aviones de la FACH para reforzar el control de la zona"
+     "El Plan Nacional Digital 2026-2036, presentado por la Subsecretaría de Telecomunicaciones, busca consolidar a Chile como el hub digital de América Latina mediante una estrategia de siete ejes enfocada en atraer inversiones estimadas en US$2.000 millones para 2030. La iniciativa contempla el despliegue de redes avanzadas como 5G y 6G, el apagado de las redes 3G y reformas regulatorias para reducir la burocracia y la brecha de conectividad."
     ],
     "imagenes": [],
     "minis": [],
-    "url": "https://www.latercera.com/politica/noticia/estrecho-de-magallanes-camara-pide-a-kast-acelerar-renovacion-de-aviones-de-la-fach-y-protestar-ante-nuevos-dichos-de-militares-argentinos/",
-    "resumen": "El martes, la Cámara de Diputados celebró una sesión especial sobre la soberanía chilena en el Estrecho de Magallanes, con los ministros de Defensa (Fernando Barros) y Relaciones Exteriores (Francisco Pérez Mackenna) presentes. La sesión se convocó por los cuestionamientos de altos mandos militares "
+    "url": "https://www.latercera.com/tecnologia/noticia/chile-plan-nacional-digital-subtel-6g/",
+    "resumen": "El Plan Nacional Digital 2026-2036, presentado por la Subsecretaría de Telecomunicaciones, busca consolidar a Chile como el hub digital de América Latina mediante una estrategia de siete ejes enfocada en atraer inversiones estimadas en US$2.000 millones para 2030. La iniciativa contempla el desplieg"
+   },
+   {
+    "fuente": "INACH",
+    "nota": "",
+    "dia": "",
+    "titulo": "LECCIONES DE RESILIENCIA EN EL FIN DEL MUNDO: MICROORGANISMOS REGENERARON LA VIDA TRAS LA ERUPCIÓN DE UN VOLCÁN ANTÁRTICO",
+    "tituloAuto": false,
+    "parrafos": [
+     "Un equipo internacional de científicos ha demostrado cómo microorganismos extremófilos recolonizaron y regeneraron la vida en la isla Decepción, en la Antártica, tras las erupciones volcánicas ocurridas entre 1967 y 1970. A través de análisis metagenómicos, el estudio identificó un enorme potencial biotecnológico en bacterias y microalgas con aplicaciones farmacéuticas, transición energética y eficiencia industrial."
+    ],
+    "imagenes": [],
+    "minis": [],
+    "url": "https://www.inach.cl/lecciones-de-resiliencia-en-el-fin-del-mundo-microorganismos-regeneraron-la-vida-tras-la-erupcion-de-un-volcan-antartico/",
+    "resumen": "Un equipo internacional de científicos ha demostrado cómo microorganismos extremófilos recolonizaron y regeneraron la vida en la isla Decepción, en la Antártica, tras las erupciones volcánicas ocurridas entre 1967 y 1970. A través de análisis metagenómicos, el estudio identificó un enorme potencial "
    },
    {
     "fuente": "INFOGATE",
     "nota": "",
     "dia": "",
-    "titulo": "PRESUPUESTO 2027: PARTIDA DE DEFENSA CONTEMPLA INCREMENTO DE 10,32%",
+    "titulo": "EMBAJADOR JUDD LO VUELVE A HACER: ADVIERTE QUE SI CHILE QUIERE PROTEGER SUS DERECHOS SOBRE EL ESTRECHO DE MAGALLANES “TENDRÁN QUE TRABAJAR CON NOSOTROS”",
     "tituloAuto": false,
     "parrafos": [
-     "El Presupuesto 2027 para la partida de Defensa Nacional en Chile contempla un incremento del 10,32% en pesos y un 53,68% en dólares en comparación con 2026, alcanzando un total neto de $2.472.992.708.000 y US$197.940.000. Este aumento se concentra principalmente en asegurar la operatividad de las Fuerzas Armadas mediante un alza del 77,95% en Bienes y Servicios, mejoras de infraestructura de la DGAC (+27,16%), y mayores recursos en divisas para la FACh (+64,85%), la Armada (+48,41%) y el Ejército (+43,70%). Asimismo, el erario prioriza la seguridad territorial con fondos asignados a Directemar (incluyendo el combate a la pesca ilegal) y al desarrollo logístico del programa antártico, mientras que el Estado Mayor Conjunto (EMCO) sufrirá un recorte del 25,84% junto a reducciones drásticas en el Servicio de la Deuda en moneda extranjera."
+     "El embajador de Estados Unidos en Chile, Brandon Judd, condicionó el respaldo de Washington en la protección de los derechos de Chile sobre el Estrecho de Magallanes a la cooperación bilateral en prioridades estadounidenses. En respuesta, el canciller chileno Francisco Pérez Mackenna afirmó que la soberanía nacional sobre el estrecho es plena e independiente."
     ],
     "imagenes": [],
     "minis": [],
-    "url": "https://infogate.cl/2026/10/presupuesto-2027-partida-de-defensa-contempla-incremento-de-10-32/",
-    "resumen": "El Presupuesto 2027 para la partida de Defensa Nacional en Chile contempla un incremento del 10,32% en pesos y un 53,68% en dólares en comparación con 2026, alcanzando un total neto de $2.472.992.708.000 y US$197.940.000. Este aumento se concentra principalmente en asegurar la operatividad de las Fu"
+    "url": "https://infogate.cl/2026/10/embajador-judd-lo-vuelve-a-hacer-advierte-que-si-chile-quiere-proteger-sus-derechos-sobre-el-estrecho-de-magallanes-tendr-n-que-trabajar-con-nosotros/",
+    "resumen": "El embajador de Estados Unidos en Chile, Brandon Judd, condicionó el respaldo de Washington en la protección de los derechos de Chile sobre el Estrecho de Magallanes a la cooperación bilateral en prioridades estadounidenses. En respuesta, el canciller chileno Francisco Pérez Mackenna afirmó que la s"
+   },
+   {
+    "fuente": "INFOGATE",
+    "nota": "",
+    "dia": "",
+    "titulo": "CHILE AVANZA EN SUS CAPACIDADES ESPACIALES CON LANZAMIENTO DE NUEVO GEOPORTAL DEL SISTEMA NACIONAL ESPACIAL",
+    "tituloAuto": false,
+    "parrafos": [
+     "Chile ha lanzado el nuevo Geoportal del Sistema Nacional Espacial, una plataforma destinada a unificar e integrar imágenes satelitales y datos geoespaciales para el uso estatal, científico y ciudadano. Este proyecto, desarrollado en colaboración entre el Ministerio de Defensa, el Ministerio de Ciencia y la Fuerza Aérea de Chile, incluye aplicaciones para la gestión de emergencias y una aplicación móvil complementaria."
+    ],
+    "imagenes": [],
+    "minis": [],
+    "url": "https://infogate.cl/2026/10/chile-avanza-en-sus-capacidades-espaciales-con-lanzamiento-de-nuevo-geoportal-del-sistema-nacional-espacial/",
+    "resumen": "Chile ha lanzado el nuevo Geoportal del Sistema Nacional Espacial, una plataforma destinada a unificar e integrar imágenes satelitales y datos geoespaciales para el uso estatal, científico y ciudadano. Este proyecto, desarrollado en colaboración entre el Ministerio de Defensa, el Ministerio de Cienc"
+   },
+   {
+    "fuente": "THE CLINIC",
+    "nota": "",
+    "dia": "",
+    "titulo": "SE ACABA EL FINANCIAMIENTO: PRESUPUESTO DEL GOBIERNO DEJA SIN RECURSOS AL INSTITUTO CHILENO DE CAMPOS DE HIELO",
+    "tituloAuto": false,
+    "parrafos": [
+     "El Gobierno de Chile eliminó el financiamiento estatal para el Instituto Chileno de Campos de Hielo (ICCH) en el proyecto de Presupuestos 2027. La institución privada sin fines de lucro, encargada de investigar el Campo de Hielo Patagónico Sur, dejará de recibir los $46,4 millones de pesos que le asignaba el Ministerio de Relaciones Exteriores.",
+     "Desde el Ministerio de Relaciones Exteriores expresan que la decisión se debe a que “el Proyecto de Presupuesto 2027 contempla, en la partida de la Dirección Nacional de Fronteras y Límites (DIFROL)-institución de esta Cancillería responsable de los temas limítrofes de nuestro país-, recursos públicos que se destinan a la realización de Estudios sobre la posición Chilena en Campos de Hielo, y que incluyen coordinaciones con la Universidad de Magallanes para estos fines, haciendo partícipes a las organizaciones de las regiones de la zona”."
+    ],
+    "imagenes": [],
+    "minis": [],
+    "url": "https://www.theclinic.cl/2026/10/07/se-acaba-el-financiamiento-presupuesto-del-gobierno-deja-sin-recursos-al-instituto-chileno-de-campos-de-hielo/",
+    "resumen": "El Gobierno de Chile eliminó el financiamiento estatal para el Instituto Chileno de Campos de Hielo (ICCH) en el proyecto de Presupuestos 2027. La institución privada sin fines de lucro, encargada de investigar el Campo de Hielo Patagónico Sur, dejará de recibir los $46,4 millones de pesos que le as"
+   },
+   {
+    "fuente": "LAS ÚLTIMAS NOTICIAS",
+    "nota": "",
+    "dia": "",
+    "titulo": "LAS ÚLTIMAS NOTICIAS",
+    "tituloAuto": true,
+    "parrafos": [
+     "Las precipitaciones registradas en octubre en la zona central de Chile son normales para la primavera, pero lo inusual es el alto volumen de agua caída en un periodo tan corto, según explicó el director del Centro de Ciencia del Clima y la Resiliencia (CR2), Roberto Rondanelli, en la edición de LUN. El especialista detalló que el fenómeno, potenciado por el fortalecimiento de El Niño, ha provocado que en algunos sectores se duplique el promedio histórico mensual en pocos días, rompiendo récords climáticos para la época del año."
+    ],
+    "imagenes": [],
+    "minis": [],
+    "url": "http://www.lun.com/Pages/NewsDetail.aspx?dt=2026-10-08&EsAviso=0&PaginaId=3&bodyid=0",
+    "resumen": "Las precipitaciones registradas en octubre en la zona central de Chile son normales para la primavera, pero lo inusual es el alto volumen de agua caída en un periodo tan corto, según explicó el director del Centro de Ciencia del Clima y la Resiliencia (CR2), Roberto Rondanelli, en la edición de LUN."
+   },
+   {
+    "fuente": "LAS ÚLTIMAS NOTICIAS",
+    "nota": "",
+    "dia": "",
+    "titulo": "LAS ÚLTIMAS NOTICIAS",
+    "tituloAuto": true,
+    "parrafos": [],
+    "imagenes": [],
+    "minis": [],
+    "url": "http://www.lun.com/Pages/NewsDetail.aspx?dt=2026-10-08&EsAviso=0&PaginaId=13&bodyid=0",
+    "resumen": ""
+   },
+   {
+    "fuente": "LA TERCERA",
+    "nota": "",
+    "dia": "",
+    "titulo": "Embajador judd aclara dichos y afirma nunca condiciono la soberania de chile este drama esta siendo tergiversado",
+    "tituloAuto": true,
+    "parrafos": [
+     "El embajador de Estados Unidos en Chile, Brandon Judd, aclaró que sus declaraciones sobre el Estrecho de Magallanes fueron sacadas de contexto y aseguró que en ningún momento condicionó el respaldo a la soberanía chilena. La controversia se originó tras sugerir que el apoyo de Washington requería cooperación en asuntos prioritarios de interés estadounidense, lo que provocó una firme respuesta de la Cancillería chilena."
+    ],
+    "imagenes": [],
+    "minis": [],
+    "url": "https://www.latercera.com/politica/noticia/embajador-judd-aclara-dichos-y-afirma-nunca-condiciono-la-soberania-de-chile-este-drama-esta-siendo-tergiversado/",
+    "resumen": "El embajador de Estados Unidos en Chile, Brandon Judd, aclaró que sus declaraciones sobre el Estrecho de Magallanes fueron sacadas de contexto y aseguró que en ningún momento condicionó el respaldo a la soberanía chilena. La controversia se originó tras sugerir que el apoyo de Washington requería co"
    },
    {
     "fuente": "EL MERCURIO DE SANTIAGO",
     "nota": "",
     "dia": "",
-    "titulo": "Recorte de prensa",
+    "titulo": "Los desafios y fortalezas de chile para enfrentar las vicisitudes",
     "tituloAuto": true,
     "parrafos": [
-     "El Departamento de Estado de EE.UU. presentó la \"Declaración conjunta relativa a la defensa de la soberanía en el Hemisferio\", una iniciativa denominada Escudo de las Américas a la que adhirió Chile junto a otros países de la región. El acuerdo busca fortalecer la resiliencia continental mediante tres pilares fundamentales (económico, de seguridad y coordinación multilateral) para proteger las economías locales, defender la gobernanza democrática y combatir de manera conjunta al narcoterrorismo transnacional. Para operativizar este esfuerzo, los estados participantes acordaron aplicar medidas como la congelación de activos financieros, restricciones de visados y apoyo logístico dirigidos específicamente a 24 organizaciones criminales identificadas (como el Tren de Aragua, el CJNG y la Mara Salvatrucha), solicitando además la convocatoria de un Órgano de Consulta bajo el marco del Tratado Interamericano de Asistencia Recíproca (Tratado de Río)."
+     "Chile rechazó categóricamente las declaraciones del embajador de Estados Unidos, Brandon Judd, quien condicionó el respaldo de su país a la soberanía chilena en el Estrecho de Magallanes a cambio de que Santiago colabore en los asuntos de interés prioritario para Washington, en especial frente a la influencia comercial de China. Ante esto, el canciller chileno, Francisco Pérez Mackenna, respondió con firmeza asegurando que \"el Estrecho de Magallanes fue, es y será siempre chileno\" y que el país no necesita la ayuda de nadie para defender su soberanía, evaluando además el envío de una nota de protesta formal hacia el representante del presidente Donald Trump. Por su parte, la controversia generó un rechazo transversal en el Congreso chileno y motivó al embajador Judd a defenderse por la noche, asegurando que sus dichos fueron \"claramente sacados de contexto\" y que jamás pretendió poner condiciones a la soberanía nacional."
     ],
-    "imagenes": [
-     "publicado/prensa/muy2zarw_2_0.jpg"
-    ],
-    "minis": [
-     "publicado/prensa/muy2zarw_2_0_m.jpg"
-    ],
-    "url": null,
-    "resumen": "El Departamento de Estado de EE.UU. presentó la \"Declaración conjunta relativa a la defensa de la soberanía en el Hemisferio\", una iniciativa denominada Escudo de las Américas a la que adhirió Chile junto a otros países de la región. El acuerdo busca fortalecer la resiliencia continental mediante tr"
-   },
-   {
-    "fuente": "REDES SOCIALES",
-    "nota": "",
-    "dia": "",
-    "titulo": "Recorte de prensa",
-    "tituloAuto": true,
-    "parrafos": [],
-    "imagenes": [
-     "publicado/prensa/muy2zarw_3_0.jpg",
-     "publicado/prensa/muy2zarw_3_1.jpg",
-     "publicado/prensa/muy2zarw_3_2.jpg",
-     "publicado/prensa/muy2zarw_3_3.jpg",
-     "publicado/prensa/muy2zarw_3_4.jpg",
-     "publicado/prensa/muy2zarw_3_5.jpg",
-     "publicado/prensa/muy2zarw_3_6.jpg",
-     "publicado/prensa/muy2zarw_3_7.jpg",
-     "publicado/prensa/muy2zarw_3_8.jpg",
-     "publicado/prensa/muy2zarw_3_9.jpg",
-     "publicado/prensa/muy2zarw_3_10.jpg",
-     "publicado/prensa/muy2zarw_3_11.jpg",
-     "publicado/prensa/muy2zarw_3_12.jpg",
-     "publicado/prensa/muy2zarw_3_13.jpg",
-     "publicado/prensa/muy2zarw_3_14.jpg",
-     "publicado/prensa/muy2zarw_3_15.jpg"
-    ],
-    "minis": [
-     "publicado/prensa/muy2zarw_3_0_m.jpg",
-     "publicado/prensa/muy2zarw_3_1_m.jpg",
-     "publicado/prensa/muy2zarw_3_2_m.jpg",
-     "publicado/prensa/muy2zarw_3_3_m.jpg",
-     "publicado/prensa/muy2zarw_3_4_m.jpg",
-     "publicado/prensa/muy2zarw_3_5_m.jpg",
-     "publicado/prensa/muy2zarw_3_6_m.jpg",
-     "publicado/prensa/muy2zarw_3_7_m.jpg",
-     "publicado/prensa/muy2zarw_3_8_m.jpg",
-     "publicado/prensa/muy2zarw_3_9_m.jpg",
-     "publicado/prensa/muy2zarw_3_10_m.jpg",
-     "publicado/prensa/muy2zarw_3_11_m.jpg",
-     "publicado/prensa/muy2zarw_3_12_m.jpg",
-     "publicado/prensa/muy2zarw_3_13_m.jpg",
-     "publicado/prensa/muy2zarw_3_14_m.jpg",
-     "publicado/prensa/muy2zarw_3_15_m.jpg"
-    ],
-    "url": null,
-    "resumen": ""
+    "imagenes": [],
+    "minis": [],
+    "url": "https://www.empresaoceano.cl/los-desafios-y-fortalezas-de-chile-para-enfrentar-las-vicisitudes",
+    "resumen": "Chile rechazó categóricamente las declaraciones del embajador de Estados Unidos, Brandon Judd, quien condicionó el respaldo de su país a la soberanía chilena en el Estrecho de Magallanes a cambio de que Santiago colabore en los asuntos de interés prioritario para Washington, en especial frente a la "
    }
   ]
  }
