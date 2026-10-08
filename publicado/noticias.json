@@ -4,13 +4,13 @@
  "publicado": "2026-10-08T11:00:00.000Z",
  "items": [
   {
-   "titulo": "EL MERCURIO DE VALPARAÍSO",
+   "titulo": "Recorte de prensa",
    "fuente": "EL MERCURIO DE VALPARAÍSO",
    "resumen": "La Comisión Regional de Uso de Borde Costero votará la solicitud de concesión marítima para el proyecto \"Parque Eólico Marino Lir\" frente a Laguna Verde, una iniciativa de 2.564 millones de dólares que busca instalar 66 aerogeneradores en plataformas flotantes para generar energía renovable. A pesar",
    "url": null
   },
   {
-   "titulo": "EL MERCURIO DE VALPARAÍSO",
+   "titulo": "Recorte de prensa",
    "fuente": "EL MERCURIO DE VALPARAÍSO",
    "resumen": "Excomandantes en jefe de la Armada valoraron positivamente la propuesta de la firma británica Babcock para construir fragatas Arrowhead 140 en Chile, una alternativa clave ante la urgente necesidad de renovar la Escuadra Nacional, considerando que parte de la flota actual terminará su vida útil a pa",
    "url": null
@@ -46,16 +46,10 @@
    "url": "https://www.theclinic.cl/2026/10/07/se-acaba-el-financiamiento-presupuesto-del-gobierno-deja-sin-recursos-al-instituto-chileno-de-campos-de-hielo/"
   },
   {
-   "titulo": "LAS ÚLTIMAS NOTICIAS",
+   "titulo": "Recorte de prensa",
    "fuente": "LAS ÚLTIMAS NOTICIAS",
    "resumen": "Las precipitaciones registradas en octubre en la zona central de Chile son normales para la primavera, pero lo inusual es el alto volumen de agua caída en un periodo tan corto, según explicó el director del Centro de Ciencia del Clima y la Resiliencia (CR2), Roberto Rondanelli, en la edición de LUN.",
    "url": "http://www.lun.com/Pages/NewsDetail.aspx?dt=2026-10-08&EsAviso=0&PaginaId=3&bodyid=0"
-  },
-  {
-   "titulo": "LAS ÚLTIMAS NOTICIAS",
-   "fuente": "LAS ÚLTIMAS NOTICIAS",
-   "resumen": "",
-   "url": "http://www.lun.com/Pages/NewsDetail.aspx?dt=2026-10-08&EsAviso=0&PaginaId=13&bodyid=0"
   },
   {
    "titulo": "Embajador judd aclara dichos y afirma nunca condiciono la soberania de chile este drama esta siendo tergiversado",
@@ -68,6 +62,18 @@
    "fuente": "EL MERCURIO DE SANTIAGO",
    "resumen": "Chile rechazó categóricamente las declaraciones del embajador de Estados Unidos, Brandon Judd, quien condicionó el respaldo de su país a la soberanía chilena en el Estrecho de Magallanes a cambio de que Santiago colabore en los asuntos de interés prioritario para Washington, en especial frente a la ",
    "url": "https://www.empresaoceano.cl/los-desafios-y-fortalezas-de-chile-para-enfrentar-las-vicisitudes"
+  },
+  {
+   "titulo": "Recorte de prensa",
+   "fuente": "LAS ÚLTIMAS NOTICIAS",
+   "resumen": "",
+   "url": "http://www.lun.com/Pages/NewsDetail.aspx?dt=2026-10-08&EsAviso=0&PaginaId=13&bodyid=0"
+  },
+  {
+   "titulo": "Recorte de prensa",
+   "fuente": "REDES SOCIALES",
+   "resumen": "",
+   "url": null
   }
  ],
  "prensa": {
@@ -78,13 +84,21 @@
     "fuente": "EL MERCURIO DE VALPARAÍSO",
     "nota": "",
     "dia": "",
-    "titulo": "EL MERCURIO DE VALPARAÍSO",
+    "titulo": "Recorte de prensa",
     "tituloAuto": true,
     "parrafos": [
      "La Comisión Regional de Uso de Borde Costero votará la solicitud de concesión marítima para el proyecto \"Parque Eólico Marino Lir\" frente a Laguna Verde, una iniciativa de 2.564 millones de dólares que busca instalar 66 aerogeneradores en plataformas flotantes para generar energía renovable. A pesar del millonario monto, la iniciativa enfrenta duros reparos debido a un informe técnico desfavorable que advierte que la ubicación no es la adecuada, ya que el sector es muy cercano al puerto de Valparaíso y presenta un intenso tráfico de buques comerciales y navales. El delegado presidencial regional, Manuel Millones, y la Municipalidad de Valparaíso manifestaron la necesidad de ser responsables con el impacto territorial y la navegación, sumándose a la fuerte oposición de los vecinos y ambientalistas locales por el daño paisajístico y la degradación del entorno marino."
     ],
-    "imagenes": [],
-    "minis": [],
+    "imagenes": [
+     "publicado/prensa/muzmng28_0_0.jpg",
+     "publicado/prensa/muzmng28_0_1.jpg",
+     "publicado/prensa/muzmng28_0_2.jpg"
+    ],
+    "minis": [
+     "publicado/prensa/muzmng28_0_0_m.jpg",
+     "publicado/prensa/muzmng28_0_1_m.jpg",
+     "publicado/prensa/muzmng28_0_2_m.jpg"
+    ],
     "url": null,
     "resumen": "La Comisión Regional de Uso de Borde Costero votará la solicitud de concesión marítima para el proyecto \"Parque Eólico Marino Lir\" frente a Laguna Verde, una iniciativa de 2.564 millones de dólares que busca instalar 66 aerogeneradores en plataformas flotantes para generar energía renovable. A pesar"
    },
@@ -92,13 +106,21 @@
     "fuente": "EL MERCURIO DE VALPARAÍSO",
     "nota": "",
     "dia": "",
-    "titulo": "EL MERCURIO DE VALPARAÍSO",
+    "titulo": "Recorte de prensa",
     "tituloAuto": true,
     "parrafos": [
      "Excomandantes en jefe de la Armada valoraron positivamente la propuesta de la firma británica Babcock para construir fragatas Arrowhead 140 en Chile, una alternativa clave ante la urgente necesidad de renovar la Escuadra Nacional, considerando que parte de la flota actual terminará su vida útil a partir del año 2032. Los exalmirantes Rodolfo Codina y Jorge Arancibia, junto a especialistas del área, destacaron que esta oferta promueve una alianza estratégica que incluye la transferencia de tecnología y la construcción local en los astilleros de Asmar. No obstante, los expertos advirtieron que la decisión es de carácter estratégico para los próximos 30 o 40 años, por lo que el Estado chileno también deberá evaluar con rigurosidad otras opciones competitivas provenientes de países como Francia, Alemania, Corea del Sur o Japón antes de concretar la multimillonaria renovación."
     ],
-    "imagenes": [],
-    "minis": [],
+    "imagenes": [
+     "publicado/prensa/muzmng28_1_0.jpg",
+     "publicado/prensa/muzmng28_1_1.jpg",
+     "publicado/prensa/muzmng28_1_2.jpg"
+    ],
+    "minis": [
+     "publicado/prensa/muzmng28_1_0_m.jpg",
+     "publicado/prensa/muzmng28_1_1_m.jpg",
+     "publicado/prensa/muzmng28_1_2_m.jpg"
+    ],
     "url": null,
     "resumen": "Excomandantes en jefe de la Armada valoraron positivamente la propuesta de la firma británica Babcock para construir fragatas Arrowhead 140 en Chile, una alternativa clave ante la urgente necesidad de renovar la Escuadra Nacional, considerando que parte de la flota actual terminará su vida útil a pa"
    },
@@ -177,27 +199,19 @@
     "fuente": "LAS ÚLTIMAS NOTICIAS",
     "nota": "",
     "dia": "",
-    "titulo": "LAS ÚLTIMAS NOTICIAS",
+    "titulo": "Recorte de prensa",
     "tituloAuto": true,
     "parrafos": [
      "Las precipitaciones registradas en octubre en la zona central de Chile son normales para la primavera, pero lo inusual es el alto volumen de agua caída en un periodo tan corto, según explicó el director del Centro de Ciencia del Clima y la Resiliencia (CR2), Roberto Rondanelli, en la edición de LUN. El especialista detalló que el fenómeno, potenciado por el fortalecimiento de El Niño, ha provocado que en algunos sectores se duplique el promedio histórico mensual en pocos días, rompiendo récords climáticos para la época del año."
     ],
-    "imagenes": [],
-    "minis": [],
+    "imagenes": [
+     "publicado/prensa/muzmng28_7_0.jpg"
+    ],
+    "minis": [
+     "publicado/prensa/muzmng28_7_0_m.jpg"
+    ],
     "url": "http://www.lun.com/Pages/NewsDetail.aspx?dt=2026-10-08&EsAviso=0&PaginaId=3&bodyid=0",
     "resumen": "Las precipitaciones registradas en octubre en la zona central de Chile son normales para la primavera, pero lo inusual es el alto volumen de agua caída en un periodo tan corto, según explicó el director del Centro de Ciencia del Clima y la Resiliencia (CR2), Roberto Rondanelli, en la edición de LUN."
-   },
-   {
-    "fuente": "LAS ÚLTIMAS NOTICIAS",
-    "nota": "",
-    "dia": "",
-    "titulo": "LAS ÚLTIMAS NOTICIAS",
-    "tituloAuto": true,
-    "parrafos": [],
-    "imagenes": [],
-    "minis": [],
-    "url": "http://www.lun.com/Pages/NewsDetail.aspx?dt=2026-10-08&EsAviso=0&PaginaId=13&bodyid=0",
-    "resumen": ""
    },
    {
     "fuente": "LA TERCERA",
@@ -208,8 +222,12 @@
     "parrafos": [
      "El embajador de Estados Unidos en Chile, Brandon Judd, aclaró que sus declaraciones sobre el Estrecho de Magallanes fueron sacadas de contexto y aseguró que en ningún momento condicionó el respaldo a la soberanía chilena. La controversia se originó tras sugerir que el apoyo de Washington requería cooperación en asuntos prioritarios de interés estadounidense, lo que provocó una firme respuesta de la Cancillería chilena."
     ],
-    "imagenes": [],
-    "minis": [],
+    "imagenes": [
+     "publicado/prensa/muzmng28_8_0.jpg"
+    ],
+    "minis": [
+     "publicado/prensa/muzmng28_8_0_m.jpg"
+    ],
     "url": "https://www.latercera.com/politica/noticia/embajador-judd-aclara-dichos-y-afirma-nunca-condiciono-la-soberania-de-chile-este-drama-esta-siendo-tergiversado/",
     "resumen": "El embajador de Estados Unidos en Chile, Brandon Judd, aclaró que sus declaraciones sobre el Estrecho de Magallanes fueron sacadas de contexto y aseguró que en ningún momento condicionó el respaldo a la soberanía chilena. La controversia se originó tras sugerir que el apoyo de Washington requería co"
    },
@@ -222,10 +240,68 @@
     "parrafos": [
      "Chile rechazó categóricamente las declaraciones del embajador de Estados Unidos, Brandon Judd, quien condicionó el respaldo de su país a la soberanía chilena en el Estrecho de Magallanes a cambio de que Santiago colabore en los asuntos de interés prioritario para Washington, en especial frente a la influencia comercial de China. Ante esto, el canciller chileno, Francisco Pérez Mackenna, respondió con firmeza asegurando que \"el Estrecho de Magallanes fue, es y será siempre chileno\" y que el país no necesita la ayuda de nadie para defender su soberanía, evaluando además el envío de una nota de protesta formal hacia el representante del presidente Donald Trump. Por su parte, la controversia generó un rechazo transversal en el Congreso chileno y motivó al embajador Judd a defenderse por la noche, asegurando que sus dichos fueron \"claramente sacados de contexto\" y que jamás pretendió poner condiciones a la soberanía nacional."
     ],
-    "imagenes": [],
-    "minis": [],
+    "imagenes": [
+     "publicado/prensa/muzmng28_9_0.jpg",
+     "publicado/prensa/muzmng28_9_1.jpg",
+     "publicado/prensa/muzmng28_9_2.jpg"
+    ],
+    "minis": [
+     "publicado/prensa/muzmng28_9_0_m.jpg",
+     "publicado/prensa/muzmng28_9_1_m.jpg",
+     "publicado/prensa/muzmng28_9_2_m.jpg"
+    ],
     "url": "https://www.empresaoceano.cl/los-desafios-y-fortalezas-de-chile-para-enfrentar-las-vicisitudes",
     "resumen": "Chile rechazó categóricamente las declaraciones del embajador de Estados Unidos, Brandon Judd, quien condicionó el respaldo de su país a la soberanía chilena en el Estrecho de Magallanes a cambio de que Santiago colabore en los asuntos de interés prioritario para Washington, en especial frente a la "
+   },
+   {
+    "fuente": "LAS ÚLTIMAS NOTICIAS",
+    "nota": "",
+    "dia": "",
+    "titulo": "Recorte de prensa",
+    "tituloAuto": true,
+    "parrafos": [],
+    "imagenes": [
+     "publicado/prensa/muzmng28_10_0.jpg"
+    ],
+    "minis": [
+     "publicado/prensa/muzmng28_10_0_m.jpg"
+    ],
+    "url": "http://www.lun.com/Pages/NewsDetail.aspx?dt=2026-10-08&EsAviso=0&PaginaId=13&bodyid=0",
+    "resumen": ""
+   },
+   {
+    "fuente": "REDES SOCIALES",
+    "nota": "",
+    "dia": "",
+    "titulo": "Recorte de prensa",
+    "tituloAuto": true,
+    "parrafos": [],
+    "imagenes": [
+     "publicado/prensa/muzmng28_11_0.jpg",
+     "publicado/prensa/muzmng28_11_1.jpg",
+     "publicado/prensa/muzmng28_11_2.jpg",
+     "publicado/prensa/muzmng28_11_3.jpg",
+     "publicado/prensa/muzmng28_11_4.jpg",
+     "publicado/prensa/muzmng28_11_5.jpg",
+     "publicado/prensa/muzmng28_11_6.jpg",
+     "publicado/prensa/muzmng28_11_7.jpg",
+     "publicado/prensa/muzmng28_11_8.jpg",
+     "publicado/prensa/muzmng28_11_9.jpg"
+    ],
+    "minis": [
+     "publicado/prensa/muzmng28_11_0_m.jpg",
+     "publicado/prensa/muzmng28_11_1_m.jpg",
+     "publicado/prensa/muzmng28_11_2_m.jpg",
+     "publicado/prensa/muzmng28_11_3_m.jpg",
+     "publicado/prensa/muzmng28_11_4_m.jpg",
+     "publicado/prensa/muzmng28_11_5_m.jpg",
+     "publicado/prensa/muzmng28_11_6_m.jpg",
+     "publicado/prensa/muzmng28_11_7_m.jpg",
+     "publicado/prensa/muzmng28_11_8_m.jpg",
+     "publicado/prensa/muzmng28_11_9_m.jpg"
+    ],
+    "url": null,
+    "resumen": ""
    }
   ]
  }
