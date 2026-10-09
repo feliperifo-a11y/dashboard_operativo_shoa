@@ -37,6 +37,8 @@ jobs:
       - name: Preparar sitio
         run: |
           mkdir -p _site
+          # Fuera de servicio: con el archivo MANTENCION en el repositorio se publica solo un aviso
+          if [ -f MANTENCION ]; then cp mantencion.html _site/index.html; echo "MANTENCION=1" >> "$GITHUB_ENV"; exit 0; fi
           cp index.html _site/
           cp -r publicado _site/ 2>/dev/null || true   # informes publicados (estaciones, personal sin nombres, noticias)
           # Recupera el estado anterior para conservar las noticias si la fuente falla
@@ -44,6 +46,7 @@ jobs:
           curl -fsSL --max-time 20 "https://${GITHUB_REPOSITORY_OWNER,,}.github.io/${REPO}/estado.json" -o _site/estado.json || true
 
       - name: Consultar boyas y noticias
+        if: env.MANTENCION != '1'
         working-directory: _site
         run: python ../colector.py
 
