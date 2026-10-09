@@ -4,7 +4,7 @@
  "publicado": "2026-10-09T11:00:00.000Z",
  "items": [
   {
-   "titulo": "EL MERCURIO DE SANTIAGO",
+   "titulo": "Recorte de prensa",
    "fuente": "EL MERCURIO DE SANTIAGO",
    "resumen": "Se aborda la tensión diplomática provocada por los dichos del embajador de Estados Unidos, Brandon Judd, quien condicionó el apoyo a la soberanía chilena en el Estrecho de Magallanes a la colaboración de Santiago en temas clave para Washington. Ante esto, el canciller chileno, Francisco Pérez Macken",
    "url": null
@@ -28,7 +28,7 @@
    "url": "https://www.latercera.com/nacional/noticia/zoom-al-presupuesto-de-defensa-y-a-los-recursos-con-los-que-el-gobierno-busca-aumentar-el-poder-militar-del-pais/"
   },
   {
-   "titulo": "EL MERCURIO DE VALPARAISO",
+   "titulo": "Recorte de prensa",
    "fuente": "EL MERCURIO DE VALPARAISO",
    "resumen": "El gobierno decretó zona de catástrofe en Las Condes tras un sorpresivo aluvión provocado por intensas lluvias cordilleras, el cual arrasó calles en el sector de San Carlos de Apoquindo dejando al menos seis personas heridas y múltiples vehículos arrastrados. El desastre inundó con barro infraestruc",
    "url": null
@@ -86,6 +86,12 @@
    "fuente": "REDES SOCIALES",
    "resumen": "Estudio científico liderado por el investigador Patricio Winckler, el cual reconstruye la historia del tsunami registrado tras el megaterremoto de Valdivia de 1960. Visualmente, se aprecia una fotografía histórica que muestra la devastación de viviendas colapsadas y un vehículo de la época en una ca",
    "url": "https://www.cooperativaciencia.cl/tendencias/2026/10/08/investigacion-reconstruye-la-historia-del-tsunami-que-se-registro-luego-del-terremoto-de-1960/"
+  },
+  {
+   "titulo": "Recorte de prensa (Se adjunta archivo pdf)",
+   "fuente": "BOLETÍN COPAS SEPTIEMBRE 2026",
+   "resumen": "",
+   "url": null
   }
  ],
  "prensa": {
@@ -96,14 +102,18 @@
     "fuente": "EL MERCURIO DE SANTIAGO",
     "nota": "",
     "dia": "",
-    "titulo": "EL MERCURIO DE SANTIAGO",
+    "titulo": "Recorte de prensa",
     "tituloAuto": true,
     "parrafos": [
      "Se aborda la tensión diplomática provocada por los dichos del embajador de Estados Unidos, Brandon Judd, quien condicionó el apoyo a la soberanía chilena en el Estrecho de Magallanes a la colaboración de Santiago en temas clave para Washington. Ante esto, el canciller chileno, Francisco Pérez Mackenna, aseguró firmemente que “la integridad territorial no es transaccional” y que Chile siempre defenderá su soberanía, aunque evitó confirmar si La Moneda enviará una nota de protesta formal.",
      "Por otra parte, la nota destaca la preocupación del Gobierno de Bolivia (expresada por su canciller Héctor Huanca) respecto a las retenciones de cargamentos de madera boliviana en puertos chilenos. Esta reunión se dio en la antesala del viaje que el presidente José Antonio Kast realizará a La Paz el 16 de octubre, acordándose convocar al Grupo de Trabajo sobre Libre Tránsito Chile-Bolivia dentro de los próximos 30 días bajo el marco del Tratado de 1904."
     ],
-    "imagenes": [],
-    "minis": [],
+    "imagenes": [
+     "publicado/prensa/mv0xpweu_0_0.jpg"
+    ],
+    "minis": [
+     "publicado/prensa/mv0xpweu_0_0_m.jpg"
+    ],
     "url": null,
     "resumen": "Se aborda la tensión diplomática provocada por los dichos del embajador de Estados Unidos, Brandon Judd, quien condicionó el apoyo a la soberanía chilena en el Estrecho de Magallanes a la colaboración de Santiago en temas clave para Washington. Ante esto, el canciller chileno, Francisco Pérez Macken"
    },
@@ -153,13 +163,19 @@
     "fuente": "EL MERCURIO DE VALPARAISO",
     "nota": "",
     "dia": "",
-    "titulo": "EL MERCURIO DE VALPARAISO",
+    "titulo": "Recorte de prensa",
     "tituloAuto": true,
     "parrafos": [
      "El gobierno decretó zona de catástrofe en Las Condes tras un sorpresivo aluvión provocado por intensas lluvias cordilleras, el cual arrasó calles en el sector de San Carlos de Apoquindo dejando al menos seis personas heridas y múltiples vehículos arrastrados. El desastre inundó con barro infraestructuras clave de la zona, incluyendo viviendas, recintos de salud como la Clínica UC Christus y los campus de la Universidad de los Andes y Duoc UC, obligando al Senapred a declarar alerta roja en diez comunas de la Región Metropolitana mientras equipos de emergencia como Bomberos, Carabineros y el GOPE despliegan labores de rescate."
     ],
-    "imagenes": [],
-    "minis": [],
+    "imagenes": [
+     "publicado/prensa/mv0xpweu_4_0.jpg",
+     "publicado/prensa/mv0xpweu_4_1.jpg"
+    ],
+    "minis": [
+     "publicado/prensa/mv0xpweu_4_0_m.jpg",
+     "publicado/prensa/mv0xpweu_4_1_m.jpg"
+    ],
     "url": null,
     "resumen": "El gobierno decretó zona de catástrofe en Las Condes tras un sorpresivo aluvión provocado por intensas lluvias cordilleras, el cual arrasó calles en el sector de San Carlos de Apoquindo dejando al menos seis personas heridas y múltiples vehículos arrastrados. El desastre inundó con barro infraestruc"
    },
@@ -186,8 +202,12 @@
     "parrafos": [
      "Durante la feria Conxemar, armadores internacionales de la industria pesquera establecieron una alianza global promovida por Tunacons para defender la continuidad de la pesca en alta mar frente a la implementación del Acuerdo BBNJ. La iniciativa busca proteger las competencias de las Organizaciones Regionales de Ordenación Pesquera y garantizar que la conservación marina se base en evidencia científica y consideraciones socioeconómicas."
     ],
-    "imagenes": [],
-    "minis": [],
+    "imagenes": [
+     "publicado/prensa/mv0xpweu_6_0.jpg"
+    ],
+    "minis": [
+     "publicado/prensa/mv0xpweu_6_0_m.jpg"
+    ],
     "url": "https://www.industriaspesqueras.com/noticia-91440-seccion-Sector+Pesquero",
     "resumen": "Durante la feria Conxemar, armadores internacionales de la industria pesquera establecieron una alianza global promovida por Tunacons para defender la continuidad de la pesca en alta mar frente a la implementación del Acuerdo BBNJ. La iniciativa busca proteger las competencias de las Organizaciones "
    },
@@ -289,10 +309,70 @@
      "reflejando una investigación que rescató la memoria oral de sobrevivientes y utilizó tecnología LiDAR para",
      "evaluar el riesgo geográfico sitio a sitio."
     ],
-    "imagenes": [],
-    "minis": [],
+    "imagenes": [
+     "publicado/prensa/mv0xpweu_13_0.jpg",
+     "publicado/prensa/mv0xpweu_13_1.jpg",
+     "publicado/prensa/mv0xpweu_13_2.jpg",
+     "publicado/prensa/mv0xpweu_13_3.jpg",
+     "publicado/prensa/mv0xpweu_13_4.jpg",
+     "publicado/prensa/mv0xpweu_13_5.jpg",
+     "publicado/prensa/mv0xpweu_13_6.jpg",
+     "publicado/prensa/mv0xpweu_13_7.jpg",
+     "publicado/prensa/mv0xpweu_13_8.jpg",
+     "publicado/prensa/mv0xpweu_13_9.jpg",
+     "publicado/prensa/mv0xpweu_13_10.jpg",
+     "publicado/prensa/mv0xpweu_13_11.jpg",
+     "publicado/prensa/mv0xpweu_13_12.jpg",
+     "publicado/prensa/mv0xpweu_13_13.jpg",
+     "publicado/prensa/mv0xpweu_13_14.jpg",
+     "publicado/prensa/mv0xpweu_13_15.jpg",
+     "publicado/prensa/mv0xpweu_13_16.jpg",
+     "publicado/prensa/mv0xpweu_13_17.jpg",
+     "publicado/prensa/mv0xpweu_13_18.jpg"
+    ],
+    "minis": [
+     "publicado/prensa/mv0xpweu_13_0_m.jpg",
+     "publicado/prensa/mv0xpweu_13_1_m.jpg",
+     "publicado/prensa/mv0xpweu_13_2_m.jpg",
+     "publicado/prensa/mv0xpweu_13_3_m.jpg",
+     "publicado/prensa/mv0xpweu_13_4_m.jpg",
+     "publicado/prensa/mv0xpweu_13_5_m.jpg",
+     "publicado/prensa/mv0xpweu_13_6_m.jpg",
+     "publicado/prensa/mv0xpweu_13_7_m.jpg",
+     "publicado/prensa/mv0xpweu_13_8_m.jpg",
+     "publicado/prensa/mv0xpweu_13_9_m.jpg",
+     "publicado/prensa/mv0xpweu_13_10_m.jpg",
+     "publicado/prensa/mv0xpweu_13_11_m.jpg",
+     "publicado/prensa/mv0xpweu_13_12_m.jpg",
+     "publicado/prensa/mv0xpweu_13_13_m.jpg",
+     "publicado/prensa/mv0xpweu_13_14_m.jpg",
+     "publicado/prensa/mv0xpweu_13_15_m.jpg",
+     "publicado/prensa/mv0xpweu_13_16_m.jpg",
+     "publicado/prensa/mv0xpweu_13_17_m.jpg",
+     "publicado/prensa/mv0xpweu_13_18_m.jpg"
+    ],
     "url": "https://www.cooperativaciencia.cl/tendencias/2026/10/08/investigacion-reconstruye-la-historia-del-tsunami-que-se-registro-luego-del-terremoto-de-1960/",
     "resumen": "Estudio científico liderado por el investigador Patricio Winckler, el cual reconstruye la historia del tsunami registrado tras el megaterremoto de Valdivia de 1960. Visualmente, se aprecia una fotografía histórica que muestra la devastación de viviendas colapsadas y un vehículo de la época en una ca"
+   },
+   {
+    "fuente": "BOLETÍN COPAS SEPTIEMBRE 2026",
+    "nota": "SE ADJUNTA ARCHIVO PDF",
+    "dia": "",
+    "titulo": "Recorte de prensa (Se adjunta archivo pdf)",
+    "tituloAuto": true,
+    "parrafos": [],
+    "imagenes": [
+     "publicado/prensa/mv0xpweu_14_0.jpg",
+     "publicado/prensa/mv0xpweu_14_1.jpg",
+     "publicado/prensa/mv0xpweu_14_2.jpg"
+    ],
+    "minis": [
+     "publicado/prensa/mv0xpweu_14_0_m.jpg",
+     "publicado/prensa/mv0xpweu_14_1_m.jpg",
+     "publicado/prensa/mv0xpweu_14_2_m.jpg"
+    ],
+    "url": null,
+    "resumen": ""
    }
   ]
  }

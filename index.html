@@ -2163,20 +2163,42 @@ function fechaDesdeTexto(t) {
   return new Date(+m[3], mes, +m[1], 8, 0, 0);
 }
 
+// Reduce la imagen a JPEG. Varios caminos, porque Safari y Chrome no se comportan igual.
+const leerComoDataUrl = (blob) => new Promise((res) => { const r = new FileReader(); r.onload = () => res(r.result); r.onerror = () => res(null); r.readAsDataURL(blob); });
+async function cargarImagen(blob) {
+  if (typeof createImageBitmap === 'function') { try { const bm = await createImageBitmap(blob); return { el: bm, w: bm.width, h: bm.height, fin: () => bm.close && bm.close() }; } catch (e) {} }
+  const prueba = async (src) => {
+    const el = await new Promise((res, rej) => { const i = new Image(); const t = setTimeout(() => rej(new Error('tiempo')), 20000); i.onload = () => { clearTimeout(t); res(i); }; i.onerror = () => { clearTimeout(t); rej(new Error('img')); }; i.src = src; });
+    return { el, w: el.naturalWidth, h: el.naturalHeight, fin: () => {} };
+  };
+  const url = URL.createObjectURL(blob);
+  try { const r = await prueba(url); return { ...r, fin: () => URL.revokeObjectURL(url) }; } catch (e) { URL.revokeObjectURL(url); }
+  const d = await leerComoDataUrl(blob); if (d) { try { return await prueba(d); } catch (e) {} }
+  return null;
+}
 async function comprimirImagen(blob, maxW = 1400, q = 0.8) {
   try {
-    const url = URL.createObjectURL(blob);
-    const img = await new Promise((res, rej) => { const i = new Image(); i.onload = () => res(i); i.onerror = rej; i.src = url; });
-    const k = Math.min(1, maxW / img.naturalWidth);
-    const c = document.createElement('canvas'); c.width = Math.round(img.naturalWidth * k); c.height = Math.round(img.naturalHeight * k);
-    const g = c.getContext('2d'); g.fillStyle = '#fff'; g.fillRect(0, 0, c.width, c.height); g.drawImage(img, 0, 0, c.width, c.height);
-    URL.revokeObjectURL(url);
-    return c.toDataURL('image/jpeg', q);
-  } catch (e) { return null; }
+    const im = await cargarImagen(blob);
+    if (im && im.w && im.h) {
+      const k = Math.min(1, maxW / im.w);
+      const c = document.createElement('canvas'); c.width = Math.max(1, Math.round(im.w * k)); c.height = Math.max(1, Math.round(im.h * k));
+      const g = c.getContext('2d'); g.fillStyle = '#fff'; g.fillRect(0, 0, c.width, c.height); g.drawImage(im.el, 0, 0, c.width, c.height);
+      im.fin();
+      const out = c.toDataURL('image/jpeg', q);
+      if (out && out.length > 100 && /^data:image\/jpeg/.test(out)) return out;
+    }
+  } catch (e) {}
+  // último recurso: la imagen original, sin reducir, si no es muy pesada
+  if (blob.size && blob.size < 1.5e6 && /^image\/(png|jpeg|gif)$/.test(blob.type)) return leerComoDataUrl(blob);
+  return null;
 }
+const A_NS = 'http://schemas.openxmlformats.org/drawingml/2006/main';
+const TIPO_IMG = { png: 'image/png', jpg: 'image/jpeg', jpeg: 'image/jpeg', gif: 'image/gif', bmp: 'image/bmp', webp: 'image/webp' };
+let IMG_DOCX = { total: 0, leidas: 0 };
 
 // docx → lista de párrafos { texto, negrita, enlaces[], imagenes[] }
 async function leerDocx(buf) {
+  IMG_DOCX = { total: 0, leidas: 0 };
   const zip = await JSZip.loadAsync(buf);
   const docXml = await zip.file('word/document.xml').async('string');
   const relsF = zip.file('word/_rels/document.xml.rels');
@@ -2210,14 +2232,19 @@ async function leerDocx(buf) {
     }
     // enlaces escritos como texto plano (también «www.…» sin https://)
     for (const m of texto.matchAll(RX_URL)) { const u = normUrl(m[0]); if (!enlaces.some(x => x.slice(0, 40) === u.slice(0, 40))) enlaces.push(u); }
-    for (const bl of p.getElementsByTagName('a:blip')) {
+    let blips = [...p.getElementsByTagNameNS(A_NS, 'blip')];
+    if (!blips.length) blips = [...p.getElementsByTagName('a:blip')];
+    for (const bl of blips) {
       const id = bl.getAttributeNS(R_NS, 'embed') || bl.getAttribute('r:embed');
       const rel = id && rels[id]; if (!rel) continue;
-      const ruta = ('word/' + rel.target).replace(/word\/\.\.\//, '');
-      const f = zip.file(ruta); if (!f) continue;
-      const blob = await f.async('blob');
+      const ruta = ('word/' + rel.target.replace(/^\//, '')).replace(/word\/word\//, 'word/').replace(/word\/\.\.\//, '');
+      const f = zip.file(ruta) || zip.file(rel.target.replace(/^\//, '')); if (!f) continue;
+      const ext = (ruta.split('.').pop() || '').toLowerCase(), tipo = TIPO_IMG[ext];
+      IMG_DOCX.total++;
+      if (!tipo) continue;                              // EMF/WMF: los navegadores no los muestran
+      const blob = new Blob([await f.async('uint8array')], { type: tipo });
       const full = await comprimirImagen(blob, 1400, 0.8), mini = await comprimirImagen(blob, 360, 0.72);
-      if (full) { imagenes.push(full); minis.push(mini || full); }
+      if (full) { imagenes.push(full); minis.push(mini || full); IMG_DOCX.leidas++; }
     }
     parrafos.push({ texto: texto.replace(/\s+\n/g, '\n').trim(), negrita: nTotal > 0 && bTotal / nTotal > 0.8, enlaces, imagenes, minis });
   }
@@ -2950,8 +2977,9 @@ async function cargarArchivoModal(f) {
         pendientePrensa = pr;
         document.getElementById('srTxt').value = prensaComoTexto(pr);
         d = new Date(pr.fecha);
-        const nImg = pr.items.reduce((n, x) => n + x.imagenes.length, 0);
-        hint.textContent = `Resumen de prensa reconocido: ${pr.items.length} noticias de ${new Set(pr.items.map(x => x.fuente)).size} fuentes${nImg ? `, ${nImg} imágenes` : ''}. Revise y publique.`;
+        const nImg = pr.items.reduce((n, x) => n + x.imagenes.length, 0), fal = IMG_DOCX.total - IMG_DOCX.leidas;
+        hint.innerHTML = escH(`Resumen de prensa reconocido: ${pr.items.length} noticias de ${new Set(pr.items.map(x => x.fuente)).size} fuentes${nImg ? `, ${nImg} imágenes` : ''}. Revise y publique.`) +
+          (fal > 0 ? ` <span class="err">El Word trae ${IMG_DOCX.total} imágenes y este navegador pudo leer ${IMG_DOCX.leidas}. Pruebe con Google Chrome o avíseme.</span>` : '');
       } else {
         document.getElementById('srTxt').value = await textoDesdeDocx(f);
         hint.textContent = 'Texto extraído del documento Word.';
