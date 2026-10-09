@@ -1,307 +1,298 @@
 {
  "tipo": "noticias",
  "version": 2,
- "publicado": "2026-10-08T11:00:00.000Z",
+ "publicado": "2026-10-09T11:00:00.000Z",
  "items": [
   {
-   "titulo": "Recorte de prensa",
-   "fuente": "EL MERCURIO DE VALPARAÍSO",
-   "resumen": "La Comisión Regional de Uso de Borde Costero votará la solicitud de concesión marítima para el proyecto \"Parque Eólico Marino Lir\" frente a Laguna Verde, una iniciativa de 2.564 millones de dólares que busca instalar 66 aerogeneradores en plataformas flotantes para generar energía renovable. A pesar",
-   "url": null
-  },
-  {
-   "titulo": "Recorte de prensa",
-   "fuente": "EL MERCURIO DE VALPARAÍSO",
-   "resumen": "Excomandantes en jefe de la Armada valoraron positivamente la propuesta de la firma británica Babcock para construir fragatas Arrowhead 140 en Chile, una alternativa clave ante la urgente necesidad de renovar la Escuadra Nacional, considerando que parte de la flota actual terminará su vida útil a pa",
-   "url": null
-  },
-  {
-   "titulo": "CHILE SE PREPARA PARA EL 6G: QUÉ ES LA NUEVA GENERACIÓN DE REDES MÓVILES Y EN QUÉ SE DIFERENCIA DEL 5G",
-   "fuente": "LA TERCERA",
-   "resumen": "El Plan Nacional Digital 2026-2036, presentado por la Subsecretaría de Telecomunicaciones, busca consolidar a Chile como el hub digital de América Latina mediante una estrategia de siete ejes enfocada en atraer inversiones estimadas en US$2.000 millones para 2030. La iniciativa contempla el desplieg",
-   "url": "https://www.latercera.com/tecnologia/noticia/chile-plan-nacional-digital-subtel-6g/"
-  },
-  {
-   "titulo": "LECCIONES DE RESILIENCIA EN EL FIN DEL MUNDO: MICROORGANISMOS REGENERARON LA VIDA TRAS LA ERUPCIÓN DE UN VOLCÁN ANTÁRTICO",
-   "fuente": "INACH",
-   "resumen": "Un equipo internacional de científicos ha demostrado cómo microorganismos extremófilos recolonizaron y regeneraron la vida en la isla Decepción, en la Antártica, tras las erupciones volcánicas ocurridas entre 1967 y 1970. A través de análisis metagenómicos, el estudio identificó un enorme potencial ",
-   "url": "https://www.inach.cl/lecciones-de-resiliencia-en-el-fin-del-mundo-microorganismos-regeneraron-la-vida-tras-la-erupcion-de-un-volcan-antartico/"
-  },
-  {
-   "titulo": "EMBAJADOR JUDD LO VUELVE A HACER: ADVIERTE QUE SI CHILE QUIERE PROTEGER SUS DERECHOS SOBRE EL ESTRECHO DE MAGALLANES “TENDRÁN QUE TRABAJAR CON NOSOTROS”",
-   "fuente": "INFOGATE",
-   "resumen": "El embajador de Estados Unidos en Chile, Brandon Judd, condicionó el respaldo de Washington en la protección de los derechos de Chile sobre el Estrecho de Magallanes a la cooperación bilateral en prioridades estadounidenses. En respuesta, el canciller chileno Francisco Pérez Mackenna afirmó que la s",
-   "url": "https://infogate.cl/2026/10/embajador-judd-lo-vuelve-a-hacer-advierte-que-si-chile-quiere-proteger-sus-derechos-sobre-el-estrecho-de-magallanes-tendr-n-que-trabajar-con-nosotros/"
-  },
-  {
-   "titulo": "CHILE AVANZA EN SUS CAPACIDADES ESPACIALES CON LANZAMIENTO DE NUEVO GEOPORTAL DEL SISTEMA NACIONAL ESPACIAL",
-   "fuente": "INFOGATE",
-   "resumen": "Chile ha lanzado el nuevo Geoportal del Sistema Nacional Espacial, una plataforma destinada a unificar e integrar imágenes satelitales y datos geoespaciales para el uso estatal, científico y ciudadano. Este proyecto, desarrollado en colaboración entre el Ministerio de Defensa, el Ministerio de Cienc",
-   "url": "https://infogate.cl/2026/10/chile-avanza-en-sus-capacidades-espaciales-con-lanzamiento-de-nuevo-geoportal-del-sistema-nacional-espacial/"
-  },
-  {
-   "titulo": "SE ACABA EL FINANCIAMIENTO: PRESUPUESTO DEL GOBIERNO DEJA SIN RECURSOS AL INSTITUTO CHILENO DE CAMPOS DE HIELO",
-   "fuente": "THE CLINIC",
-   "resumen": "El Gobierno de Chile eliminó el financiamiento estatal para el Instituto Chileno de Campos de Hielo (ICCH) en el proyecto de Presupuestos 2027. La institución privada sin fines de lucro, encargada de investigar el Campo de Hielo Patagónico Sur, dejará de recibir los $46,4 millones de pesos que le as",
-   "url": "https://www.theclinic.cl/2026/10/07/se-acaba-el-financiamiento-presupuesto-del-gobierno-deja-sin-recursos-al-instituto-chileno-de-campos-de-hielo/"
-  },
-  {
-   "titulo": "Recorte de prensa",
-   "fuente": "LAS ÚLTIMAS NOTICIAS",
-   "resumen": "Las precipitaciones registradas en octubre en la zona central de Chile son normales para la primavera, pero lo inusual es el alto volumen de agua caída en un periodo tan corto, según explicó el director del Centro de Ciencia del Clima y la Resiliencia (CR2), Roberto Rondanelli, en la edición de LUN.",
-   "url": "http://www.lun.com/Pages/NewsDetail.aspx?dt=2026-10-08&EsAviso=0&PaginaId=3&bodyid=0"
-  },
-  {
-   "titulo": "Embajador judd aclara dichos y afirma nunca condiciono la soberania de chile este drama esta siendo tergiversado",
-   "fuente": "LA TERCERA",
-   "resumen": "El embajador de Estados Unidos en Chile, Brandon Judd, aclaró que sus declaraciones sobre el Estrecho de Magallanes fueron sacadas de contexto y aseguró que en ningún momento condicionó el respaldo a la soberanía chilena. La controversia se originó tras sugerir que el apoyo de Washington requería co",
-   "url": "https://www.latercera.com/politica/noticia/embajador-judd-aclara-dichos-y-afirma-nunca-condiciono-la-soberania-de-chile-este-drama-esta-siendo-tergiversado/"
-  },
-  {
-   "titulo": "Los desafios y fortalezas de chile para enfrentar las vicisitudes",
+   "titulo": "EL MERCURIO DE SANTIAGO",
    "fuente": "EL MERCURIO DE SANTIAGO",
-   "resumen": "Chile rechazó categóricamente las declaraciones del embajador de Estados Unidos, Brandon Judd, quien condicionó el respaldo de su país a la soberanía chilena en el Estrecho de Magallanes a cambio de que Santiago colabore en los asuntos de interés prioritario para Washington, en especial frente a la ",
-   "url": "https://www.empresaoceano.cl/los-desafios-y-fortalezas-de-chile-para-enfrentar-las-vicisitudes"
-  },
-  {
-   "titulo": "Recorte de prensa",
-   "fuente": "LAS ÚLTIMAS NOTICIAS",
-   "resumen": "",
-   "url": "http://www.lun.com/Pages/NewsDetail.aspx?dt=2026-10-08&EsAviso=0&PaginaId=13&bodyid=0"
-  },
-  {
-   "titulo": "Recorte de prensa",
-   "fuente": "REDES SOCIALES",
-   "resumen": "",
+   "resumen": "Se aborda la tensión diplomática provocada por los dichos del embajador de Estados Unidos, Brandon Judd, quien condicionó el apoyo a la soberanía chilena en el Estrecho de Magallanes a la colaboración de Santiago en temas clave para Washington. Ante esto, el canciller chileno, Francisco Pérez Macken",
    "url": null
+  },
+  {
+   "titulo": "DIRECTORA DE SENAPRED AFIRMA QUE NO EXISTE MONITOREO DE REMOCIÓN EN MASA EN CHILE Y QUE ALUVIÓN FUE UN “EVENTO SÚBITO” IMPOSIBLE DE ANTICIPAR",
+   "fuente": "LA TERCERA",
+   "resumen": "La directora de Senapred, Alicia Cebrián, y el subsecretario del Interior, Máximo Pavez, descartaron una falla de protocolo o un error en la ausencia de alertas SAE durante el aluvión en Las Condes, explicando que no existe un sistema de monitoreo de remoción en masa en Chile y que la emergencia fue",
+   "url": "https://www.latercera.com/nacional/noticia/gobierno-afirma-que-no-existe-monitoreo-de-remocion-en-masa-en-chile-y-que-aluvion-fue-un-evento-subito-imposible-de-anticipar/"
+  },
+  {
+   "titulo": "AUTORIDADES AFIRMAN QUE INCENDIO DEL VERANO EN QUEBRADA HONDA INFLUYÓ EN ALUVIÓN DE LAS CONDES",
+   "fuente": "LA TERCERA",
+   "resumen": "Las autoridades informaron que un devastador incendio forestal de mil hectáreas registrado en enero de este año en la Quebrada Honda degradó severamente el suelo y consumió la capa vegetal que sostenía el terreno, facilitando el desprendimiento de tierra tras las intensas lluvias en Las Condes. El d",
+   "url": "https://www.latercera.com/nacional/noticia/autoridades-afirman-que-incendio-del-verano-en-quebrada-honda-influyo-en-aluvion-de-las-condes/"
+  },
+  {
+   "titulo": "ZOOM AL PRESUPUESTO DE DEFENSA Y A LOS RECURSOS CON LOS QUE EL GOBIERNO BUSCA AUMENTAR EL PODER MILITAR DEL PAÍS",
+   "fuente": "LA TERCERA",
+   "resumen": "El Presupuesto 2027 para el Ministerio de Defensa contempla un total de $2.648.367.548.000, lo que representa un aumento del 7,6% en comparación con el año anterior. Bajo la conducción del ministro Fernando Barros, las partidas institucionales de las Fuerzas Armadas experimentarán incrementos signif",
+   "url": "https://www.latercera.com/nacional/noticia/zoom-al-presupuesto-de-defensa-y-a-los-recursos-con-los-que-el-gobierno-busca-aumentar-el-poder-militar-del-pais/"
+  },
+  {
+   "titulo": "EL MERCURIO DE VALPARAISO",
+   "fuente": "EL MERCURIO DE VALPARAISO",
+   "resumen": "El gobierno decretó zona de catástrofe en Las Condes tras un sorpresivo aluvión provocado por intensas lluvias cordilleras, el cual arrasó calles en el sector de San Carlos de Apoquindo dejando al menos seis personas heridas y múltiples vehículos arrastrados. El desastre inundó con barro infraestruc",
+   "url": null
+  },
+  {
+   "titulo": "PRESIDENTE DE CSAV CUESTIONA NECESIDAD DE EJECUTAR PROYECTO DE PUERTO EXTERIOR DE SAN ANTONIO",
+   "fuente": "PORTAL PORTUARIO",
+   "resumen": "El presidente de la Compañía Sud Americana de Vapores (CSAV), Óscar Hasbún, cuestionó la necesidad de ejecutar el proyecto del Puerto Exterior de San Antonio y abogó por optimizar y descentralizar la inversión en la red portuaria actual del país. Su postura señala que potenciar los puertos regionale",
+   "url": "https://portalportuario.cl/presidente-de-csav-cuestiona-necesidad-de-ejecutar-proyecto-de-puerto-exterior-de-san-antonio/"
+  },
+  {
+   "titulo": "Noticia 91440 seccion Sector+Pesquero",
+   "fuente": "INDUSTRIA PESQUERA",
+   "resumen": "Durante la feria Conxemar, armadores internacionales de la industria pesquera establecieron una alianza global promovida por Tunacons para defender la continuidad de la pesca en alta mar frente a la implementación del Acuerdo BBNJ. La iniciativa busca proteger las competencias de las Organizaciones ",
+   "url": "https://www.industriaspesqueras.com/noticia-91440-seccion-Sector+Pesquero"
+  },
+  {
+   "titulo": "PUERTOS EUROPEOS HACEN DEL CAMBIO CLIMÁTICO SU PRIORIDAD AMBIENTAL MIENTRAS CHILE ELECTRIFICA MUELLES",
+   "fuente": "EL DESCONCIERTO",
+   "resumen": "El último informe de la European Sea Ports Organisation sitúa al cambio climático como la principal preocupación ambiental de los puertos europeos, con un 85% de las terminales fijando metas de reducción de gases de efecto invernadero para 2026. En contraste, la industria marítima chilena muestra av",
+   "url": "https://eldesconcierto.cl/hoja-ruta/puertos-europeos-hacen-del-cambio-climatico-su-prioridad-ambiental-mientras-chile-electrifica-muelles-n5462969"
+  },
+  {
+   "titulo": "CUANDO MAMÁ VIAJA A LA ANTÁRTICA: LIBRO INFANTIL ENSEÑA A CUIDAR EL PLANETA Y VISIBILIZA A MUJERES CIENTÍFICAS",
+   "fuente": "EL DESCONCIERTO",
+   "resumen": "El nuevo libro infantil “Buceamos con mamá… ¡En la Antártica!”, publicado por Editorial SurCiencia y el Instituto Milenio BASE, narra la historia de una bióloga marina en Punta Arenas que emprende una expedición de buceo científico al continente helado. A través de los ojos de sus dos hijas, quienes",
+   "url": "https://eldesconcierto.cl/tendencias/cuando-mama-viaja-la-antartica-libro-infantil-ensena-cuidar-el-planeta-y-visibiliza-mujeres-cientificas-n5462955"
+  },
+  {
+   "titulo": "LA SEQUÍA EN EL CANAL DE PANAMÁ Y ALTOS COBROS ELEVA EL TRÁNSITO DE BARCOS POR EL ESTRECHO DE MAGALLANES",
+   "fuente": "INFOBAE",
+   "resumen": "El tránsito de barcos por el estrecho de Magallanes aumentó más de un 70% interanual debido a las severas restricciones del Canal de Panamá provocadas por la sequía. Los altos costos de las subastas en la vía panameña y su condición de ruta libre de peajes han convertido al paso austral chileno en u",
+   "url": "https://www.infobae.com/america/america-latina/2026/10/08/la-sequia-en-el-canal-de-panama-y-altos-cobros-eleva-el-transito-de-barcos-por-el-estrecho-de-magallanes/"
+  },
+  {
+   "titulo": "REPUBLICANOS ESPERAN QUE ARGENTINA RESPETE LOS TRATADOS INTERNACIONALES ANTE POSIBLE “EVENTO CRÍTICO” POR ZARPE DE BUQUE CHILENO A LAS FALKLAND",
+   "fuente": "INFOBAE",
+   "resumen": "El partido Republicanos instó a Argentina a respetar los tratados internacionales vigentes sobre la libre navegación en el Estrecho de Magallanes ante un posible evento crítico derivado del zarpe del buque Danstar hacia las islas Falkland. Los parlamentarios enfatizaron que el libre tránsito y la li",
+   "url": "https://infogate.cl/2026/10/republicanos-esperan-que-argentina-respete-los-tratados-internacionales-ante-posible-evento-cr-tico-por-zarpe-de-buque-chileno-a-las-falkland/"
+  },
+  {
+   "titulo": "BARROS DICE QUE NO HAY DATOS PARA TEMER QUE SE ROMPERÁN NORMAS DE LA LIBRE NAVEGACIÓN POR ZARPE DE BUSQUE A LAS FALKLAND",
+   "fuente": "INFOGATE",
+   "resumen": "El ministro de Defensa de Chile, Fernando Barros, descartó que existan antecedentes para temer una vulneración a las normas de libre navegación tras el próximo zarpe del buque civil Dunstar hacia las islas Falkland (Malvinas). El secretario de Estado afirmó que no hay elementos que hagan prever difi",
+   "url": "https://infogate.cl/2026/10/barros-dice-que-no-hay-datos-para-temer-que-se-romper-n-normas-de-la-libre-navegaci-n-por-zarpe-de-busque-a-las-falkland/"
+  },
+  {
+   "titulo": "JUDD ABOFETEA LA SOBERANÍA CHILENA AL ASEGURAR: \"NO HAY UNA ANTÁRTICA QUE PERTENEZCA A CHILE\"",
+   "fuente": "INFOGATE",
+   "resumen": "El embajador de Estados Unidos en Chile, Brandon Judd, desató una polémica al afirmar que “no hay una Antártica que pertenezca a Chile” durante un webinar de la Fundación Chilena del Pacífico celebrado el 6 de octubre de 2026. El diplomático argumentó que el sistema de tratados internacionales estab",
+   "url": "https://infogate.cl/2026/10/judd-abofetea-la-soberan-a-chilena-al-asegurar-no-hay-una-ant-rtica-que-pertenezca-a-chile/"
+  },
+  {
+   "titulo": "Investigacion reconstruye la historia del tsunami que se registro luego del terremoto de 1960",
+   "fuente": "REDES SOCIALES",
+   "resumen": "Estudio científico liderado por el investigador Patricio Winckler, el cual reconstruye la historia del tsunami registrado tras el megaterremoto de Valdivia de 1960. Visualmente, se aprecia una fotografía histórica que muestra la devastación de viviendas colapsadas y un vehículo de la época en una ca",
+   "url": "https://www.cooperativaciencia.cl/tendencias/2026/10/08/investigacion-reconstruye-la-historia-del-tsunami-que-se-registro-luego-del-terremoto-de-1960/"
   }
  ],
  "prensa": {
-  "titulo": "RESUMEN DE PRENSA 08 DE OCTUBRE DE 2026",
-  "fecha": "2026-10-08T11:00:00.000Z",
+  "titulo": "RESUMEN DE PRENSA 09 DE OCTUBRE DE 2026",
+  "fecha": "2026-10-09T11:00:00.000Z",
   "items": [
-   {
-    "fuente": "EL MERCURIO DE VALPARAÍSO",
-    "nota": "",
-    "dia": "",
-    "titulo": "Recorte de prensa",
-    "tituloAuto": true,
-    "parrafos": [
-     "La Comisión Regional de Uso de Borde Costero votará la solicitud de concesión marítima para el proyecto \"Parque Eólico Marino Lir\" frente a Laguna Verde, una iniciativa de 2.564 millones de dólares que busca instalar 66 aerogeneradores en plataformas flotantes para generar energía renovable. A pesar del millonario monto, la iniciativa enfrenta duros reparos debido a un informe técnico desfavorable que advierte que la ubicación no es la adecuada, ya que el sector es muy cercano al puerto de Valparaíso y presenta un intenso tráfico de buques comerciales y navales. El delegado presidencial regional, Manuel Millones, y la Municipalidad de Valparaíso manifestaron la necesidad de ser responsables con el impacto territorial y la navegación, sumándose a la fuerte oposición de los vecinos y ambientalistas locales por el daño paisajístico y la degradación del entorno marino."
-    ],
-    "imagenes": [
-     "publicado/prensa/muzmng28_0_0.jpg",
-     "publicado/prensa/muzmng28_0_1.jpg",
-     "publicado/prensa/muzmng28_0_2.jpg"
-    ],
-    "minis": [
-     "publicado/prensa/muzmng28_0_0_m.jpg",
-     "publicado/prensa/muzmng28_0_1_m.jpg",
-     "publicado/prensa/muzmng28_0_2_m.jpg"
-    ],
-    "url": null,
-    "resumen": "La Comisión Regional de Uso de Borde Costero votará la solicitud de concesión marítima para el proyecto \"Parque Eólico Marino Lir\" frente a Laguna Verde, una iniciativa de 2.564 millones de dólares que busca instalar 66 aerogeneradores en plataformas flotantes para generar energía renovable. A pesar"
-   },
-   {
-    "fuente": "EL MERCURIO DE VALPARAÍSO",
-    "nota": "",
-    "dia": "",
-    "titulo": "Recorte de prensa",
-    "tituloAuto": true,
-    "parrafos": [
-     "Excomandantes en jefe de la Armada valoraron positivamente la propuesta de la firma británica Babcock para construir fragatas Arrowhead 140 en Chile, una alternativa clave ante la urgente necesidad de renovar la Escuadra Nacional, considerando que parte de la flota actual terminará su vida útil a partir del año 2032. Los exalmirantes Rodolfo Codina y Jorge Arancibia, junto a especialistas del área, destacaron que esta oferta promueve una alianza estratégica que incluye la transferencia de tecnología y la construcción local en los astilleros de Asmar. No obstante, los expertos advirtieron que la decisión es de carácter estratégico para los próximos 30 o 40 años, por lo que el Estado chileno también deberá evaluar con rigurosidad otras opciones competitivas provenientes de países como Francia, Alemania, Corea del Sur o Japón antes de concretar la multimillonaria renovación."
-    ],
-    "imagenes": [
-     "publicado/prensa/muzmng28_1_0.jpg",
-     "publicado/prensa/muzmng28_1_1.jpg",
-     "publicado/prensa/muzmng28_1_2.jpg"
-    ],
-    "minis": [
-     "publicado/prensa/muzmng28_1_0_m.jpg",
-     "publicado/prensa/muzmng28_1_1_m.jpg",
-     "publicado/prensa/muzmng28_1_2_m.jpg"
-    ],
-    "url": null,
-    "resumen": "Excomandantes en jefe de la Armada valoraron positivamente la propuesta de la firma británica Babcock para construir fragatas Arrowhead 140 en Chile, una alternativa clave ante la urgente necesidad de renovar la Escuadra Nacional, considerando que parte de la flota actual terminará su vida útil a pa"
-   },
-   {
-    "fuente": "LA TERCERA",
-    "nota": "",
-    "dia": "",
-    "titulo": "CHILE SE PREPARA PARA EL 6G: QUÉ ES LA NUEVA GENERACIÓN DE REDES MÓVILES Y EN QUÉ SE DIFERENCIA DEL 5G",
-    "tituloAuto": false,
-    "parrafos": [
-     "El Plan Nacional Digital 2026-2036, presentado por la Subsecretaría de Telecomunicaciones, busca consolidar a Chile como el hub digital de América Latina mediante una estrategia de siete ejes enfocada en atraer inversiones estimadas en US$2.000 millones para 2030. La iniciativa contempla el despliegue de redes avanzadas como 5G y 6G, el apagado de las redes 3G y reformas regulatorias para reducir la burocracia y la brecha de conectividad."
-    ],
-    "imagenes": [],
-    "minis": [],
-    "url": "https://www.latercera.com/tecnologia/noticia/chile-plan-nacional-digital-subtel-6g/",
-    "resumen": "El Plan Nacional Digital 2026-2036, presentado por la Subsecretaría de Telecomunicaciones, busca consolidar a Chile como el hub digital de América Latina mediante una estrategia de siete ejes enfocada en atraer inversiones estimadas en US$2.000 millones para 2030. La iniciativa contempla el desplieg"
-   },
-   {
-    "fuente": "INACH",
-    "nota": "",
-    "dia": "",
-    "titulo": "LECCIONES DE RESILIENCIA EN EL FIN DEL MUNDO: MICROORGANISMOS REGENERARON LA VIDA TRAS LA ERUPCIÓN DE UN VOLCÁN ANTÁRTICO",
-    "tituloAuto": false,
-    "parrafos": [
-     "Un equipo internacional de científicos ha demostrado cómo microorganismos extremófilos recolonizaron y regeneraron la vida en la isla Decepción, en la Antártica, tras las erupciones volcánicas ocurridas entre 1967 y 1970. A través de análisis metagenómicos, el estudio identificó un enorme potencial biotecnológico en bacterias y microalgas con aplicaciones farmacéuticas, transición energética y eficiencia industrial."
-    ],
-    "imagenes": [],
-    "minis": [],
-    "url": "https://www.inach.cl/lecciones-de-resiliencia-en-el-fin-del-mundo-microorganismos-regeneraron-la-vida-tras-la-erupcion-de-un-volcan-antartico/",
-    "resumen": "Un equipo internacional de científicos ha demostrado cómo microorganismos extremófilos recolonizaron y regeneraron la vida en la isla Decepción, en la Antártica, tras las erupciones volcánicas ocurridas entre 1967 y 1970. A través de análisis metagenómicos, el estudio identificó un enorme potencial "
-   },
-   {
-    "fuente": "INFOGATE",
-    "nota": "",
-    "dia": "",
-    "titulo": "EMBAJADOR JUDD LO VUELVE A HACER: ADVIERTE QUE SI CHILE QUIERE PROTEGER SUS DERECHOS SOBRE EL ESTRECHO DE MAGALLANES “TENDRÁN QUE TRABAJAR CON NOSOTROS”",
-    "tituloAuto": false,
-    "parrafos": [
-     "El embajador de Estados Unidos en Chile, Brandon Judd, condicionó el respaldo de Washington en la protección de los derechos de Chile sobre el Estrecho de Magallanes a la cooperación bilateral en prioridades estadounidenses. En respuesta, el canciller chileno Francisco Pérez Mackenna afirmó que la soberanía nacional sobre el estrecho es plena e independiente."
-    ],
-    "imagenes": [],
-    "minis": [],
-    "url": "https://infogate.cl/2026/10/embajador-judd-lo-vuelve-a-hacer-advierte-que-si-chile-quiere-proteger-sus-derechos-sobre-el-estrecho-de-magallanes-tendr-n-que-trabajar-con-nosotros/",
-    "resumen": "El embajador de Estados Unidos en Chile, Brandon Judd, condicionó el respaldo de Washington en la protección de los derechos de Chile sobre el Estrecho de Magallanes a la cooperación bilateral en prioridades estadounidenses. En respuesta, el canciller chileno Francisco Pérez Mackenna afirmó que la s"
-   },
-   {
-    "fuente": "INFOGATE",
-    "nota": "",
-    "dia": "",
-    "titulo": "CHILE AVANZA EN SUS CAPACIDADES ESPACIALES CON LANZAMIENTO DE NUEVO GEOPORTAL DEL SISTEMA NACIONAL ESPACIAL",
-    "tituloAuto": false,
-    "parrafos": [
-     "Chile ha lanzado el nuevo Geoportal del Sistema Nacional Espacial, una plataforma destinada a unificar e integrar imágenes satelitales y datos geoespaciales para el uso estatal, científico y ciudadano. Este proyecto, desarrollado en colaboración entre el Ministerio de Defensa, el Ministerio de Ciencia y la Fuerza Aérea de Chile, incluye aplicaciones para la gestión de emergencias y una aplicación móvil complementaria."
-    ],
-    "imagenes": [],
-    "minis": [],
-    "url": "https://infogate.cl/2026/10/chile-avanza-en-sus-capacidades-espaciales-con-lanzamiento-de-nuevo-geoportal-del-sistema-nacional-espacial/",
-    "resumen": "Chile ha lanzado el nuevo Geoportal del Sistema Nacional Espacial, una plataforma destinada a unificar e integrar imágenes satelitales y datos geoespaciales para el uso estatal, científico y ciudadano. Este proyecto, desarrollado en colaboración entre el Ministerio de Defensa, el Ministerio de Cienc"
-   },
-   {
-    "fuente": "THE CLINIC",
-    "nota": "",
-    "dia": "",
-    "titulo": "SE ACABA EL FINANCIAMIENTO: PRESUPUESTO DEL GOBIERNO DEJA SIN RECURSOS AL INSTITUTO CHILENO DE CAMPOS DE HIELO",
-    "tituloAuto": false,
-    "parrafos": [
-     "El Gobierno de Chile eliminó el financiamiento estatal para el Instituto Chileno de Campos de Hielo (ICCH) en el proyecto de Presupuestos 2027. La institución privada sin fines de lucro, encargada de investigar el Campo de Hielo Patagónico Sur, dejará de recibir los $46,4 millones de pesos que le asignaba el Ministerio de Relaciones Exteriores.",
-     "Desde el Ministerio de Relaciones Exteriores expresan que la decisión se debe a que “el Proyecto de Presupuesto 2027 contempla, en la partida de la Dirección Nacional de Fronteras y Límites (DIFROL)-institución de esta Cancillería responsable de los temas limítrofes de nuestro país-, recursos públicos que se destinan a la realización de Estudios sobre la posición Chilena en Campos de Hielo, y que incluyen coordinaciones con la Universidad de Magallanes para estos fines, haciendo partícipes a las organizaciones de las regiones de la zona”."
-    ],
-    "imagenes": [],
-    "minis": [],
-    "url": "https://www.theclinic.cl/2026/10/07/se-acaba-el-financiamiento-presupuesto-del-gobierno-deja-sin-recursos-al-instituto-chileno-de-campos-de-hielo/",
-    "resumen": "El Gobierno de Chile eliminó el financiamiento estatal para el Instituto Chileno de Campos de Hielo (ICCH) en el proyecto de Presupuestos 2027. La institución privada sin fines de lucro, encargada de investigar el Campo de Hielo Patagónico Sur, dejará de recibir los $46,4 millones de pesos que le as"
-   },
-   {
-    "fuente": "LAS ÚLTIMAS NOTICIAS",
-    "nota": "",
-    "dia": "",
-    "titulo": "Recorte de prensa",
-    "tituloAuto": true,
-    "parrafos": [
-     "Las precipitaciones registradas en octubre en la zona central de Chile son normales para la primavera, pero lo inusual es el alto volumen de agua caída en un periodo tan corto, según explicó el director del Centro de Ciencia del Clima y la Resiliencia (CR2), Roberto Rondanelli, en la edición de LUN. El especialista detalló que el fenómeno, potenciado por el fortalecimiento de El Niño, ha provocado que en algunos sectores se duplique el promedio histórico mensual en pocos días, rompiendo récords climáticos para la época del año."
-    ],
-    "imagenes": [
-     "publicado/prensa/muzmng28_7_0.jpg"
-    ],
-    "minis": [
-     "publicado/prensa/muzmng28_7_0_m.jpg"
-    ],
-    "url": "http://www.lun.com/Pages/NewsDetail.aspx?dt=2026-10-08&EsAviso=0&PaginaId=3&bodyid=0",
-    "resumen": "Las precipitaciones registradas en octubre en la zona central de Chile son normales para la primavera, pero lo inusual es el alto volumen de agua caída en un periodo tan corto, según explicó el director del Centro de Ciencia del Clima y la Resiliencia (CR2), Roberto Rondanelli, en la edición de LUN."
-   },
-   {
-    "fuente": "LA TERCERA",
-    "nota": "",
-    "dia": "",
-    "titulo": "Embajador judd aclara dichos y afirma nunca condiciono la soberania de chile este drama esta siendo tergiversado",
-    "tituloAuto": true,
-    "parrafos": [
-     "El embajador de Estados Unidos en Chile, Brandon Judd, aclaró que sus declaraciones sobre el Estrecho de Magallanes fueron sacadas de contexto y aseguró que en ningún momento condicionó el respaldo a la soberanía chilena. La controversia se originó tras sugerir que el apoyo de Washington requería cooperación en asuntos prioritarios de interés estadounidense, lo que provocó una firme respuesta de la Cancillería chilena."
-    ],
-    "imagenes": [
-     "publicado/prensa/muzmng28_8_0.jpg"
-    ],
-    "minis": [
-     "publicado/prensa/muzmng28_8_0_m.jpg"
-    ],
-    "url": "https://www.latercera.com/politica/noticia/embajador-judd-aclara-dichos-y-afirma-nunca-condiciono-la-soberania-de-chile-este-drama-esta-siendo-tergiversado/",
-    "resumen": "El embajador de Estados Unidos en Chile, Brandon Judd, aclaró que sus declaraciones sobre el Estrecho de Magallanes fueron sacadas de contexto y aseguró que en ningún momento condicionó el respaldo a la soberanía chilena. La controversia se originó tras sugerir que el apoyo de Washington requería co"
-   },
    {
     "fuente": "EL MERCURIO DE SANTIAGO",
     "nota": "",
     "dia": "",
-    "titulo": "Los desafios y fortalezas de chile para enfrentar las vicisitudes",
+    "titulo": "EL MERCURIO DE SANTIAGO",
     "tituloAuto": true,
     "parrafos": [
-     "Chile rechazó categóricamente las declaraciones del embajador de Estados Unidos, Brandon Judd, quien condicionó el respaldo de su país a la soberanía chilena en el Estrecho de Magallanes a cambio de que Santiago colabore en los asuntos de interés prioritario para Washington, en especial frente a la influencia comercial de China. Ante esto, el canciller chileno, Francisco Pérez Mackenna, respondió con firmeza asegurando que \"el Estrecho de Magallanes fue, es y será siempre chileno\" y que el país no necesita la ayuda de nadie para defender su soberanía, evaluando además el envío de una nota de protesta formal hacia el representante del presidente Donald Trump. Por su parte, la controversia generó un rechazo transversal en el Congreso chileno y motivó al embajador Judd a defenderse por la noche, asegurando que sus dichos fueron \"claramente sacados de contexto\" y que jamás pretendió poner condiciones a la soberanía nacional."
+     "Se aborda la tensión diplomática provocada por los dichos del embajador de Estados Unidos, Brandon Judd, quien condicionó el apoyo a la soberanía chilena en el Estrecho de Magallanes a la colaboración de Santiago en temas clave para Washington. Ante esto, el canciller chileno, Francisco Pérez Mackenna, aseguró firmemente que “la integridad territorial no es transaccional” y que Chile siempre defenderá su soberanía, aunque evitó confirmar si La Moneda enviará una nota de protesta formal.",
+     "Por otra parte, la nota destaca la preocupación del Gobierno de Bolivia (expresada por su canciller Héctor Huanca) respecto a las retenciones de cargamentos de madera boliviana en puertos chilenos. Esta reunión se dio en la antesala del viaje que el presidente José Antonio Kast realizará a La Paz el 16 de octubre, acordándose convocar al Grupo de Trabajo sobre Libre Tránsito Chile-Bolivia dentro de los próximos 30 días bajo el marco del Tratado de 1904."
     ],
-    "imagenes": [
-     "publicado/prensa/muzmng28_9_0.jpg",
-     "publicado/prensa/muzmng28_9_1.jpg",
-     "publicado/prensa/muzmng28_9_2.jpg"
-    ],
-    "minis": [
-     "publicado/prensa/muzmng28_9_0_m.jpg",
-     "publicado/prensa/muzmng28_9_1_m.jpg",
-     "publicado/prensa/muzmng28_9_2_m.jpg"
-    ],
-    "url": "https://www.empresaoceano.cl/los-desafios-y-fortalezas-de-chile-para-enfrentar-las-vicisitudes",
-    "resumen": "Chile rechazó categóricamente las declaraciones del embajador de Estados Unidos, Brandon Judd, quien condicionó el respaldo de su país a la soberanía chilena en el Estrecho de Magallanes a cambio de que Santiago colabore en los asuntos de interés prioritario para Washington, en especial frente a la "
+    "imagenes": [],
+    "minis": [],
+    "url": null,
+    "resumen": "Se aborda la tensión diplomática provocada por los dichos del embajador de Estados Unidos, Brandon Judd, quien condicionó el apoyo a la soberanía chilena en el Estrecho de Magallanes a la colaboración de Santiago en temas clave para Washington. Ante esto, el canciller chileno, Francisco Pérez Macken"
    },
    {
-    "fuente": "LAS ÚLTIMAS NOTICIAS",
+    "fuente": "LA TERCERA",
     "nota": "",
     "dia": "",
-    "titulo": "Recorte de prensa",
+    "titulo": "DIRECTORA DE SENAPRED AFIRMA QUE NO EXISTE MONITOREO DE REMOCIÓN EN MASA EN CHILE Y QUE ALUVIÓN FUE UN “EVENTO SÚBITO” IMPOSIBLE DE ANTICIPAR",
+    "tituloAuto": false,
+    "parrafos": [
+     "La directora de Senapred, Alicia Cebrián, y el subsecretario del Interior, Máximo Pavez, descartaron una falla de protocolo o un error en la ausencia de alertas SAE durante el aluvión en Las Condes, explicando que no existe un sistema de monitoreo de remoción en masa en Chile y que la emergencia fue un \"evento súbito\" imposible de anticipar. Las autoridades informaron que el desastre se produjo por una caída inusual y extrema de 15 milímetros de agua en un periodo muy breve, lo que activó repentinamente la Quebrada Honda y generó un flujo inmediato de barro que impidió realizar evacuaciones preventivas."
+    ],
+    "imagenes": [],
+    "minis": [],
+    "url": "https://www.latercera.com/nacional/noticia/gobierno-afirma-que-no-existe-monitoreo-de-remocion-en-masa-en-chile-y-que-aluvion-fue-un-evento-subito-imposible-de-anticipar/",
+    "resumen": "La directora de Senapred, Alicia Cebrián, y el subsecretario del Interior, Máximo Pavez, descartaron una falla de protocolo o un error en la ausencia de alertas SAE durante el aluvión en Las Condes, explicando que no existe un sistema de monitoreo de remoción en masa en Chile y que la emergencia fue"
+   },
+   {
+    "fuente": "LA TERCERA",
+    "nota": "",
+    "dia": "",
+    "titulo": "AUTORIDADES AFIRMAN QUE INCENDIO DEL VERANO EN QUEBRADA HONDA INFLUYÓ EN ALUVIÓN DE LAS CONDES",
+    "tituloAuto": false,
+    "parrafos": [
+     "Las autoridades informaron que un devastador incendio forestal de mil hectáreas registrado en enero de este año en la Quebrada Honda degradó severamente el suelo y consumió la capa vegetal que sostenía el terreno, facilitando el desprendimiento de tierra tras las intensas lluvias en Las Condes. El delegado presidencial, Germán Codina, y la alcaldesa, Catalina San Martín, explicaron que el siniestro dejó la superficie totalmente saturada y debilitada, condición que empeoró por la caída de granizo y el bloqueo de un canal subterráneo de desagüe en el sector de Álvaro del Portillo con Avenida La Plaza. Para mitigar futuros riesgos, el municipio anunció que trabaja junto al Ministerio de Obras Públicas desde marzo en un estudio hidrográfico para la próxima instalación de mallas dinámicas en las quebradas de la zona"
+    ],
+    "imagenes": [],
+    "minis": [],
+    "url": "https://www.latercera.com/nacional/noticia/autoridades-afirman-que-incendio-del-verano-en-quebrada-honda-influyo-en-aluvion-de-las-condes/",
+    "resumen": "Las autoridades informaron que un devastador incendio forestal de mil hectáreas registrado en enero de este año en la Quebrada Honda degradó severamente el suelo y consumió la capa vegetal que sostenía el terreno, facilitando el desprendimiento de tierra tras las intensas lluvias en Las Condes. El d"
+   },
+   {
+    "fuente": "LA TERCERA",
+    "nota": "",
+    "dia": "",
+    "titulo": "ZOOM AL PRESUPUESTO DE DEFENSA Y A LOS RECURSOS CON LOS QUE EL GOBIERNO BUSCA AUMENTAR EL PODER MILITAR DEL PAÍS",
+    "tituloAuto": false,
+    "parrafos": [
+     "El Presupuesto 2027 para el Ministerio de Defensa contempla un total de $2.648.367.548.000, lo que representa un aumento del 7,6% en comparación con el año anterior. Bajo la conducción del ministro Fernando Barros, las partidas institucionales de las Fuerzas Armadas experimentarán incrementos significativos: la Fuerza Aérea (FACH) lidera las alzas con un 9,8% ($380 mil millones), seguida por la Armada con un 5,3% ($600 mil millones) y el Ejército con un 3,4% ($809 mil millones). En contraste, la Subsecretaría para las FF.AA. sufrirá un recorte del 11,3% y el Estado Mayor Conjunto caerá un 5,2%, registrando sus mayores mermas en los programas de la Antártica."
+    ],
+    "imagenes": [],
+    "minis": [],
+    "url": "https://www.latercera.com/nacional/noticia/zoom-al-presupuesto-de-defensa-y-a-los-recursos-con-los-que-el-gobierno-busca-aumentar-el-poder-militar-del-pais/",
+    "resumen": "El Presupuesto 2027 para el Ministerio de Defensa contempla un total de $2.648.367.548.000, lo que representa un aumento del 7,6% en comparación con el año anterior. Bajo la conducción del ministro Fernando Barros, las partidas institucionales de las Fuerzas Armadas experimentarán incrementos signif"
+   },
+   {
+    "fuente": "EL MERCURIO DE VALPARAISO",
+    "nota": "",
+    "dia": "",
+    "titulo": "EL MERCURIO DE VALPARAISO",
     "tituloAuto": true,
-    "parrafos": [],
-    "imagenes": [
-     "publicado/prensa/muzmng28_10_0.jpg"
+    "parrafos": [
+     "El gobierno decretó zona de catástrofe en Las Condes tras un sorpresivo aluvión provocado por intensas lluvias cordilleras, el cual arrasó calles en el sector de San Carlos de Apoquindo dejando al menos seis personas heridas y múltiples vehículos arrastrados. El desastre inundó con barro infraestructuras clave de la zona, incluyendo viviendas, recintos de salud como la Clínica UC Christus y los campus de la Universidad de los Andes y Duoc UC, obligando al Senapred a declarar alerta roja en diez comunas de la Región Metropolitana mientras equipos de emergencia como Bomberos, Carabineros y el GOPE despliegan labores de rescate."
     ],
-    "minis": [
-     "publicado/prensa/muzmng28_10_0_m.jpg"
+    "imagenes": [],
+    "minis": [],
+    "url": null,
+    "resumen": "El gobierno decretó zona de catástrofe en Las Condes tras un sorpresivo aluvión provocado por intensas lluvias cordilleras, el cual arrasó calles en el sector de San Carlos de Apoquindo dejando al menos seis personas heridas y múltiples vehículos arrastrados. El desastre inundó con barro infraestruc"
+   },
+   {
+    "fuente": "PORTAL PORTUARIO",
+    "nota": "",
+    "dia": "",
+    "titulo": "PRESIDENTE DE CSAV CUESTIONA NECESIDAD DE EJECUTAR PROYECTO DE PUERTO EXTERIOR DE SAN ANTONIO",
+    "tituloAuto": false,
+    "parrafos": [
+     "El presidente de la Compañía Sud Americana de Vapores (CSAV), Óscar Hasbún, cuestionó la necesidad de ejecutar el proyecto del Puerto Exterior de San Antonio y abogó por optimizar y descentralizar la inversión en la red portuaria actual del país. Su postura señala que potenciar los puertos regionales y aprovechar iniciativas como el Corredor Bioceánico Capricornio resulta más eficiente que concentrar recursos masivos en un solo megaproyecto en la zona central. Puedes leer más información en Portal Portuario."
     ],
-    "url": "http://www.lun.com/Pages/NewsDetail.aspx?dt=2026-10-08&EsAviso=0&PaginaId=13&bodyid=0",
-    "resumen": ""
+    "imagenes": [],
+    "minis": [],
+    "url": "https://portalportuario.cl/presidente-de-csav-cuestiona-necesidad-de-ejecutar-proyecto-de-puerto-exterior-de-san-antonio/",
+    "resumen": "El presidente de la Compañía Sud Americana de Vapores (CSAV), Óscar Hasbún, cuestionó la necesidad de ejecutar el proyecto del Puerto Exterior de San Antonio y abogó por optimizar y descentralizar la inversión en la red portuaria actual del país. Su postura señala que potenciar los puertos regionale"
+   },
+   {
+    "fuente": "INDUSTRIA PESQUERA",
+    "nota": "",
+    "dia": "",
+    "titulo": "Noticia 91440 seccion Sector+Pesquero",
+    "tituloAuto": true,
+    "parrafos": [
+     "Durante la feria Conxemar, armadores internacionales de la industria pesquera establecieron una alianza global promovida por Tunacons para defender la continuidad de la pesca en alta mar frente a la implementación del Acuerdo BBNJ. La iniciativa busca proteger las competencias de las Organizaciones Regionales de Ordenación Pesquera y garantizar que la conservación marina se base en evidencia científica y consideraciones socioeconómicas."
+    ],
+    "imagenes": [],
+    "minis": [],
+    "url": "https://www.industriaspesqueras.com/noticia-91440-seccion-Sector+Pesquero",
+    "resumen": "Durante la feria Conxemar, armadores internacionales de la industria pesquera establecieron una alianza global promovida por Tunacons para defender la continuidad de la pesca en alta mar frente a la implementación del Acuerdo BBNJ. La iniciativa busca proteger las competencias de las Organizaciones "
+   },
+   {
+    "fuente": "EL DESCONCIERTO",
+    "nota": "",
+    "dia": "",
+    "titulo": "PUERTOS EUROPEOS HACEN DEL CAMBIO CLIMÁTICO SU PRIORIDAD AMBIENTAL MIENTRAS CHILE ELECTRIFICA MUELLES",
+    "tituloAuto": false,
+    "parrafos": [
+     "El último informe de la European Sea Ports Organisation sitúa al cambio climático como la principal preocupación ambiental de los puertos europeos, con un 85% de las terminales fijando metas de reducción de gases de efecto invernadero para 2026. En contraste, la industria marítima chilena muestra avances descentralizados y carece de una política sectorial unificada como la europea."
+    ],
+    "imagenes": [],
+    "minis": [],
+    "url": "https://eldesconcierto.cl/hoja-ruta/puertos-europeos-hacen-del-cambio-climatico-su-prioridad-ambiental-mientras-chile-electrifica-muelles-n5462969",
+    "resumen": "El último informe de la European Sea Ports Organisation sitúa al cambio climático como la principal preocupación ambiental de los puertos europeos, con un 85% de las terminales fijando metas de reducción de gases de efecto invernadero para 2026. En contraste, la industria marítima chilena muestra av"
+   },
+   {
+    "fuente": "EL DESCONCIERTO",
+    "nota": "",
+    "dia": "",
+    "titulo": "CUANDO MAMÁ VIAJA A LA ANTÁRTICA: LIBRO INFANTIL ENSEÑA A CUIDAR EL PLANETA Y VISIBILIZA A MUJERES CIENTÍFICAS",
+    "tituloAuto": false,
+    "parrafos": [
+     "El nuevo libro infantil “Buceamos con mamá… ¡En la Antártica!”, publicado por Editorial SurCiencia y el Instituto Milenio BASE, narra la historia de una bióloga marina en Punta Arenas que emprende una expedición de buceo científico al continente helado. A través de los ojos de sus dos hijas, quienes le ayudan a armar la maleta e imaginan el viaje, la obra busca acercar la ciencia polar a las primeras infancias."
+    ],
+    "imagenes": [],
+    "minis": [],
+    "url": "https://eldesconcierto.cl/tendencias/cuando-mama-viaja-la-antartica-libro-infantil-ensena-cuidar-el-planeta-y-visibiliza-mujeres-cientificas-n5462955",
+    "resumen": "El nuevo libro infantil “Buceamos con mamá… ¡En la Antártica!”, publicado por Editorial SurCiencia y el Instituto Milenio BASE, narra la historia de una bióloga marina en Punta Arenas que emprende una expedición de buceo científico al continente helado. A través de los ojos de sus dos hijas, quienes"
+   },
+   {
+    "fuente": "INFOBAE",
+    "nota": "",
+    "dia": "",
+    "titulo": "LA SEQUÍA EN EL CANAL DE PANAMÁ Y ALTOS COBROS ELEVA EL TRÁNSITO DE BARCOS POR EL ESTRECHO DE MAGALLANES",
+    "tituloAuto": false,
+    "parrafos": [
+     "El tránsito de barcos por el estrecho de Magallanes aumentó más de un 70% interanual debido a las severas restricciones del Canal de Panamá provocadas por la sequía. Los altos costos de las subastas en la vía panameña y su condición de ruta libre de peajes han convertido al paso austral chileno en una alternativa viable a pesar de la distancia adicional."
+    ],
+    "imagenes": [],
+    "minis": [],
+    "url": "https://www.infobae.com/america/america-latina/2026/10/08/la-sequia-en-el-canal-de-panama-y-altos-cobros-eleva-el-transito-de-barcos-por-el-estrecho-de-magallanes/",
+    "resumen": "El tránsito de barcos por el estrecho de Magallanes aumentó más de un 70% interanual debido a las severas restricciones del Canal de Panamá provocadas por la sequía. Los altos costos de las subastas en la vía panameña y su condición de ruta libre de peajes han convertido al paso austral chileno en u"
+   },
+   {
+    "fuente": "INFOBAE",
+    "nota": "",
+    "dia": "",
+    "titulo": "REPUBLICANOS ESPERAN QUE ARGENTINA RESPETE LOS TRATADOS INTERNACIONALES ANTE POSIBLE “EVENTO CRÍTICO” POR ZARPE DE BUQUE CHILENO A LAS FALKLAND",
+    "tituloAuto": false,
+    "parrafos": [
+     "El partido Republicanos instó a Argentina a respetar los tratados internacionales vigentes sobre la libre navegación en el Estrecho de Magallanes ante un posible evento crítico derivado del zarpe del buque Danstar hacia las islas Falkland. Los parlamentarios enfatizaron que el libre tránsito y la libertad de comercio son obligaciones internacionales y derechos soberanos que ningún decreto extranjero puede vulnerar."
+    ],
+    "imagenes": [],
+    "minis": [],
+    "url": "https://infogate.cl/2026/10/republicanos-esperan-que-argentina-respete-los-tratados-internacionales-ante-posible-evento-cr-tico-por-zarpe-de-buque-chileno-a-las-falkland/",
+    "resumen": "El partido Republicanos instó a Argentina a respetar los tratados internacionales vigentes sobre la libre navegación en el Estrecho de Magallanes ante un posible evento crítico derivado del zarpe del buque Danstar hacia las islas Falkland. Los parlamentarios enfatizaron que el libre tránsito y la li"
+   },
+   {
+    "fuente": "INFOGATE",
+    "nota": "",
+    "dia": "",
+    "titulo": "BARROS DICE QUE NO HAY DATOS PARA TEMER QUE SE ROMPERÁN NORMAS DE LA LIBRE NAVEGACIÓN POR ZARPE DE BUSQUE A LAS FALKLAND",
+    "tituloAuto": false,
+    "parrafos": [
+     "El ministro de Defensa de Chile, Fernando Barros, descartó que existan antecedentes para temer una vulneración a las normas de libre navegación tras el próximo zarpe del buque civil Dunstar hacia las islas Falkland (Malvinas). El secretario de Estado afirmó que no hay elementos que hagan prever dificultades en las rutas hacia el archipiélago u otros destinos, a pesar de los informes de inteligencia sobre el viaje."
+    ],
+    "imagenes": [],
+    "minis": [],
+    "url": "https://infogate.cl/2026/10/barros-dice-que-no-hay-datos-para-temer-que-se-romper-n-normas-de-la-libre-navegaci-n-por-zarpe-de-busque-a-las-falkland/",
+    "resumen": "El ministro de Defensa de Chile, Fernando Barros, descartó que existan antecedentes para temer una vulneración a las normas de libre navegación tras el próximo zarpe del buque civil Dunstar hacia las islas Falkland (Malvinas). El secretario de Estado afirmó que no hay elementos que hagan prever difi"
+   },
+   {
+    "fuente": "INFOGATE",
+    "nota": "",
+    "dia": "",
+    "titulo": "JUDD ABOFETEA LA SOBERANÍA CHILENA AL ASEGURAR: \"NO HAY UNA ANTÁRTICA QUE PERTENEZCA A CHILE\"",
+    "tituloAuto": false,
+    "parrafos": [
+     "El embajador de Estados Unidos en Chile, Brandon Judd, desató una polémica al afirmar que “no hay una Antártica que pertenezca a Chile” durante un webinar de la Fundación Chilena del Pacífico celebrado el 6 de octubre de 2026. El diplomático argumentó que el sistema de tratados internacionales establece que ningún territorio es propiedad de un país en particular, y recordó que existen reclamaciones en disputa debido a que Argentina también reclama parte de la zona que Chile considera suya. El medio Infogate criticó con dureza sus dichos, acusándolo de ignorancia en materia antártica y sugiriendo que la postura exterior de su país es hostil hacia los intereses de soberanía chilenos."
+    ],
+    "imagenes": [],
+    "minis": [],
+    "url": "https://infogate.cl/2026/10/judd-abofetea-la-soberan-a-chilena-al-asegurar-no-hay-una-ant-rtica-que-pertenezca-a-chile/",
+    "resumen": "El embajador de Estados Unidos en Chile, Brandon Judd, desató una polémica al afirmar que “no hay una Antártica que pertenezca a Chile” durante un webinar de la Fundación Chilena del Pacífico celebrado el 6 de octubre de 2026. El diplomático argumentó que el sistema de tratados internacionales estab"
    },
    {
     "fuente": "REDES SOCIALES",
     "nota": "",
     "dia": "",
-    "titulo": "Recorte de prensa",
+    "titulo": "Investigacion reconstruye la historia del tsunami que se registro luego del terremoto de 1960",
     "tituloAuto": true,
-    "parrafos": [],
-    "imagenes": [
-     "publicado/prensa/muzmng28_11_0.jpg",
-     "publicado/prensa/muzmng28_11_1.jpg",
-     "publicado/prensa/muzmng28_11_2.jpg",
-     "publicado/prensa/muzmng28_11_3.jpg",
-     "publicado/prensa/muzmng28_11_4.jpg",
-     "publicado/prensa/muzmng28_11_5.jpg",
-     "publicado/prensa/muzmng28_11_6.jpg",
-     "publicado/prensa/muzmng28_11_7.jpg",
-     "publicado/prensa/muzmng28_11_8.jpg",
-     "publicado/prensa/muzmng28_11_9.jpg"
+    "parrafos": [
+     "Estudio científico liderado por el investigador Patricio Winckler, el cual reconstruye la historia del tsunami",
+     "registrado tras el megaterremoto de Valdivia de 1960. Visualmente, se aprecia una fotografía histórica que",
+     "muestra la devastación de viviendas colapsadas y un vehículo de la época en una calle inundada,",
+     "acompañada en la esquina inferior izquierda por el logotipo de Cigiden y el hashtag #CuriososXNaturaleza,",
+     "reflejando una investigación que rescató la memoria oral de sobrevivientes y utilizó tecnología LiDAR para",
+     "evaluar el riesgo geográfico sitio a sitio."
     ],
-    "minis": [
-     "publicado/prensa/muzmng28_11_0_m.jpg",
-     "publicado/prensa/muzmng28_11_1_m.jpg",
-     "publicado/prensa/muzmng28_11_2_m.jpg",
-     "publicado/prensa/muzmng28_11_3_m.jpg",
-     "publicado/prensa/muzmng28_11_4_m.jpg",
-     "publicado/prensa/muzmng28_11_5_m.jpg",
-     "publicado/prensa/muzmng28_11_6_m.jpg",
-     "publicado/prensa/muzmng28_11_7_m.jpg",
-     "publicado/prensa/muzmng28_11_8_m.jpg",
-     "publicado/prensa/muzmng28_11_9_m.jpg"
-    ],
-    "url": null,
-    "resumen": ""
+    "imagenes": [],
+    "minis": [],
+    "url": "https://www.cooperativaciencia.cl/tendencias/2026/10/08/investigacion-reconstruye-la-historia-del-tsunami-que-se-registro-luego-del-terremoto-de-1960/",
+    "resumen": "Estudio científico liderado por el investigador Patricio Winckler, el cual reconstruye la historia del tsunami registrado tras el megaterremoto de Valdivia de 1960. Visualmente, se aprecia una fotografía histórica que muestra la devastación de viviendas colapsadas y un vehículo de la época en una ca"
    }
   ]
  }
